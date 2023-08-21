@@ -5,6 +5,7 @@ import Templates from "../Components/Pages/Templates/Templates";
 import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
 import DashboardPage from "../Components/LayOut/Dashboard/DashboardPage";
+import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideoEditor";
 // import ErrorPage from './../Components/Pages/ErrorPage';
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/onlinevideo',
+                element: <OnlineVideoEditor></OnlineVideoEditor>
             }
         ]
     },

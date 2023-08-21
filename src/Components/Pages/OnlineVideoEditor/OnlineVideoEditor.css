@@ -1,0 +1,22 @@
+ 
+.linear_bg{
+    background: linear-gradient(265.56deg, #DAD7FF -3.41%, #CAF6FF 52.63%, #ECFAFF 103.42%);
+}
+.signin-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  
+  .signin-button .arrow-icon {
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    transition: right 0.3s;  
+  }
+  
+  
+  .signin-button:hover .arrow-icon {
+    right:40px; 
+  }

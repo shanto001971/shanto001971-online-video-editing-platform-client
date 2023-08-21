@@ -1,0 +1,40 @@
+/* Header.css
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  li {
+    cursor: pointer;
+    
+  }
+  
+  .tools-dropdown {
+    position: absolute;
+    list-style-type: none;
+    background-color: #444;
+    padding: 0;
+    display: none;
+  }
+  
+  .tools-dropdown li {
+    padding: 10px;
+  }
+  
+  .header li:hover .tools-dropdown {
+    display: block;
+  }
+   */
+
+/* .hover_test:hover .tools-dropdown{
+    display:  block;
+} */

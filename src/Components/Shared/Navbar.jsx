@@ -5,10 +5,16 @@ import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+// import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
   const {user, logOut } = useContext(AuthContext);
+
+  const toggleTools = () => {
+    setIsToolsOpen(!isToolsOpen);
+  };
 
   const handleLogOut = () => {
     logOut()
@@ -48,6 +54,57 @@ const Navbar = () => {
              Templates
             </NavLink>
           </li>
+          {/* tool section working start =================== */}
+          <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
+            <NavLink
+              to="/Tools"
+              title="Tools"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+             Tools
+             {isToolsOpen && (
+            <ul className="tools-dropdown absolute left-0 right-0 flex-column justify-center pt-5 bg-[#1D232A]">
+             
+             <li className="text-center">
+            <NavLink
+              to="/onlinevideo"
+              title=" Online video editor"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+             Online video editor
+            </NavLink>
+          </li>
+          <li className="py-3 text-center">
+            <NavLink
+              to="/ Onlinevideoedit"
+              title=" Online video edit"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+             Video Crop
+            </NavLink>
+          </li>
+          <li className="text-center pb-3">
+            <NavLink
+              to="/ Onlinevideoedit"
+              title=" Online video edit"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+             Video Merge
+            </NavLink>
+          </li>
+            </ul>
+            )}
+            </NavLink>
+          </li>
+          {/* tool section working end ===================== */}
           <li>
             <NavLink
               to="/explore"
