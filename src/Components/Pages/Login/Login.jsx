@@ -4,16 +4,17 @@ import animation from '../../../assets/animation.json';
 import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './../../../providers/AuthProvider';
-import { useContext, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 // import { FaGoogle } from 'react-icons/fa';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
-  const {signInUser} = useContext(AuthContext);
+  const {signInUser, resetPassword} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState('');
+  const emailRef = useRef();
   const from = location.state?.from?.pathname || "/";
 
     const defaultOptions = {
@@ -73,6 +74,47 @@ const Login = () => {
     }
 
 
+    const handleResetPassword = () => {
+      const email = emailRef.current.value;
+      if(!email){
+        Swal.fire({
+          title: 'Please input your email to reset password!',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
+        return;
+      }
+  
+  
+    
+      resetPassword(email)
+      .then(() => {
+        Swal.fire({
+          title: 'Please check your email!',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  
+  
+      console.log(email);
+  
+    }
+  
+  
+
+
 
     return (
         <div className='bg-gradient-to-r from-cyan-300 to-blue-300 lg:h-[800px]'>
@@ -84,12 +126,13 @@ const Login = () => {
     <h2 className='text-3xl md:text-5xl text-black font-semibold pb-5'>Login Here </h2>
         <form onSubmit = {handleSignin}>
         <div>
-        <input type="email" name='email' placeholder="Email" className="w-full input input-bordered" />
+        <input type="email" ref={emailRef} name='email' placeholder="Email" className="w-full input input-bordered" />
         </div>
       
         <div>
         <input type="password" name='password' placeholder="Password" className="w-full input input-bordered" />
         <p className="text-red-600 text-xs">{error}</p>
+        <small>forgot password? <button onClick={handleResetPassword} className='text-orange-500'>reset now</button> </small>
         </div>
         <div className="form-control mt-6">
         <input type="submit" className='w-full bg-gradient-to-r from-cyan-500 to-blue-500' value="Login" />
