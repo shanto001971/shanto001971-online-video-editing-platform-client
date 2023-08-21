@@ -7,3 +7,10 @@ I will add an attractive section
 
 // authentication will be implemented in this project
 //a little bit 
+
+
+//Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius
+
+// testing git with create pull request and merge to main
