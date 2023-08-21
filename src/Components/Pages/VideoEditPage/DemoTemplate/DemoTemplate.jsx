@@ -4,21 +4,28 @@ import { BsArrowUpRight, BsFilter } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { FaCrown } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchImages } from "../../../../features/demoImages/demoImagesSlice";
 
 const DemoTemplate = () => {
-  const [data, setData] = useState([]);
+  const { isLoading, images, error } = useSelector((state) => state.images);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    // Fetch data when the component mounts
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/demoTemplates`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+    dispatch(fetchImages())
+  }, [dispatch]);
+
+  const templateCategoryData = images.find((item) => item.category === "template");
+
+  let templateData = [];
+  if (templateCategoryData) {
+    templateData = templateCategoryData.data?.map((object) => ({
+      img: object.img,
+      title: object.title,
+    }));
+  } else {
+    console.log("Image category data not found in the data array");
+  }
 
   return (
     <>
@@ -31,11 +38,11 @@ const DemoTemplate = () => {
       </div>
 
       <div className="flex items-center justify-center gap-2">
-        <div class="relative w-full">
+        <div className="relative w-full">
           <CiSearch className="absolute left-[10px] top-[6px] text-base text-gray-500" />
           <input
             type="text"
-            class="border bg-gray-100 rounded-3xl pl-7 h-[26px] w-full text-[13px]  focus:outline-none font-medium focus:border-blue-300"
+            className="border bg-gray-100 rounded-3xl pl-7 h-[26px] w-full text-[13px]  focus:outline-none font-medium focus:border-blue-300"
             placeholder="Search templates"
           />
         </div>
@@ -58,8 +65,8 @@ const DemoTemplate = () => {
         <AiOutlinePlus />
         <p className="text-xs font-medium">Add blank scene</p>
       </div>
-      {data.map((item) => (
-        <div className="group" key={item._id}>
+      {templateData && templateData.map((item, index) => (
+        <div className="group" key={index}>
           <img
             className="group-hover:scale-105 transition-transform"
             src={item.img}

@@ -110,7 +110,7 @@ const SideBar = () => {
 
             {/* 2nd column content here */}
             <>
-            <div className="w-[270px] h-[90vh] overflow-y-scroll custom-scrollbar">
+            <div className="w-[270px] h-[100vh] overflow-y-scroll custom-scrollbar">
             
             {activeComponent === 'DemoVideo' && <DemoVideo />}
             {activeComponent === 'DemoImage' && <DemoImage />}
