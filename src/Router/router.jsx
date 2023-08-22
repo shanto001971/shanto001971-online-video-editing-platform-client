@@ -6,13 +6,13 @@ import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
 import DashboardPage from "../Components/LayOut/Dashboard/DashboardPage";
 import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideoEditor";
-// import ErrorPage from './../Components/Pages/ErrorPage';
+import ErrorPage from './../Components/Pages/ErrorPage';
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <LayOut />,
-        // errorElement:<ErrorPage/>,
+        errorElement:<ErrorPage/>,
         children: [
             {
                 path: "/",

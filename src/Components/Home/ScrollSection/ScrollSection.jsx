@@ -10,7 +10,7 @@ const ScrollSection = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const imageIndex = Math.floor(scrollPosition / window.innerHeight) % images.length;
+    const imageIndex = Math.round(scrollPosition / window.innerHeight) % images.length;
     setCurrentImageIndex(imageIndex);
   };
 

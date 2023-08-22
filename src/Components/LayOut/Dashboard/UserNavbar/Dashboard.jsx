@@ -13,7 +13,7 @@ const Dashboard = () => {
         {/* Logo Section */}
         <div className="flex items-center">
           <Link to="/" title="Home">
-            <img src={logoCopy} alt="logo" className=" w-16 rounded-full" />
+            <img src={logoCopy} alt="logo" className=" w-16 rounded-full ml-2" />
           </Link>
           Projects
         </div>

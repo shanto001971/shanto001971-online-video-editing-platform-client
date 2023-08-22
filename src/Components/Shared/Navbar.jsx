@@ -31,7 +31,7 @@ const Navbar = () => {
   }
   
   return (
-    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 sticky top-0 z-10 bg-transparent backdrop-blur-md">
+    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  md:px-24 sticky top-0 z-10 bg-transparent backdrop-blur-md">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
