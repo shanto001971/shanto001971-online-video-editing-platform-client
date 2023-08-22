@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowUpRight, BsFilter } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
@@ -6,16 +5,19 @@ import { FaCrown } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages } from "../../../../features/demoImages/demoImagesSlice";
+import Loader from "../../../Loader/Loader";
 
 const DemoTemplate = () => {
   const { isLoading, images, error } = useSelector((state) => state.images);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchImages())
+    dispatch(fetchImages());
   }, [dispatch]);
 
-  const templateCategoryData = images.find((item) => item.category === "template");
+  const templateCategoryData = images.find(
+    (item) => item.category === "template"
+  );
 
   let templateData = [];
   if (templateCategoryData) {
@@ -65,26 +67,31 @@ const DemoTemplate = () => {
         <AiOutlinePlus />
         <p className="text-xs font-medium">Add blank scene</p>
       </div>
-      {templateData && templateData.map((item, index) => (
-        <div className="group" key={index}>
-          <img
-            className="group-hover:scale-105 transition-transform"
-            src={item.img}
-            alt=""
-          />
-          <div className="flex justify-between items-center px-1">
-            <p className="text-xs font-semibold text-gray-600 mt-1 mb-4">
-              {item.title}
-            </p>
-            <div className="flex items-center gap-1">
-              <p className="text-xs font-semibold hidden group-hover:block">
-                Use
+
+      {isLoading && <Loader />}
+      {error && <h6 className="text-sm text-red-600">{error.message}</h6>}
+
+      {templateData &&
+        templateData.map((item, index) => (
+          <div className="group" key={index}>
+            <img
+              className="group-hover:scale-105 transition-transform"
+              src={item.img}
+              alt=""
+            />
+            <div className="flex justify-between items-center px-1">
+              <p className="text-xs font-semibold text-gray-600 mt-1 mb-4">
+                {item.title}
               </p>
-              <BsArrowUpRight className="hidden group-hover:block" />
+              <div className="flex items-center gap-1">
+                <p className="text-xs font-semibold hidden group-hover:block">
+                  Use
+                </p>
+                <BsArrowUpRight className="hidden group-hover:block" />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
     </>
   );
 };

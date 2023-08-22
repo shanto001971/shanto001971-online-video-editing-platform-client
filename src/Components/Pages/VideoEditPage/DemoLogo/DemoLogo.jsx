@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
-import { BsFilter } from "react-icons/bs";
-import { CiSearch } from "react-icons/ci";
+import React, { useEffect } from "react";
 import { FaCrown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages } from "../../../../features/demoImages/demoImagesSlice";
+import { CiSearch } from "react-icons/ci";
+import { BsFilter } from "react-icons/bs";
+import { AiOutlinePlus } from "react-icons/ai";
 import Loader from "../../../Loader/Loader";
 
-const DemoImage = () => {
+const DemoLogo = () => {
   const { isLoading, images, error } = useSelector((state) => state.images);
   const dispatch = useDispatch();
 
@@ -15,21 +15,22 @@ const DemoImage = () => {
     dispatch(fetchImages());
   }, [dispatch]);
 
-  const imageCategoryData = images.find((item) => item.category === "images");
+  const logoCategoryData = images.find((item) => item.category === "logos");
 
-  let imageData = [];
-  if (imageCategoryData) {
-    imageData = imageCategoryData.data?.map((object) => ({
-      image: object.image,
+  let logoData = [];
+  if (logoCategoryData) {
+    logoData = logoCategoryData.data?.map((object) => ({
+      img: object.img,
     }));
   } else {
     console.log("Image category data not found in the data array");
   }
 
+  //console.log("logo Data", logoData);
   return (
     <>
       <div className="flex justify-between items-center my-4">
-        <h6 className="text-sm font-semibold">Add Image</h6>
+        <h6 className="text-sm font-semibold">Add Logo</h6>
         <div className="text-pink-700 flex items-center gap-[2px] bg-pink-100 px-2 rounded-sm cursor-pointer">
           <FaCrown className="text-xs" />
           <p className="text-[10px] font-semibold">Remove watermark</p>
@@ -54,13 +55,13 @@ const DemoImage = () => {
       {error && <h6 className="text-sm text-red-600">{error.message}</h6>}
 
       <div className="grid grid-cols-2 gap-2">
-        {imageData &&
-          imageData.map((item, index) => (
+        {logoData &&
+          logoData.map((item, index) => (
             <div key={index} className="group relative">
               <img
                 title="Drag and drop on canvas"
                 className="h-20 w-full group-hover:scale-105 transition-transform rounded-sm"
-                src={item?.image}
+                src={item?.img}
                 alt=""
               />
               <AiOutlinePlus
@@ -74,4 +75,4 @@ const DemoImage = () => {
   );
 };
 
-export default DemoImage;
+export default DemoLogo;
