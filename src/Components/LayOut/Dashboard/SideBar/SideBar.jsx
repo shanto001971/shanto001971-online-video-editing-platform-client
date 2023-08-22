@@ -13,6 +13,10 @@ import DemoImage from "../../../Pages/VideoEditPage/DemoImage/DemoImage";
 import DemoMusic from "../../../Pages/VideoEditPage/DemoMusic/DemoMusic";
 import DemoTemplate from "../../../Pages/VideoEditPage/DemoTemplate/DemoTemplate";
 import './Sidebar.css'
+import DemoText from "../../../Pages/VideoEditPage/DemoText/DemoText";
+import DemoLogo from "../../../Pages/VideoEditPage/DemoLogo/DemoLogo";
+import DemoElement from "../../../Pages/VideoEditPage/DemoElement/DemoElement";
+import More from "../../../Pages/VideoEditPage/More/More";
 
 const SideBar = () => {
   const [activeComponent, setActiveComponent] = useState('DemoVideo'); //by default component uses active component
@@ -71,21 +75,21 @@ const SideBar = () => {
                   </span>
                 </button>
 
-                <button className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
+                <button onClick={() => handleButtonClick('DemoText')} className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
                   <RxText className="text-[20px] sm:text-[28px] group-hover:scale-95" />
                   <span className="text-[8px] sm:text-[10px] font-medium">
                     Text
                   </span>
                 </button>
 
-                <button className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
+                <button onClick={() => handleButtonClick('DemoLogo')} className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
                   <TbMoodEdit className="text-[20px] sm:text-[28px] group-hover:scale-95" />
                   <span className="text-[8px] sm:text-[10px] font-medium">
                     Logo
                   </span>
                 </button>
 
-                <button className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
+                <button onClick={() => handleButtonClick('DemoElement')} className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
                   <SiSemanticrelease className="text-[20px] sm:text-[28px]  group-hover:scale-95" />
                   <span className="text-[8px] sm:text-[10px] font-medium">
                     Elements
@@ -99,7 +103,7 @@ const SideBar = () => {
                   </span>
                 </button>
 
-                <button className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
+                <button onClick={() => handleButtonClick('More')} className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group">
                   <BsThreeDots className="text-[20px] sm:text-[28px] group-hover:scale-95" />
                   <span className="text-[8px] sm:text-[10px] font-medium">
                     More
@@ -116,6 +120,10 @@ const SideBar = () => {
             {activeComponent === 'DemoImage' && <DemoImage />}
             {activeComponent === 'DemoMusic' && <DemoMusic />}
             {activeComponent === 'DemoTemplate' && <DemoTemplate />}
+            {activeComponent === 'DemoText' && <DemoText />}
+            {activeComponent === 'DemoLogo' && <DemoLogo />}
+            {activeComponent === 'DemoElement' && <DemoElement />}
+            {activeComponent === 'More' && <More />}
             </div>
             </>
           </ul>
