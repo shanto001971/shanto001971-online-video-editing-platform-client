@@ -17,6 +17,7 @@ import DemoText from "../../../Pages/VideoEditPage/DemoText/DemoText";
 import DemoLogo from "../../../Pages/VideoEditPage/DemoLogo/DemoLogo";
 import DemoElement from "../../../Pages/VideoEditPage/DemoElement/DemoElement";
 import More from "../../../Pages/VideoEditPage/More/More";
+import { Outlet } from "react-router-dom";
 
 const SideBar = () => {
   const [activeComponent, setActiveComponent] = useState('DemoVideo'); //by default component uses active component
@@ -29,8 +30,9 @@ const SideBar = () => {
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
+        <div className="drawer-content flex flex-col items-center mt-10">
           {/* Page content here */}
+          <Outlet/>
           <label
             htmlFor="my-drawer-2"
             className="btn btn-primary px-8 py-3 font-semibold rounded bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-gray-100
