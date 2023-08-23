@@ -25,7 +25,7 @@ const VideoLayout = () => {
 					muted
 					playsInline
 					preload="auto"
-					className=" md:h-[300px] w-[100vw]"
+					className="md:h-[300px] w-[100vw]"
 				>
 					<source className="w-full" src={video} type="video/mp4" />
 				</video>
