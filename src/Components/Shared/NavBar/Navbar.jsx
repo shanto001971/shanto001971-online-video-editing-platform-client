@@ -149,6 +149,17 @@ const Navbar = () => {
               Pricing
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/about"
+              title="About"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+              About
+            </NavLink>
+          </li>
         </ul>
 
         <ul className="items-center hidden space-x-8 lg:flex  text-gray-400 font-semibold text-xl">
@@ -277,41 +288,32 @@ const Navbar = () => {
                     {/* Conditional rendering login and logout */}
 
                     {user ? (
-                      <>
-                        <img
-                          title={user?.displayName}
-                          style={{
-                            width: "40px",
-                            borderRadius: "50%",
-                            marginLeft: "7px",
-                          }}
-                          src={user.photoURL}
-                          alt=""
-                        />
-                        <button
-                          onClick={handleLogOut}
-                          className="text-[16px] text-gray-500  default"
-                        >
-                          Logout
-                        </button>
-                      </>
-                    ) : (
-                      <>
-                        <li>
-                          <NavLink
-                            to="/login"
-                            title="Log In"
-                            className={({ isActive }) =>
-                              isActive
-                                ? "text-[16px] text-black font-bold"
-                                : "default text-[16px]"
-                            }
-                          >
-                            Login
-                          </NavLink>
-                        </li>
-                      </>
-                    )}
+            <>
+              <UserModal handleLogOut={handleLogOut}/>{" "}
+              <button
+                onClick={handleLogOut}
+                className="text-[16px] text-gray-500  default"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <li>
+                <NavLink
+                  to="/login"
+                  title="Log In"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[16px] text-black font-bold"
+                      : "default text-[16px]"
+                  }
+                >
+                  Login
+                </NavLink>
+              </li>
+            </>
+          )}
                   </ul>
                 </nav>
               </div>
