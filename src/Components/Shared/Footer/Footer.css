@@ -1,0 +1,45 @@
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+}
+footer{
+    position: relative;
+    width: 100%;
+    
+    height: 100px;
+    padding: 20px 50px;
+}
+footer .wave{
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    margin-top:20px;
+    left: 0;
+    height: 100px;
+background:  url(../../../assets/wave.png);    
+    background-size: 1000px 100px;
+}
+footer .wave{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite ;
+}
+ 
+@keyframes animateWave{
+0%{
+    background-position: 1000px;
+}
+100%{
+    background-position: 0px;
+}
+
+} */

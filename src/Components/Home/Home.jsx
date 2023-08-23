@@ -1,4 +1,5 @@
 import Banner from '../BannerSection/Banner';
+import EndBanner from '../EndBanner/EndBanner';
 import Timeline from '../Pages/Timeline/Timeline';
 import VideoLayout from '../Pages/VideoLayout/VideoLayout';
 import SideIcon from '../SideIcon/SideIcon';
@@ -18,6 +19,7 @@ const Home = () => {
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
 			<SideIcon />
+			<EndBanner/>
 		</div>
 	);
 };

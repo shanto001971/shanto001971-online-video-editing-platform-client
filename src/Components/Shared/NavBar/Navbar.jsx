@@ -1,16 +1,17 @@
-import {  useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
-import { AuthContext } from "../../providers/AuthProvider";
+import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import UserModal from "./UserModal";
 // import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
-  const {user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const toggleTools = () => {
     setIsToolsOpen(!isToolsOpen);
@@ -18,25 +19,25 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut()
-    .then(() => {
-      Swal.fire({
-        position: 'top-center',
-        icon: 'success',
-        title: 'Logout successfull',
-        showConfirmButton: false,
-        timer: 1500
+      .then(() => {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Logout successfull",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
-    })
-    .catch(error => console.log(error))
-  }
-  
+      .catch((error) => console.log(error));
+  };
+
   return (
-    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 sticky top-0 z-10 bg-transparent backdrop-blur-md">
+    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  md:px-24 sticky top-0 z-10 bg-transparent backdrop-blur-md">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
           <img src={logo} alt="logo" className=" w-20 rounded-full" />
-         
+
           <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Motion Mingle
           </span>
@@ -51,7 +52,7 @@ const Navbar = () => {
                 isActive ? "text-xl text-black font-bold" : "default"
               }
             >
-             Templates
+              Templates
             </NavLink>
           </li>
           {/* tool section working start =================== */}
@@ -63,45 +64,44 @@ const Navbar = () => {
                 isActive ? "text-xl text-black font-bold" : "default"
               }
             >
-             Tools
-             {isToolsOpen && (
-            <ul className="tools-dropdown absolute left-0 right-0 flex-column justify-center pt-5 bg-[#1D232A]">
-             
-             <li className="text-center">
-            <NavLink
-              to="/onlinevideo"
-              title=" Online video editor"
-              className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
-              }
-            >
-             Online video editor
-            </NavLink>
-          </li>
-          <li className="py-3 text-center">
-            <NavLink
-              to="/ Onlinevideoedit"
-              title=" Online video edit"
-              className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
-              }
-            >
-             Video Crop
-            </NavLink>
-          </li>
-          <li className="text-center pb-3">
-            <NavLink
-              to="/ Onlinevideoedit"
-              title=" Online video edit"
-              className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
-              }
-            >
-             Video Merge
-            </NavLink>
-          </li>
-            </ul>
-            )}
+              Tools
+              {isToolsOpen && (
+                <ul className="tools-dropdown absolute left-0 right-0 flex-column justify-center pt-5 bg-[#1D232A]">
+                  <li className="text-center">
+                    <NavLink
+                      to="/onlinevideo"
+                      title=" Online video editor"
+                      className={({ isActive }) =>
+                        isActive ? "text-xl text-black font-bold" : "default"
+                      }
+                    >
+                      Online video editor
+                    </NavLink>
+                  </li>
+                  <li className="py-3 text-center">
+                    <NavLink
+                      to="/ Onlinevideoedit"
+                      title=" Online video edit"
+                      className={({ isActive }) =>
+                        isActive ? "text-xl text-black font-bold" : "default"
+                      }
+                    >
+                      Video Crop
+                    </NavLink>
+                  </li>
+                  <li className="text-center pb-3">
+                    <NavLink
+                      to="/ Onlinevideoedit"
+                      title=" Online video edit"
+                      className={({ isActive }) =>
+                        isActive ? "text-xl text-black font-bold" : "default"
+                      }
+                    >
+                      Video Merge
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
             </NavLink>
           </li>
           {/* tool section working end ===================== */}
@@ -134,7 +134,8 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? "text-xl text-black font-bold" : "default"
               }
-            >Support
+            >
+              Support
             </NavLink>
           </li>
           <li>
@@ -151,42 +152,35 @@ const Navbar = () => {
         </ul>
 
         <ul className="items-center hidden space-x-8 lg:flex  text-gray-400 font-semibold text-xl">
-         
-  {/* Conditional rendering login and logout */}
+          {/* Conditional rendering login and logout */}
 
-  {
-            user ? <>
-             <img title={user?.displayName} style={{width:"40px", borderRadius:'50%', marginLeft:'7px'}} src={user.photoURL} alt="" />
-            <button onClick={handleLogOut} className="text-[16px] text-gray-500  default">Logout</button>
-            
-            </> 
-            
-            : <>
-            <li>
-            <NavLink
-              to="/login"
-              title="Log In"
-              className={({ isActive }) => (isActive ? "text-[16px] text-black font-bold" : "default text-[16px]")}
-            >
-              Login
-            </NavLink>
-          </li>
-
-            { <li>
-            <NavLink
-              to="/register"
-              title="Sign Up"
-              className={({ isActive }) => (isActive ? "text-[16px] text-gray-400  font-bold" : "default text-[16px]")}
-            >
-              Sign Up
-            </NavLink>
-          </li> }
-
+          {user ? (
+            <>
+              <UserModal handleLogOut={handleLogOut}/>{" "}
+              <button
+                onClick={handleLogOut}
+                className="text-[16px] text-gray-500  default"
+              >
+                Logout
+              </button>
             </>
-          }
-
-
-
+          ) : (
+            <>
+              <li>
+                <NavLink
+                  to="/login"
+                  title="Log In"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[16px] text-black font-bold"
+                      : "default text-[16px]"
+                  }
+                >
+                  Login
+                </NavLink>
+              </li>
+            </>
+          )}
         </ul>
         {/* Mobile Navbar Section */}
         <div className="lg:hidden">
@@ -214,10 +208,10 @@ const Navbar = () => {
                         alt="logo"
                         className="w-14  rounded-full"
                       />
-                      
+
                       <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Motion Mingle
-          </span>
+                        Motion Mingle
+                      </span>
                     </NavLink>
                   </div>
                   {/* Dropdown menu close button */}
@@ -239,9 +233,7 @@ const Navbar = () => {
                         to="/templates"
                         title="Templates"
                         className={({ isActive }) =>
-                          isActive
-                            ? "text-xl text-black font-bold"
-                            : "default"
+                          isActive ? "text-xl text-black font-bold" : "default"
                         }
                       >
                         Templates
@@ -253,9 +245,7 @@ const Navbar = () => {
                         to="/explore"
                         title="Explore"
                         className={({ isActive }) =>
-                          isActive
-                            ? "text-xl text-black font-bold"
-                            : "default"
+                          isActive ? "text-xl text-black font-bold" : "default"
                         }
                       >
                         Explore
@@ -266,9 +256,7 @@ const Navbar = () => {
                         to="/learn"
                         title="Learn"
                         className={({ isActive }) =>
-                          isActive
-                            ? "text-xl text-black font-bold"
-                            : "default"
+                          isActive ? "text-xl text-black font-bold" : "default"
                         }
                       >
                         Learn
@@ -279,49 +267,51 @@ const Navbar = () => {
                         to="/support"
                         title="Support"
                         className={({ isActive }) =>
-                          isActive
-                            ? "text-xl text-black font-bold"
-                            : "default"
+                          isActive ? "text-xl text-black font-bold" : "default"
                         }
                       >
                         Support
                       </NavLink>
                     </li>
-                    
 
-            {/* Conditional rendering login and logout */}
+                    {/* Conditional rendering login and logout */}
 
-            {
-            user ? <>
-             <img title={user?.displayName} style={{width:"40px", borderRadius:'50%', marginLeft:'7px'}} src={user.photoURL} alt="" />
-            <button onClick={handleLogOut} className="text-[16px] text-gray-500  default">Logout</button>
-            
-            </> 
-            
-            : <>
-            <li>
-            <NavLink
-              to="/login"
-              title="Log In"
-              className={({ isActive }) => (isActive ? "text-[16px] text-black font-bold" : "default text-[16px]")}
-            >
-              Login
-            </NavLink>
-          </li>
-
-            { <li>
-            <NavLink
-              to="/register"
-              title="Sign Up"
-              className={({ isActive }) => (isActive ? "text-[16px] text-gray-400  font-bold" : "default text-[16px]")}
-            >
-              Sign Up
-            </NavLink>
-          </li> }
-
-            </>
-          }
-
+                    {user ? (
+                      <>
+                        <img
+                          title={user?.displayName}
+                          style={{
+                            width: "40px",
+                            borderRadius: "50%",
+                            marginLeft: "7px",
+                          }}
+                          src={user.photoURL}
+                          alt=""
+                        />
+                        <button
+                          onClick={handleLogOut}
+                          className="text-[16px] text-gray-500  default"
+                        >
+                          Logout
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          <NavLink
+                            to="/login"
+                            title="Log In"
+                            className={({ isActive }) =>
+                              isActive
+                                ? "text-[16px] text-black font-bold"
+                                : "default text-[16px]"
+                            }
+                          >
+                            Login
+                          </NavLink>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </nav>
               </div>
