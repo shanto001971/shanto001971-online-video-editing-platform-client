@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../Shared/Navbar";
-import Footer from "../Shared/Footer";
+import Footer from "../Shared/Footer/Footer";
+import Navbar from './../Shared/NavBar/Navbar';
 
 
 const LayOut = () => {
     return (
         <>
             <Navbar />
-      <div className="min-h-[calc(100vh-346px)]">
+      <div className="min-h-[calc(100vh-158px)]">
         <Outlet />
       </div>
       <Footer />

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFilter } from "react-icons/bs";
@@ -6,13 +5,14 @@ import { CiSearch } from "react-icons/ci";
 import { FaCrown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages } from "../../../../features/demoImages/demoImagesSlice";
+import Loader from "../../../Loader/Loader";
 
 const DemoImage = () => {
   const { isLoading, images, error } = useSelector((state) => state.images);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchImages())
+    dispatch(fetchImages());
   }, [dispatch]);
 
   const imageCategoryData = images.find((item) => item.category === "images");
@@ -49,23 +49,26 @@ const DemoImage = () => {
           <BsFilter className="-mt-5 text-xl text-gray-600 cursor-pointer" />
         </div>
       </div>
-      {isLoading && <h6>Loading....</h6>}
-      {error && <h6>{error.message}</h6>}
+
+      {isLoading && <Loader />}
+      {error && <h6 className="text-sm text-red-600">{error.message}</h6>}
+
       <div className="grid grid-cols-2 gap-2">
-        {imageData && imageData.map((item, index) => (
-          <div key={index} className="group relative">
-            <img
-              title="Drag and drop on canvas"
-              className="h-20 w-full group-hover:scale-105 transition-transform rounded-sm"
-              src={item?.image}
-              alt=""
-            />
-            <AiOutlinePlus
-              title="Drag and drop on canvas"
-              className="absolute ml-[110px] bottom-1 z-10 hidden text-white  group-hover:block text-xl"
-            />
-          </div>
-        ))}
+        {imageData &&
+          imageData.map((item, index) => (
+            <div key={index} className="group relative">
+              <img
+                title="Drag and drop on canvas"
+                className="h-20 w-full group-hover:scale-105 transition-transform rounded-sm"
+                src={item?.image}
+                alt=""
+              />
+              <AiOutlinePlus
+                title="Drag and drop on canvas"
+                className="absolute ml-[110px] bottom-1 z-10 hidden text-white  group-hover:block text-xl"
+              />
+            </div>
+          ))}
       </div>
     </>
   );

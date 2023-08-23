@@ -4,14 +4,17 @@ import logo_2 from '../../../../public/logo-2.png'
 import logo_3 from '../../../../public/logo-3.png'
 import './OnlineVideoEditor.css';
 import { FaArrowRight } from 'react-icons/fa';
+import SwiperSection from './SwiperSection/SwiperSection';
+import CreateDemoVideo from './CreateDemoVideo/CreateDemoVideo';
+import Tools from './Tools/Tools';
 const OnlineVideoEditor = () => {
 
     return (
-        <div className=' '>
+        <>
             
-           <div className='flex flex-col lg:flex-row w-full linear_bg'>
+           <div className='flex flex-col lg:flex-row w-full linear_bg px-5 md:px-20' >
             {/* left div content */}
-                <div className='w-full lg:w-1/2  flex items-center justify-center'>
+                <div className='w-full lg:w-5/12  flex items-center justify-left'>
                     <div className=''>
                     <h2 className='text-black text-[58px] font-bold text-left leading-tight'>
                        Free Online <br /> Video Editor
@@ -33,8 +36,8 @@ const OnlineVideoEditor = () => {
                     </div>
                 </div>
                 {/* right div image */}
-                <div className='w-full lg:w-1/2'>
-                    <img src={video_editor} alt="" />
+                <div className='w-full lg:w-7/12'>
+                    <img className='w-full' src={video_editor} alt="" />
                 </div>
            </div>
 
@@ -47,7 +50,16 @@ const OnlineVideoEditor = () => {
                </div>
             </div>
 
-        </div>
+            {/* ohters components */}
+
+            <SwiperSection></SwiperSection>
+
+            <CreateDemoVideo></CreateDemoVideo>
+
+            <Tools></Tools>
+
+
+        </>
     );
 };
 
