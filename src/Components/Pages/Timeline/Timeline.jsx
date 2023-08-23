@@ -5,20 +5,21 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaReact } from 'react-icons/fa';
-import './Timeline.css';
+// import './Timeline.css';
 
 const Timeline = () => {
 	return (
-		<div className="bg-gray-300">
-			<VerticalTimeline>
+		<div>
+			<VerticalTimeline lineColor="gray">
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					contentStyle={{
-						background: 'rgb(33, 150, 243)',
-						color: '#fff',
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
 					}}
 					contentArrowStyle={{
-						borderRight: '7px solid  rgb(33, 150, 243)',
+						borderRight: '10px solid #E0E8FA',
 					}}
 					date="2011 - present"
 					iconStyle={{
@@ -40,6 +41,14 @@ const Timeline = () => {
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
 					date="2010 - 2011"
 					iconStyle={{
 						background: 'rgb(33, 150, 243)',
@@ -55,15 +64,24 @@ const Timeline = () => {
 					</h4>
 					<p>
 						Creative Direction, User Experience, Visual Design, SEO,
-						Online Marketing
+						Online Marketing.
 					</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
 					date="2008 - 2010"
 					iconStyle={{
 						background: 'rgb(33, 150, 243)',
 						color: '#fff',
+						lineColor: 'gray',
 					}}
 					icon={<FaReact />}
 				>
@@ -77,6 +95,14 @@ const Timeline = () => {
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
 					date="2006 - 2008"
 					iconStyle={{
 						background: 'rgb(33, 150, 243)',
@@ -94,6 +120,14 @@ const Timeline = () => {
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
 					date="April 2013"
 					iconStyle={{
 						background: 'rgb(233, 30, 99)',
@@ -111,6 +145,14 @@ const Timeline = () => {
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
 					date="November 2012"
 					iconStyle={{
 						background: 'rgb(233, 30, 99)',
@@ -128,6 +170,14 @@ const Timeline = () => {
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
 					date="2002 - 2006"
 					iconStyle={{
 						background: 'rgb(233, 30, 99)',
