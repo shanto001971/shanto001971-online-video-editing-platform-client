@@ -59,38 +59,45 @@ const VideoPlayer = () => {
                     </div>
                 </div>
 
-                <div className="mt-2 flex">
-                    <div className="bg-indigo-500 h-10 w-32 rounded-lg flex items-center gap-2 p-2 text-slate-300">
+                <div className="mt-1 flex gap-5">
+                    <div className="bg-indigo-500 hover:bg-indigo-600 h-10 w-28 rounded-t-lg flex items-center gap-2 p-2 text-slate-300">
                         <DiHtml53DEffects className="w-5" />
                         <p>Effects</p>
                     </div>
-                    <div className="bg-green-400 h-10 w-32 rounded-lg flex items-center gap-2 p-2 ">
+                    <div className="bg-green-400 hover:bg-green-500 h-10 w-28 rounded-t-lg flex items-center gap-2 p-2 ">
                         <GoVideo />
                         <p>Video</p>
                     </div>
-                    <div className="bg-red-400 h-10 w-32 rounded-lg flex items-center gap-2 p-2">
+                    <div className="bg-red-400 hover:bg-red-500 h-10 w-28 rounded-t-lg flex items-center gap-2 p-2">
                         <BsEmojiHeartEyes />
                         <p>Emoji</p>
                     </div>
-                    <div className="bg-blue-500 h-10 w-32 rounded-lg flex items-center gap-2 p-2 ">
+                    <div className="bg-blue-500 hover:bg-blue-600 h-10 w-28 rounded-t-lg flex items-center gap-2 p-2 ">
                         <MdOutlineAudiotrack />
                         <p>Audio</p>
                     </div>
-                    <div className="bg-amber-300 h-10 w-32 rounded-lg flex items-center gap-2 p-2">
+                    <div className="bg-amber-300 hover:bg-amber-400 h-10 w-28 rounded-t-lg flex items-center gap-2 p-2">
                         <PiTextAaBold />
                         <p>Text</p>
                     </div>
                 </div>
 
-                <div className=" bg-black mt-2 flex items-center gap-1 p-2 rounded-lg">
+                <div className="bg-black rounded-b- h-40">
+                    <div className="   flex items-center gap-1 p-2 ">
                         <img className="w-20 h-20" src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX" alt="" />
-                        <AiOutlinePlusSquare className="text-white"/>
+                        <AiOutlinePlusSquare className="text-white" />
                         <img className="w-20 h-20" src="https://imgv3.fotor.com/images/blog-cover-image/Image-Upscaler-2.jpg" alt="" />
-                        <AiOutlinePlusSquare className="text-white"/>
+                        <AiOutlinePlusSquare className="text-white" />
                         <img className="w-20 h-20" src="https://pixlr.com/images/index/remove-bg.webp" alt="" />
-                        <AiOutlinePlusSquare className="text-white"/>
+                        <AiOutlinePlusSquare className="text-white" />
                         <img className="w-20 h-20" src="https://blog.hootsuite.com/wp-content/uploads/2020/02/Image-copyright-556x556.png" alt="" />
-                        <AiOutlinePlusSquare className="text-white"/>
+                        <AiOutlinePlusSquare className="text-white" />
+                    </div>
+                    <div className="h-5 w-full flex px-2">
+                        <img className="h-5 w-1/2 rounded-sm" src="https://ak6.picdn.net/shutterstock/videos/24231536/thumb/11.jpg" alt="" />
+                        <AiOutlinePlusSquare className="text-white" />
+                        <img className="h-5 w-1/2 rounded-sm" src="https://ak6.picdn.net/shutterstock/videos/24231536/thumb/11.jpg" alt="" />
+                    </div>
                 </div>
             </div>
         </div>
