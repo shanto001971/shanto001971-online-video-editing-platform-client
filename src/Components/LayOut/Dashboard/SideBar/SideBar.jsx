@@ -7,7 +7,7 @@ import { TbMoodEdit } from "react-icons/tb";
 import { SiSemanticrelease } from "react-icons/si";
 import { GoProjectTemplate } from "react-icons/go";
 import { BsThreeDots } from "react-icons/bs";
-import { useState } from "react";
+import {  useState } from "react";
 import DemoVideo from "../../../Pages/VideoEditPage/DemoVideo/DemoVideo";
 import DemoImage from "../../../Pages/VideoEditPage/DemoImage/DemoImage";
 import DemoMusic from "../../../Pages/VideoEditPage/DemoMusic/DemoMusic";
@@ -26,6 +26,7 @@ const SideBar = () => {
     setActiveComponent(componentName);
   };
 
+  
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -33,13 +34,14 @@ const SideBar = () => {
         <div className="drawer-content items-center">
           {/* Page content here */}
           <Outlet/>
-          <label
+          {/* <label */}
+          {/* <label 
             htmlFor="my-drawer-2"
-            className="btn btn-primary px-8 py-3 font-semibold rounded bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-gray-100
+            className="btn btn-primary px-8 py-3 -mt font-semibold rounded bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-gray-100
             mt-6 mr-36 lg:hidden"
           >
             Open drawer
-          </label>
+          </label> */}
           
         </div>
         <div className="drawer-side ">
