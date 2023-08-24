@@ -30,7 +30,7 @@ const SideBar = () => {
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center mt-10">
+        <div className="drawer-content items-center">
           {/* Page content here */}
           <Outlet/>
           <label

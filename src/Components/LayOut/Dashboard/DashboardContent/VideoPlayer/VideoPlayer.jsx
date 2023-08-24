@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player";
 import "./VideoPlayer.css";
 import { useRef, useState } from "react";
-import { BsPlay, BsPause, BsEmojiHeartEyes } from 'react-icons/bs';
+import { BsPlay, BsPause, BsEmojiHeartEyes,BsPlusCircleDotted } from 'react-icons/bs';
 import { DiHtml53DEffects } from 'react-icons/Di';
 import { GoVideo } from 'react-icons/go';
 import { MdOutlineAudiotrack } from 'react-icons/md';
@@ -25,7 +25,8 @@ const VideoPlayer = () => {
     };
 
     return (
-        <div>
+        <div className="lg:flex gap-1">
+            
             <div className="w-full">
                 <div className="pt-10 bg-black  rounded-t-lg">
                     <div>
@@ -99,6 +100,15 @@ const VideoPlayer = () => {
                         <img className="h-5 w-1/2 rounded-sm" src="https://ak6.picdn.net/shutterstock/videos/24231536/thumb/11.jpg" alt="" />
                     </div>
                 </div>
+            </div>
+            
+
+            <div className="w-full h-screen bg-black rounded-lg p-2">
+                <div className="bg-slate-50 w-60 h-60 rounded-full mx-auto lg:mt-10 relative overflow-hidden">
+                    <BsPlusCircleDotted className="absolute top-[42%] left-[43%] w-10 h-10"/>
+
+                </div>
+                             grtawqet
             </div>
         </div>
     );
