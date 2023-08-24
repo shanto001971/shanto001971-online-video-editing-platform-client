@@ -50,7 +50,7 @@ class CreateDemoVideo extends Component {
     
     return (
         <div className='py-20 px-5 md:px-20 bg-[#F5F8FC]'>
-        <div className='text-center text-5xl py-10 text-black font-bold'>
+        <div className='text-center text-[42px] py-10 text-black font-bold'>
             <h2>How to create a video online?</h2>
         </div>
        <div className="create-demo-video grid grid-cols-1 md:grid-cols-2 gap-5">
