@@ -11,7 +11,7 @@ import UserModal from "./UserModal";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
-  const { user, logOut ,handleDrawerButton} = useContext(AuthContext);
+  const { user, logOut} = useContext(AuthContext);
 
   const toggleTools = () => {
     setIsToolsOpen(!isToolsOpen);

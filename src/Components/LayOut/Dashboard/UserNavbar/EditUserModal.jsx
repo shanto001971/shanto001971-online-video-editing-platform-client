@@ -32,7 +32,7 @@ const EditUserModal = ({ closeModal, isOpen,user}) => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-center align-middle shadow-xl transition-all'>
+                <Dialog.Panel className='w-screen max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-center align-middle shadow-xl transition-all'>
                 <RxCross1
                       className=' '
                       onClick={closeModal}
@@ -105,14 +105,7 @@ const EditUserModal = ({ closeModal, isOpen,user}) => {
           >
              FaQ
           </NavLink> </li>
-        <li> <NavLink
-            to="/logout"
-            title="Log Out"
-            className="hover:text-xl py-4 "
-
-          >
-            Log Out
-          </NavLink> </li>
+       
 </ul> 
                 </Dialog.Panel>
               </Transition.Child>
