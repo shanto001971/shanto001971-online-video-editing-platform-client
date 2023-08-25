@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import HoverVideoPlayer from "react-hover-video-player";
 import { CiSearch } from "react-icons/ci";
 import { BsFilter } from "react-icons/bs";
 import { FaCrown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVideos } from "../../../../features/demoVideos/demoVideosSlice";
+import Loader from "../../../Loader/Loader";
 
 const DemoVideo = () => {
   const { isLoading, videos, error } = useSelector((state) => state.videos);
@@ -48,8 +49,8 @@ const DemoVideo = () => {
           <BsFilter className="-mt-5 text-xl text-gray-600 cursor-pointer" />
         </div>
       </div>
-      {isLoading && <h6>Loading....</h6>}
-      {error && <h6>{error.message}</h6>}
+      {isLoading && <Loader />}
+      {error && <h6 className="text-sm text-red-600">{error.message}</h6>}
 
       <div className="grid grid-cols-2 gap-2 relative">
         {videoData &&

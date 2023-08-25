@@ -1,4 +1,7 @@
 import Banner from '../BannerSection/Banner';
+import VideoCropper from '../LayOut/Dashboard/VideoCropper/VideoCropper';
+import EndBanner from '../EndBanner/EndBanner';
+import Timeline from '../Pages/Timeline/Timeline';
 import VideoLayout from '../Pages/VideoLayout/VideoLayout';
 import SideIcon from '../SideIcon/SideIcon';
 import TemplateVideo from '../TemplateVideoSection/TemplateVideo';
@@ -12,10 +15,16 @@ const Home = () => {
 			<Banner />
 			<TemplateVideo />
 			<VoiceSection />
-			<AutoScroll/>
+			<AutoScroll />
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
-			<SideIcon/>
+			<SideIcon />
+
+			<Timeline />
+			<VideoLayout></VideoLayout>
+			<ScrollSection></ScrollSection>
+			<SideIcon />
+			<EndBanner />
 		</div>
 	);
 };

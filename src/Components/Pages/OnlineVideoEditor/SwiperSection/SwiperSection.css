@@ -1,0 +1,35 @@
+
+.image-container {
+  position: relative;
+  width: 327px; 
+  height: 218px; 
+  overflow: hidden;
+}
+
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  .mySwiper {
+    .swiper-slide {
+      width: 100%; 
+    }
+  }
+  .image-container {
+    position: relative;
+    width: 100%; 
+    
+    overflow: hidden;
+  }
+  
+}
+
+/* For tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mySwiper {
+    .swiper-slide {
+      width: 100%;  
+    }
+  }
+}
+
+ 

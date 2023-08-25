@@ -1,0 +1,12 @@
+
+.custom{
+    font-size: 2rem;
+}
+
+.border-left{
+    border-left: 4px solid rgb(52, 177, 226) ;
+    /* border-image:linear-gradient(180deg,#00cae0,#477df5) ; */
+    padding-left: 5px;
+}
+ 
+  
