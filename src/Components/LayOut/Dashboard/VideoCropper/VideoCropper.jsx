@@ -72,12 +72,12 @@ class VideoCropper extends React.Component {
         };
 
         return (
-            <div className='flex'>
+            <div className=''>
                 <div
                     onDrop={this.handleDrop}
                     onDragOver={this.handleDragOver}
                     style={{
-                        width: '200px',
+                        width: '800px',
                         height: '200px',
                         border: '2px dashed #ccc',
                         padding: '20px',
@@ -169,8 +169,8 @@ class VideoCropper extends React.Component {
                         </div>
                     </div>
                 ) : (
-                    <div style={{ width: '100%', maxWidth: '900px' }}>
-                        <video controls>
+                    <div >
+                        <video controls style={{ width: "800px", height: "300px" }}>
                             <source src="" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -205,7 +205,7 @@ class VideoCropper extends React.Component {
                         }}
                     >  <button className='ml-72 btn btn-circle btn-outline  btn-secondary ' onClick={this.handleCloseUploadModal}><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                         </button>
-                        <h2 className='font-bold flex gap-3' > <img src='' width={"40px"} alt="" /> Upload Your <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent'>  Media files</span>  </ h2>
+                        <h2 className='font-bold ' > <img src='' width={"40px"} alt="" /> Upload Your <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent'>  Media files</span>  </ h2>
                         <input type="file" accept="video/*"
                             onChange={this.handleUploadVideo} />
 
