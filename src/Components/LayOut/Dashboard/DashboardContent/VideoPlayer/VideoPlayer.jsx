@@ -11,6 +11,8 @@ import { GoFileMedia } from 'react-icons/go';
 import { FiLayers } from 'react-icons/fi';
 import { BiMicrophone } from 'react-icons/bi';
 import { FiMusic } from 'react-icons/fi';
+import { BsFullscreen } from 'react-icons/bs';
+import screenfull from 'screenfull';
 
 
 
@@ -18,7 +20,9 @@ const VideoPlayer = () => {
     const videoSource = "https://www.youtube.com/watch?v=61floBUAiTY&list=RDGMEM916WJxafRUGgOvd6dVJkeQVM61floBUAiTY&start_radio=1";
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
+    const [volume, setVolume] = useState(1);
     const [progress, setProgress] = useState(0);
+    const playerRef = useRef(null);
 
     const togglePlay = () => {
         setIsPlaying(!isPlaying);
@@ -32,32 +36,64 @@ const VideoPlayer = () => {
     const toggleMute = () => {
         setIsMuted(!isMuted);
     };
+    const handleVolumeChange = (value) => {
+        setVolume(value);
+        setIsMuted(false); // Unmute if volume is adjusted
+    };
+
+    const handleProgressVolume = (progress) => {
+        setProgress(progress.played * 100);
+    };
+
+    const toggleFullScreen = () => {
+        if (playerRef.current && screenfull.isEnabled) {
+            screenfull.toggle(playerRef.current.wrapper);
+          }
+    };
 
     return (
         <div className="lg:flex gap-1 ">
 
             <div className="w-full">
-                <div className="pt-10 bg-black  rounded-t-lg">
+                <div className="pt-10 bg-black rounded-t-lg">
                     <div>
-
                         <ReactPlayer
+                            ref={playerRef}
                             url={videoSource}
                             playing={isPlaying}
+                            volume={volume}
                             muted={isMuted}
                             onProgress={handleProgress}
-                            controls // Add controls to show player controls
-                        // className="w-20"
+                            controls
                         />
                     </div>
                 </div>
                 <div className="bg-black p-2 rounded-b-lg">
-                    <button className=" w-10 h-8 " onClick={togglePlay}>
-                        {isPlaying ? <BsPause className="text-white" /> : <BsPlay className="text-white" />}
+                    <div className="flex justify-between items-center">
+                        <div className="flex">
+                            <button className="w-10 h-8" onClick={togglePlay}>
+                                {isPlaying ? <BsPause className="text-white" /> : <BsPlay className="text-white" />}
+                            </button>
+                            <button className="w-10 h-8" onClick={toggleMute}>
+                                {isMuted ? <BsVolumeMute className="text-white" /> : <BsVolumeUp className="text-white" />}
+                            </button>
+                            <input
+                                type="range"
+                                min={0}
+                                max={1}
+                                step={0.01}
+                                value={volume}
+                                onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
+                                className="w-20"
+                            />
+                        </div>
+                        <div className="">
 
-                    </button>
-                    <button className="w-10 h-8" onClick={toggleMute}>
-                        {isMuted ? <BsVolumeMute className="text-white" /> : <BsVolumeUp className="text-white" />}
-                    </button>
+                            <button className="w-10 h-8" onClick={toggleFullScreen}>
+                                <BsFullscreen className="text-white" />
+                            </button>
+                        </div>
+                    </div>
                     <div className="progress">
                         <div
                             className="progress-bar"

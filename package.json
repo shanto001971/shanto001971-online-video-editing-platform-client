@@ -31,6 +31,7 @@
     "react-router-dom": "^6.14.2",
     "react-spinners": "^0.13.8",
     "react-vertical-timeline-component": "^3.6.0",
+    "screenfull": "^6.0.2",
     "sort-by": "^0.0.2",
     "sweetalert2": "^11.7.20",
     "swiper": "^10.2.0",
