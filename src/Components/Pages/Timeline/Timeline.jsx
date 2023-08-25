@@ -4,94 +4,60 @@ import {
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaReact } from 'react-icons/fa';
-// import './Timeline.css';
+import {
+	FaCut,
+	FaFilter,
+	FaHandScissors,
+	FaImage,
+	FaImages,
+	FaMusic,
+	FaReact,
+	FaTerminal,
+	FaTruckMoving,
+	FaTruckPickup,
+	FaUpload,
+	FaVideo,
+} from 'react-icons/fa';
+import './Timeline.css';
 
 const Timeline = () => {
 	return (
 		<div>
-			<VerticalTimeline lineColor="gray">
+			<h1 className="text-6xl font-bold text-center capitalize text-black mx-40 my-16">
+				The fastest, easiest way <br /> to create{' '}
+				<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+					pro-quality <br /> videos
+				</span>
+			</h1>
+			<VerticalTimeline lineColor="gray" className="timeline-container">
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					contentStyle={{
-						background: '#E0E8FA',
+						// background: '#E0E8FA',
+						background: '#9190F5',
 						color: 'black',
 						boxShadow: 'none',
 					}}
 					contentArrowStyle={{
-						borderRight: '10px solid #E0E8FA',
+						borderRight: '10px solid #9190F5',
 					}}
-					date="2011 - present"
 					iconStyle={{
-						background: 'rgb(33, 150, 243)',
-						color: '#fff',
-					}}
-					icon={<FaReact />}
-				>
-					<h3 className="vertical-timeline-element-title">
-						Creative Director
-					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						Miami, FL
-					</h4>
-					<p>
-						Creative Direction, User Experience, Visual Design,
-						Project Management, Team Leading
-					</p>
-				</VerticalTimelineElement>
-				<VerticalTimelineElement
-					className="vertical-timeline-element--work"
-					contentStyle={{
-						background: '#E0E8FA',
-						color: 'black',
-						boxShadow: 'none',
-					}}
-					contentArrowStyle={{
-						borderRight: '10px solid #E0E8FA',
-					}}
-					date="2010 - 2011"
-					iconStyle={{
-						background: 'rgb(33, 150, 243)',
-						color: '#fff',
-					}}
-					icon={<FaReact />}
-				>
-					<h3 className="vertical-timeline-element-title">
-						Art Director
-					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						San Francisco, CA
-					</h4>
-					<p>
-						Creative Direction, User Experience, Visual Design, SEO,
-						Online Marketing.
-					</p>
-				</VerticalTimelineElement>
-				<VerticalTimelineElement
-					className="vertical-timeline-element--work"
-					contentStyle={{
-						background: '#E0E8FA',
-						color: 'black',
-						boxShadow: 'none',
-					}}
-					contentArrowStyle={{
-						borderRight: '10px solid #E0E8FA',
-					}}
-					date="2008 - 2010"
-					iconStyle={{
-						background: 'rgb(33, 150, 243)',
+						background: '#BA51DD',
 						color: '#fff',
 						lineColor: 'gray',
 					}}
-					icon={<FaReact />}
+					icon={<FaCut />}
 				>
-					<h3 className="vertical-timeline-element-title">
-						Web Designer
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						Cut your video by just one click.
 					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						Los Angeles, CA
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
 					</h4>
-					<p>User Experience, Visual Design</p>
+					<p>Just Wow, isn't it?</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
@@ -103,23 +69,26 @@ const Timeline = () => {
 					contentArrowStyle={{
 						borderRight: '10px solid #E0E8FA',
 					}}
-					date="2006 - 2008"
 					iconStyle={{
-						background: 'rgb(33, 150, 243)',
+						background: '#BA51DD',
 						color: '#fff',
+						lineColor: 'gray',
 					}}
-					icon={<FaReact />}
+					icon={<FaHandScissors />}
 				>
-					<h3 className="vertical-timeline-element-title">
-						Web Designer
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						Trim your video by just one click.
 					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						San Francisco, CA
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
 					</h4>
-					<p>User Experience, Visual Design</p>
+					<p>Just Wow, isn't it?</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
-					className="vertical-timeline-element--education"
+					className="vertical-timeline-element--work"
 					contentStyle={{
 						background: '#E0E8FA',
 						color: 'black',
@@ -128,23 +97,26 @@ const Timeline = () => {
 					contentArrowStyle={{
 						borderRight: '10px solid #E0E8FA',
 					}}
-					date="April 2013"
 					iconStyle={{
-						background: 'rgb(233, 30, 99)',
+						background: '#BA51DD',
 						color: '#fff',
+						lineColor: 'gray',
 					}}
-					icon={<FaReact />}
+					icon={<FaFilter />}
 				>
-					<h3 className="vertical-timeline-element-title">
-						Content Marketing for Web, Mobile and Social Media
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						Make your video filtered by just one click.
 					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						Online Course
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
 					</h4>
-					<p>Strategy, Social Media</p>
+					<p>Just Wow, isn't it?</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
-					className="vertical-timeline-element--education"
+					className="vertical-timeline-element--work"
 					contentStyle={{
 						background: '#E0E8FA',
 						color: 'black',
@@ -153,23 +125,26 @@ const Timeline = () => {
 					contentArrowStyle={{
 						borderRight: '10px solid #E0E8FA',
 					}}
-					date="November 2012"
 					iconStyle={{
-						background: 'rgb(233, 30, 99)',
+						background: '#BA51DD',
 						color: '#fff',
+						lineColor: 'gray',
 					}}
-					icon={<FaReact />}
+					icon={<FaUpload />}
 				>
-					<h3 className="vertical-timeline-element-title">
-						Agile Development Scrum Master
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						You can upload a video of any size.
 					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						Certification
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
 					</h4>
-					<p>Creative Direction, User Experience, Visual Design</p>
+					<p>Just Wow, isn't it?</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
-					className="vertical-timeline-element--education"
+					className="vertical-timeline-element--work"
 					contentStyle={{
 						background: '#E0E8FA',
 						color: 'black',
@@ -178,21 +153,110 @@ const Timeline = () => {
 					contentArrowStyle={{
 						borderRight: '10px solid #E0E8FA',
 					}}
-					date="2002 - 2006"
 					iconStyle={{
-						background: 'rgb(233, 30, 99)',
+						background: '#BA51DD',
 						color: '#fff',
+						lineColor: 'gray',
 					}}
-					icon={<FaReact />}
+					icon={<FaTerminal />}
 				>
-					<h3 className="vertical-timeline-element-title">
-						Bachelor of Science in Interactive Digital Media Visual
-						Imaging
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						You can choose from our unlimited Templates.
 					</h3>
-					<h4 className="vertical-timeline-element-subtitle">
-						Bachelor Degree
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
 					</h4>
-					<p>Creative Direction, Visual Design</p>
+					<p>Just Wow, isn't it?</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
+					iconStyle={{
+						background: '#BA51DD',
+						color: '#fff',
+						lineColor: 'gray',
+					}}
+					icon={<FaVideo />}
+				>
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						We have more than thousands demo videos for you
+						completely Free.
+					</h3>
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
+					</h4>
+					<p>Just Wow, isn't it?</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
+					iconStyle={{
+						background: '#BA51DD',
+						color: '#fff',
+						lineColor: 'gray',
+					}}
+					icon={<FaMusic />}
+				>
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						We have more than thousands demo Musics completely Free
+						for you.
+					</h3>
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
+					</h4>
+					<p>Just Wow, isn't it?</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{
+						background: '#E0E8FA',
+						color: 'black',
+						boxShadow: 'none',
+					}}
+					contentArrowStyle={{
+						borderRight: '10px solid #E0E8FA',
+					}}
+					iconStyle={{
+						background: '#BA51DD',
+						color: '#fff',
+						lineColor: 'gray',
+					}}
+					icon={<FaImages />}
+				>
+					<h3 className="vertical-timeline-element-title text-2xl font-bold">
+						We have more than thousands demo Images completely Free
+						for you.
+					</h3>
+					<h4 className="vertical-timeline-element-subtitle pt-4">
+						Enhance your website's visual appeal with seamless video
+						cutting and editing. Our video editing services ensure
+						your content flows smoothly, engaging your audience from
+						start to finish.
+					</h4>
+					<p>Just Wow, isn't it?</p>
 				</VerticalTimelineElement>
 			</VerticalTimeline>
 		</div>

@@ -4,8 +4,8 @@ import EditUserModal from "./EditUserModal";
 // import { NavLink } from "react-router-dom";
 
 function UserButton({ user }) {
-  const [isOpen, setIsOpen] = useState(true)
-  const [modal, setModal] = useState(true)
+  const [isOpen, setIsOpen] = useState(false);
+  const [modal, setModal] = useState(false);
 
 
   const closeModal = () => {
@@ -28,7 +28,7 @@ function UserButton({ user }) {
           >
             {user?.displayName.slice(0, 1)}
           </div>
-          <BsChevronDown className=" text-gray-800 h-3 font-extrabold" />
+          <BsChevronDown className="hidden md:block text-gray-800 h-3 font-extrabold" />
         </li>
       )}</label>
   <EditUserModal isOpen={modal} user={user} closeModal={closeModal}/>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logoCopy from "../../../../assets/logoCopy.png";
 import { FiCornerUpLeft, FiCornerUpRight } from "react-icons/fi";
+import { BiMenu } from "react-icons/bi";
 import UserButton from "./UserButton";
 import CreateModal from "./CreateModal";
 import { AuthContext } from "../../../../providers/AuthProvider";
@@ -41,20 +42,21 @@ const Dashboard = () => {
             </NavLink>
           </li>
         </ul>
-          {/* Open Drawer Button */}
-          <label
-          htmlFor="my-drawer-2"
-          className="btn btn-primary p-1 py-4 font-semibold rounded bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-gray-100
-            sm:inline-block lg:hidden"
-        >
-          Open drawer
-        </label>
-        <ul className="items-center  lg:space-x-3 flex  text-gray-400 font-semibold text-xl">
+        
+        <ul className="items-center space-x-1  lg:space-x-3 flex  text-gray-400 font-semibold text-xl">
 
           <FiCornerUpLeft className="text-gray-500 hidden md:block" />
           <FiCornerUpRight className="text-gray-500 hidden md:block" />
           <CreateModal />
           <UserButton user={user} />
+            {/* Open Drawer Button */}
+            <label
+          htmlFor="my-drawer-2"
+          className="   rounded-full py-auto 
+            sm:inline-block lg:hidden"
+        >
+         <BiMenu className=" text-gray-500 h-12"/>
+        </label>
         </ul>
      {/* Conditional rendering of sidebar based on isSidebarOpen */}
      
