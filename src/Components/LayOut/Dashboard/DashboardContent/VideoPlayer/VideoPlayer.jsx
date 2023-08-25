@@ -17,7 +17,7 @@ import screenfull from 'screenfull';
 
 
 const VideoPlayer = () => {
-    const videoSource = "https://www.youtube.com/watch?v=61floBUAiTY&list=RDGMEM916WJxafRUGgOvd6dVJkeQVM61floBUAiTY&start_radio=1";
+    const videoSource = "https://v4.cdnpk.net/videvo_files/video/free/video0466/large_watermarked/_import_61490450321f37.49858282_FPpreview.mp4";
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const [volume, setVolume] = useState(1);
@@ -48,7 +48,7 @@ const VideoPlayer = () => {
     const toggleFullScreen = () => {
         if (playerRef.current && screenfull.isEnabled) {
             screenfull.toggle(playerRef.current.wrapper);
-          }
+        }
     };
 
     return (
@@ -147,7 +147,7 @@ const VideoPlayer = () => {
 
             <div className="w-full  bg-black rounded-lg p-2">
                 <div className="bg-slate-50 w-60 h-60 rounded-full mx-auto lg:mt-10 relative ">
-                    <BsPlusCircleDotted className="absolute top-[42%] left-[43%] w-10 h-10 " />
+                    <BsPlusCircleDotted className="absolute top-[42%] left-[43%] w-10 h-10 text-black" />
                     <div className="group text-black flex ">
                         <p className=" w-20 bg-gray-800 text-[8px] sm:text-[10px] font-bold pt-[14px] sm:pt-5 px-6 uppercase text-white hidden group-hover:block ease-out transition ">
                             Connect us
@@ -155,9 +155,9 @@ const VideoPlayer = () => {
                         <GoFileMedia className="absolute top-8 left-[45%] h-10 w-10  ease-out transition-all " />
                     </div>
 
-                    <FiLayers className="absolute top-[42%] left-8 h-10 w-10" />
-                    <BiMicrophone className="absolute bottom-8 left-[43%] h-10 w-10" />
-                    <FiMusic className="absolute top-[42%] right-8 h-10 w-10" />
+                    <FiLayers className="absolute top-[42%] left-8 h-10 w-10 text-black" />
+                    <BiMicrophone className="absolute bottom-8 left-[43%] h-10 w-10 text-black" />
+                    <FiMusic className="absolute top-[42%] right-8 h-10 w-10 text-black" />
                 </div>
                 <div className="">
                     <div className="text-center mt-5 mb-5">
