@@ -102,7 +102,7 @@ const VideoPlayer = () => {
                     </div>
                 </div>
 
-                <div className="mt-1 flex gap-5">
+                {/* <div className="mt-1 flex gap-5">
                     <div className="bg-indigo-500 hover:bg-indigo-600 h-10 w-28 rounded-t-lg flex items-center gap-2 p-2 text-slate-300">
                         <DiHtml53DEffects className="w-5" />
                         <p>Effects</p>
@@ -123,7 +123,7 @@ const VideoPlayer = () => {
                         <PiTextAaBold />
                         <p>Text</p>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="bg-black rounded-b- h-40">
                     <div className="   flex items-center gap-1 p-2 ">
