@@ -31,7 +31,7 @@ const SwiperSection = () => {
     return (
         <div className='bg-white py-10 px-5 md:px-20'>
         <div className='text-center py-20 pt-20'>
-            <h2 className='text-5xl text-black font-bold'>Meet your needs in every context</h2>
+            <h2 className='text-[42px] text-black font-bold'>Meet your needs in every context</h2>
             <p className='text-black'>Here are contexts where you can use Motion Mingle to create compelling videos that engage your viewers.</p>
         </div>
           <Swiper
@@ -46,9 +46,9 @@ const SwiperSection = () => {
           >
             <SwiperSlide>
               <div className='small_devices'>
-              <div className=' image-container'>
-                <div className='zoomable-image'>
-                <img src={slider_1} alt="" />
+              <div className=' '>
+                <div className='image-container rounded-xl relative overflow-hidden'>
+                <img className=' transition-transform transform scale-100 hover:scale-110 absolute inset-0  duration-300' src={slider_1} alt="" />
                 </div>
                 </div>
                 <div className='text-left'>
@@ -60,8 +60,8 @@ const SwiperSection = () => {
             <SwiperSlide>
             <div className=''>
               <div className=' image-container'>
-                <div className='zoomable-image'>
-                <img src={slider_2} alt="" />
+                <div className='image-container rounded-xl relative overflow-hidden'>
+                <img className=' transition-transform transform scale-100 hover:scale-110 absolute inset-0  duration-300' src={slider_2} alt="" />
                 </div>
                 </div>
                 <div className='text-left'>
@@ -73,8 +73,8 @@ const SwiperSection = () => {
             <SwiperSlide>
             <div className=''>
               <div className=' image-container'>
-                <div className='zoomable-image'>
-                <img src={slider_3} alt="" />
+                <div className='image-container rounded-xl relative overflow-hidden'>
+                <img className=' transition-transform transform scale-100 hover:scale-110 absolute inset-0  duration-300' src={slider_3} alt="" />
                 </div>
                 </div>
                 <div className='text-left'>
@@ -86,8 +86,8 @@ const SwiperSection = () => {
             <SwiperSlide>
             <div className=''>
               <div className=' image-container'>
-                <div className='zoomable-image'>
-                <img src={slider_4} alt="" />
+                <div className='image-container rounded-xl relative overflow-hidden'>
+                <img className=' transition-transform transform scale-100 hover:scale-110 absolute inset-0  duration-300' src={slider_4} alt="" />
                 </div>
                 </div>
                 <div className='text-left'>
@@ -99,8 +99,8 @@ const SwiperSection = () => {
             <SwiperSlide>
             <div className=''>
               <div className=' image-container'>
-                <div className='zoomable-image'>
-                <img src={slider_5} alt="" />
+                <div className='image-container rounded-xl relative overflow-hidden'>
+                <img className=' transition-transform transform scale-100 hover:scale-110 absolute inset-0  duration-300' src={slider_5} alt="" />
                 </div>
                 </div>
                 <div className='text-left'>
@@ -112,8 +112,8 @@ const SwiperSection = () => {
             <SwiperSlide>
             <div className=''>
               <div className=' image-container'>
-                <div className='zoomable-image'>
-                <img src={slider_6} alt="" />
+                <div className='image-container rounded-xl relative overflow-hidden'>
+                <img className=' transition-transform transform scale-100 hover:scale-110 absolute inset-0  duration-300' src={slider_6} alt="" />
                 </div>
                 </div>
                 <div className='text-left'>
