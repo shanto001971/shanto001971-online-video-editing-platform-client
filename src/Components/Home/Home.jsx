@@ -21,8 +21,6 @@ const Home = () => {
 			<SideIcon />
 
 			<Timeline />
-			<VideoLayout></VideoLayout>
-			<ScrollSection></ScrollSection>
 			<SideIcon />
 			<EndBanner />
 		</div>
