@@ -50,11 +50,11 @@ const EditFeaturesReverse = () => {
       {/* for mobile  */}
        <div  className='md:hidden'>
 
-<div className='max-w-screen-md m-3 tracking-wide'>
+<div className='max-w-screen-md md:m-3 tracking-wide'>
 
 <img src={img_8} alt="" className='object-fill pt-3 md:pt-7' />
 </div>
-<div className='max-w-screen-md m-3  tracking-wide'>
+<div className='max-w-screen-md md:m-3  tracking-wide'>
 <div className='flex justify-center gap-5 '>
     <span className='pt-3'> 
 <img src={text} alt="" /></span>
@@ -124,7 +124,7 @@ Remove video background to isolate people from the scene of a video or an image,
 </div>
   </div> 
       {/* Container Box */}
-      <div className=" flex max-w-screen-xl items-center overflow-hidden bg-white lg:flex-row min-h-[700px]">
+      <div className=" flex max-w-screen-xl items-center overflow-hidden bg-white lg:flex-row md:min-h-[700px]">
         {/* Image Container start*/}
         <div className=" lg:w-1/2 h-full hidden md:block">
           <img

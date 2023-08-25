@@ -6,7 +6,7 @@ const Topics = () => {
         <div className="bg-white px-5 md:px-20 py-20">
            <h2 className="text-center text-black text-[42px] font-bold">More topics on CapCut online video editor</h2>
            {/* flex container */}
-           <div className='flex flex-col md:flex-row gap-10 py-10'>
+           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-10'>
 
             <div>
                 <div className='w-[342px] h-[228px] rounded-xl relative overflow-hidden  '>
