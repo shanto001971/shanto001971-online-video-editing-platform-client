@@ -11,7 +11,7 @@ import tool_8 from '../../../../assets/tools_image/tools_8.webp';
 const Tools = () => {
     return (
         <div className="bg-white px-5 md:px-20">
-            <h2 className="text-center text-4xl font-bold text-black pt-20 pb-10">One-stop tools, professional videos</h2>
+            <h2 className="text-center text-[42px] font-bold text-black pt-20 pb-10">One-stop tools, professional videos</h2>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-center items-center pb-10 md:pb-40'>
             <vid className=" flex flex-col items-center py-16 rounded-2xl bg-[#F5F8FC] hover:scale-105 transform transition-transform duration-300">
                 <div className='w-[52px] pb-2'><img src={tool_1} alt="" /></div>

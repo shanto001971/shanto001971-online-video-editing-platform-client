@@ -7,7 +7,7 @@ import { TbMoodEdit } from "react-icons/tb";
 import { SiSemanticrelease } from "react-icons/si";
 import { GoProjectTemplate } from "react-icons/go";
 import { BsThreeDots } from "react-icons/bs";
-import { useState } from "react";
+import {  useState } from "react";
 import DemoVideo from "../../../Pages/VideoEditPage/DemoVideo/DemoVideo";
 import DemoImage from "../../../Pages/VideoEditPage/DemoImage/DemoImage";
 import DemoMusic from "../../../Pages/VideoEditPage/DemoMusic/DemoMusic";
@@ -18,28 +18,31 @@ import DemoLogo from "../../../Pages/VideoEditPage/DemoLogo/DemoLogo";
 import DemoElement from "../../../Pages/VideoEditPage/DemoElement/DemoElement";
 import More from "../../../Pages/VideoEditPage/More/More";
 import { Outlet } from "react-router-dom";
+import VideoCropper from "../VideoCropper/VideoCropper";
 
 const SideBar = () => {
-  const [activeComponent, setActiveComponent] = useState('DemoVideo'); //by default component uses active component
+  const [activeComponent, setActiveComponent] = useState('VideoCropper'); //by default component uses active component
 
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
   };
 
+  
   return (
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center mt-10">
+        <div className="drawer-content items-center">
           {/* Page content here */}
           <Outlet/>
-          <label
+          {/* <label */}
+          {/* <label 
             htmlFor="my-drawer-2"
-            className="btn btn-primary px-8 py-3 font-semibold rounded bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-gray-100
+            className="btn btn-primary px-8 py-3 -mt font-semibold rounded bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-gray-100
             mt-6 mr-36 lg:hidden"
           >
             Open drawer
-          </label>
+          </label> */}
           
         </div>
         <div className="drawer-side ">
@@ -49,7 +52,7 @@ const SideBar = () => {
             {/* Side icon bar here(1st column) */}
             <>
               <div className="flex flex-col gap-6 items-center justify-center border-r-[1px] w-[50px] sm:w-[60px] h-auto py-2 z-10 shadow-md">
-                <div className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group cursor-pointer">
+                <div onClick={() => handleButtonClick('VideoCropper')} className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group cursor-pointer">
                   <SlCloudUpload className="text-[20px] sm:text-[28px]  group-hover:scale-95" />
                   <span className="text-[8px] sm:text-[10px] font-medium">
                     Uploads
@@ -118,6 +121,8 @@ const SideBar = () => {
             <>
             <div className="w-[270px] h-[100vh] overflow-y-scroll custom-scrollbar">
             
+            {activeComponent === 'VideoCropper' && <VideoCropper />}
+
             {activeComponent === 'DemoVideo' && <DemoVideo />}
             {activeComponent === 'DemoImage' && <DemoImage />}
             {activeComponent === 'DemoMusic' && <DemoMusic />}

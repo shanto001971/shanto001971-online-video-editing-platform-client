@@ -22,7 +22,7 @@ const VoiceSection = () => {
       // data-aos-mirror="true"
       // data-aos-once="false"
       // data-aos-anchor-placement="top-center"
-      className="relative block md:flex justify-center items-center gap-8  my-16"
+      className="relative block md:flex justify-center items-center gap-8  my-16 px-2"
     >
       <div className="w-full md:w-[60%] md:h-[450px] lg:h-[600px] h-auto video-side px-4">
         <video

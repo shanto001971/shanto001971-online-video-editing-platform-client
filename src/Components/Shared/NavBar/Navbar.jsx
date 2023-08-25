@@ -11,7 +11,7 @@ import UserModal from "./UserModal";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut} = useContext(AuthContext);
 
   const toggleTools = () => {
     setIsToolsOpen(!isToolsOpen);
@@ -55,7 +55,7 @@ const Navbar = () => {
               Templates
             </NavLink>
           </li>
-          {/* tool section working start =================== */}
+          {/* tool section  start =================== */}
           <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
             <NavLink
               to="/Tools"
@@ -66,8 +66,8 @@ const Navbar = () => {
             >
               Tools
               {isToolsOpen && (
-                <ul className="tools-dropdown absolute left-0 right-0 flex-column justify-center pt-5 bg-[#1D232A]">
-                  <li className="text-center">
+                <ul className="tools-dropdown absolute flex-column justify-center pt-5 bg-[#1D232A]">
+                  <li className="text-left pe-10">
                     <NavLink
                       to="/onlinevideo"
                       title=" Online video editor"
@@ -78,7 +78,7 @@ const Navbar = () => {
                       Online video editor
                     </NavLink>
                   </li>
-                  <li className="py-3 text-center">
+                  <li className="py-3 text-left">
                     <NavLink
                       to="/ Onlinevideoedit"
                       title=" Online video edit"
@@ -89,7 +89,7 @@ const Navbar = () => {
                       Video Crop
                     </NavLink>
                   </li>
-                  <li className="text-center pb-3">
+                  <li className="text-left pb-3">
                     <NavLink
                       to="/ Onlinevideoedit"
                       title=" Online video edit"
@@ -104,7 +104,7 @@ const Navbar = () => {
               )}
             </NavLink>
           </li>
-          {/* tool section working end ===================== */}
+          {/* tool section end ===================== */}
           <li>
             <NavLink
               to="/explore"

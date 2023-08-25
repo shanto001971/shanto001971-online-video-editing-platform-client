@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logoCopy from "../../../../assets/logoCopy.png";
 import { FiCornerUpLeft, FiCornerUpRight } from "react-icons/fi";
-import UserModal from "./UserModal";
+import { BiMenu } from "react-icons/bi";
+import UserButton from "./UserButton";
 import CreateModal from "./CreateModal";
 import { AuthContext } from "../../../../providers/AuthProvider";
 const Dashboard = () => {
@@ -17,6 +18,8 @@ const Dashboard = () => {
           </Link>
           Projects
         </div>
+      
+             
         <ul className="items-center hidden space-x-4 lg:flex">
 
           <li>
@@ -39,14 +42,24 @@ const Dashboard = () => {
             </NavLink>
           </li>
         </ul>
-        <ul className="items-center  lg:space-x-3 flex  text-gray-400 font-semibold text-xl">
+        
+        <ul className="items-center space-x-1  lg:space-x-3 flex  text-gray-400 font-semibold text-xl">
 
-          <FiCornerUpLeft className="text-gray-500" />
-          <FiCornerUpRight className="text-gray-500" />
+          <FiCornerUpLeft className="text-gray-500 hidden md:block" />
+          <FiCornerUpRight className="text-gray-500 hidden md:block" />
           <CreateModal />
-          <UserModal user={user} />
+          <UserButton user={user} />
+            {/* Open Drawer Button */}
+            <label
+          htmlFor="my-drawer-2"
+          className="   rounded-full py-auto 
+            sm:inline-block lg:hidden"
+        >
+         <BiMenu className=" text-gray-500 h-12"/>
+        </label>
         </ul>
-
+     {/* Conditional rendering of sidebar based on isSidebarOpen */}
+     
       </div>
     </div>
   );
