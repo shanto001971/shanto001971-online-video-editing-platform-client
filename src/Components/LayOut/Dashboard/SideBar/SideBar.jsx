@@ -18,9 +18,10 @@ import DemoLogo from "../../../Pages/VideoEditPage/DemoLogo/DemoLogo";
 import DemoElement from "../../../Pages/VideoEditPage/DemoElement/DemoElement";
 import More from "../../../Pages/VideoEditPage/More/More";
 import { Outlet } from "react-router-dom";
+import VideoCropper from "../VideoCropper/VideoCropper";
 
 const SideBar = () => {
-  const [activeComponent, setActiveComponent] = useState('DemoVideo'); //by default component uses active component
+  const [activeComponent, setActiveComponent] = useState('VideoCropper'); //by default component uses active component
 
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
@@ -51,7 +52,7 @@ const SideBar = () => {
             {/* Side icon bar here(1st column) */}
             <>
               <div className="flex flex-col gap-6 items-center justify-center border-r-[1px] w-[50px] sm:w-[60px] h-auto py-2 z-10 shadow-md">
-                <div className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group cursor-pointer">
+                <div onClick={() => handleButtonClick('VideoCropper')} className="flex flex-col items-center justify-center text-gray-700 hover:text-gray-950 group cursor-pointer">
                   <SlCloudUpload className="text-[20px] sm:text-[28px]  group-hover:scale-95" />
                   <span className="text-[8px] sm:text-[10px] font-medium">
                     Uploads
@@ -120,6 +121,8 @@ const SideBar = () => {
             <>
             <div className="w-[270px] h-[100vh] overflow-y-scroll custom-scrollbar">
             
+            {activeComponent === 'VideoCropper' && <VideoCropper />}
+
             {activeComponent === 'DemoVideo' && <DemoVideo />}
             {activeComponent === 'DemoImage' && <DemoImage />}
             {activeComponent === 'DemoMusic' && <DemoMusic />}

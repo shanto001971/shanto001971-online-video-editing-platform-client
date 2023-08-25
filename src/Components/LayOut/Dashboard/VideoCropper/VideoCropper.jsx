@@ -72,12 +72,12 @@ class VideoCropper extends React.Component {
         };
 
         return (
-            <div className=''>
+            <div className='mt-4'>
                 <div
                     onDrop={this.handleDrop}
                     onDragOver={this.handleDragOver}
                     style={{
-                        width: '800px',
+                        width: '270px',
                         height: '200px',
                         border: '2px dashed #ccc',
                         padding: '20px',
@@ -99,7 +99,7 @@ class VideoCropper extends React.Component {
                     <button onClick={this.handleOpenUploadModal} className='text-blue-600'>  Upload Media</button>
                 </div>
 
-                {videoSrc ? (
+                {/* {videoSrc ? (
                     <div>
                         <div style={{ position: 'relative', maxWidth: '100%' }}>
                             <ReactPlayer
@@ -175,7 +175,7 @@ class VideoCropper extends React.Component {
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                )}
+                )} */}
 
                 {/* {isUploadModalOpen && (
                     <div className="modal">
