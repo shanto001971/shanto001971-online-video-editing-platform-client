@@ -64,13 +64,13 @@ function UserModal({ handleLogOut }) {
             </button>
           </div>
           <div className="md:flex text-start">
-           <Link to="login"> <span className=" md:rounded-l-xl text-sm  text-gray-600 py-2 px-8 font-semibold my-3  bg-gray-200 flex items-center gap-2  ">
+           <Link to="login"> <span className="  md:rounded-l-xl text-sm  text-gray-600 py-2 px-8 font-semibold my-3  bg-gray-200 flex items-center gap-2  ">
               <BsPlusCircle className=" text-blue-700 " /> Add Account
             </span></Link>
             <span
               onClick={handleLogOut}
               style={{ marginLeft: "2px" }}
-              className=" md:rounded-r-xl cursor-pointer py-2 px-8 text-sm  flex items-center gap-2   text-gray-600 font-semibold my-3  bg-gray-200"
+              className="  md:rounded-r-xl cursor-pointer py-2 px-8 text-sm  flex items-center gap-2   text-gray-600 font-semibold my-3  bg-gray-200"
             >
               {" "}
               <MdOutlineLogout className="text-black" />
