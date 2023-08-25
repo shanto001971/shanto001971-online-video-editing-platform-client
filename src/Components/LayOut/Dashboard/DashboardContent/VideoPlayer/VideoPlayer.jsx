@@ -145,9 +145,9 @@ const VideoPlayer = () => {
                 </div>
             </div>
 
-            <div className="mt-40 ">
+            <div className="">
 
-                <VideoCropper></VideoCropper>
+                {/* <VideoCropper></VideoCropper> */}
 
                 <div className="w-full  bg-black rounded-lg p-2">
                     <div className="bg-slate-50 w-60 h-60 rounded-full mx-auto lg:mt-10 relative ">
