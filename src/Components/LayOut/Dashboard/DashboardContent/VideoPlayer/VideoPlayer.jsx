@@ -48,6 +48,7 @@ const VideoPlayer = () => {
                             playing={isPlaying}
                             onProgress={handleProgress}
                             controls // Add controls to show player controls
+                            // className="w-20"
                         />
                     </div>
                 </div>
@@ -107,14 +108,14 @@ const VideoPlayer = () => {
             </div>
 
 
-            <div className="w-full h-screen bg-black rounded-lg p-2">
+            <div className="w-full  bg-black rounded-lg p-2">
                 <div className="bg-slate-50 w-60 h-60 rounded-full mx-auto lg:mt-10 relative ">
                     <BsPlusCircleDotted className="absolute top-[42%] left-[43%] w-10 h-10 " />
-                   <div className="group text-black">
-                   <p className="w-20 bg-gray-800 text-[8px] sm:text-[10px] font-bold pt-[14px] sm:pt-5 px-6 uppercase text-white hidden group-hover:block ease-out transition ">
+                   <div className="group text-black flex ">
+                   <p className=" w-20 bg-gray-800 text-[8px] sm:text-[10px] font-bold pt-[14px] sm:pt-5 px-6 uppercase text-white hidden group-hover:block ease-out transition ">
                             Connect us
                         </p>
-                   <GoFileMedia className="absolute top-8 left-[45%] h-10 w-10" />
+                   <GoFileMedia className="absolute top-8 left-[45%] h-10 w-10  ease-out transition-all " />
                    </div>
 
                     <FiLayers className="absolute top-[42%] left-8 h-10 w-10" />
@@ -122,13 +123,17 @@ const VideoPlayer = () => {
                     <FiMusic className="absolute top-[42%] right-8 h-10 w-10" />
                 </div>
                 <div className="">
-                    <div className=" group text-black">
-                        
-                        <p className="w-20 bg-gray-800 text-[8px] sm:text-[10px] font-bold pt-[14px] sm:pt-5 px-6 uppercase text-white hidden group-hover:block ease-out transition ">
-                            Connect us
-                        </p>
-                        <PiMessengerLogo className="w-[55px] h-[42px] sm:w-[70px] sm:h-[57px] bg-red-500 py-2 sm:py-3 ps-2 sm:ps-3 pr-7 hover:transition-transform ease-out transition-all hover:-translate-x-1" />
+                    <div className="text-center mt-5 mb-5">
+                        <h1 className="text-2xl font-semibold text-white">Audio</h1>
                     </div>
+                             <input type="range" name="" id="" className="w-1/2"/>
+                             <input type="range" name="" id="" className="w-1/2"/>
+                             <input type="range" name="" id="" className="w-1/2"/>
+                             <input type="range" name="" id="" className="w-1/2"/>
+                             <br />
+                             <input type="range" min={0} max={100} defaultValue={10} name="" id=""  className="w-full"/>
+                             <br />
+                             <input type="range" name="" id="" className="w-full"/>
 
                 </div>
             </div>
