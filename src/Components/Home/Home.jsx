@@ -19,11 +19,7 @@ const Home = () => {
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
 			<SideIcon />
-
 			<Timeline />
-			<VideoLayout></VideoLayout>
-			<ScrollSection></ScrollSection>
-			<SideIcon />
 			<EndBanner />
 		</div>
 	);
