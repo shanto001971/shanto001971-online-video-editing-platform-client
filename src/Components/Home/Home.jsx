@@ -1,7 +1,6 @@
 import Banner from '../BannerSection/Banner';
 import VideoCropper from '../LayOut/Dashboard/VideoCropper/VideoCropper';
 import EndBanner from '../EndBanner/EndBanner';
-import Timeline from '../Pages/Timeline/Timeline';
 import VideoLayout from '../Pages/VideoLayout/VideoLayout';
 import SideIcon from '../SideIcon/SideIcon';
 import TemplateVideo from '../TemplateVideoSection/TemplateVideo';
@@ -19,7 +18,6 @@ const Home = () => {
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
 			<SideIcon />
-			<Timeline />
 			<EndBanner />
 		</div>
 	);
