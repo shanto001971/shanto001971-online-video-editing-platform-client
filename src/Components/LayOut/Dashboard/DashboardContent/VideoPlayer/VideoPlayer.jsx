@@ -7,6 +7,7 @@ import { GoVideo } from 'react-icons/go';
 import { MdOutlineAudiotrack } from 'react-icons/md';
 import { PiTextAaBold } from 'react-icons/pi';
 import { AiOutlinePlusSquare } from 'react-icons/ai';
+import VideoCropper from "../../VideoCropper/VideoCropper";
 
 
 
@@ -99,6 +100,11 @@ const VideoPlayer = () => {
                         <img className="h-5 w-1/2 rounded-sm" src="https://ak6.picdn.net/shutterstock/videos/24231536/thumb/11.jpg" alt="" />
                     </div>
                 </div>
+            </div>
+
+            <div className="mt-40 ">
+
+                <VideoCropper></VideoCropper>
             </div>
         </div>
     );
