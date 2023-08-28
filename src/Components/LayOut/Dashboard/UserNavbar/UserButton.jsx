@@ -16,7 +16,7 @@ function UserButton({ user }) {
   
     <div >
       
-    <div className="dropdown dropdown-hover ">
+    <div className="">
   <label tabIndex={0} className="md:flex items-center gap-1 m-1">
   {user && (
         <li
