@@ -31,16 +31,8 @@ function UserModal({ handleLogOut }) {
             <div className="btn btn-circle relative text-white text-base font-bold bg-violet-500 hover:text-white hover:bg-violet-500">
               {user?.displayName?.slice(0, 1) || "User"}
             </div>
-            <div className="hidden md:block"
-            //  style={{
-            //   position: "absolute",
-            //   top: "80px",
-            //   right: "99px",
-            //   backgroundColor: "white",
-            //   width: "20px",
-            //   height: "20px",
-            //   borderRadius: "50%",
-            // }}
+            <div className="hidden md:block ml-5"
+          
               style={{
                 position: "absolute",
                 top: "85px",
