@@ -32,7 +32,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto sm:max-w-xl md:max-w-full  md:px-24 sticky top-0 z-10 bg-transparent backdrop-blur-md">
+    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto md:max-w-full   sticky top-0 z-10 bg-transparent backdrop-blur-md">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
@@ -129,13 +129,13 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/support"
-              title="Support"
+              to="/help"
+              title="help"
               className={({ isActive }) =>
                 isActive ? "text-xl text-black font-bold" : "default"
               }
             >
-              Support
+              Help
             </NavLink>
           </li>
           <li>
@@ -275,13 +275,13 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/support"
-                        title="Support"
+                        to="/help"
+                        title="help"
                         className={({ isActive }) =>
                           isActive ? "text-xl text-black font-bold" : "default"
                         }
                       >
-                        Support
+                        Help
                       </NavLink>
                     </li>
 
