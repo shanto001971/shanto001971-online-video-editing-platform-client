@@ -32,7 +32,7 @@ const VideoModalData = ({ selectedData, closeModal }) => {
             </div>
           }
         />
-        <div className="lg:ml-10">
+        <div className="lg:ml-10 sm:mt-6">
           <h4 className="text-2xl font-bold">{title}</h4>
           <div className="flex gap-2 items-center mt-4 mb-2">
             <img className="w-6 h-6 rounded-full avatar" src={img_url} alt="" />
