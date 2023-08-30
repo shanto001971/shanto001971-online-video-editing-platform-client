@@ -12,7 +12,13 @@ const templateVideosSlice = createSlice({
         isLoading: false,
         templateVideos: [],
         error: null,
+        selectedData: null,
     },
+    reducers: {
+        setSelectedData2: (state, action) => {
+          state.selectedData = action.payload;
+        },
+      },
     extraReducers: (builder) => {
         builder.addCase(fetchVideosTemplate.pending, (state)=> {
             state.isLoading = true; 
@@ -20,6 +26,7 @@ const templateVideosSlice = createSlice({
         builder.addCase(fetchVideosTemplate.fulfilled, (state, action)=> {
             state.isLoading = false;
             state.templateVideos = action.payload;
+            state.selectedData = action.payload[0]?.data[0];
             state.error = null;
         });
         builder.addCase(fetchVideosTemplate.rejected, (state, action)=> {
@@ -29,5 +36,7 @@ const templateVideosSlice = createSlice({
         });
     }
 });
+
+export const { setSelectedData2 } = templateVideosSlice.actions;
 
 export default templateVideosSlice.reducer;

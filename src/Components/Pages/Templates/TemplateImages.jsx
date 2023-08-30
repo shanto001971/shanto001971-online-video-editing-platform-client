@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImgTemplate } from "../../../features/template/templateImagesSlice";
 import Loader from "../../Loader/Loader";
+import TemplateImgModal from "./TemplateImgModal";
 
 const TemplateImages = () => {
+  let [isOpen, setIsOpen] = useState(false); //for modal
+  const [selectedData, setSelectedData] = useState(null); 
+
   const {
     isLoading,
     templateImg: templateImagesData,
@@ -24,6 +28,12 @@ const TemplateImages = () => {
   const selectedCategoryData = templateImagesData.find(
     (categoryItem) => categoryItem.category === selectedCategory
   );
+
+  const handleDetailsTemplate = (item) => {
+    setSelectedData(item); // Set the selected data when a video is clicked
+    setIsOpen(true); 
+  }
+  
   return (
     <>
       <div>
@@ -50,11 +60,17 @@ const TemplateImages = () => {
             </button>
           ))}
         </div>
-       
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 my-6 gap-0 sm:gap-4 lg:gap-1">
+          {/* For Template modal */}
+          <TemplateImgModal isOpen={isOpen} setIsOpen={setIsOpen} selectedData={selectedData} />
           {selectedCategoryData &&
             selectedCategoryData.data.map((item, index) => (
-              <div key={index} className="mx-2 my-2 rounded-xl group">
+              <div
+                onClick={() => handleDetailsTemplate(item)}
+                key={index}
+                className="mx-2 my-2 rounded-xl group"
+              >
                 <img
                   className="h-[215px] w-[215px] rounded-lg group-hover:scale-105 transition-transform"
                   src={item.img}

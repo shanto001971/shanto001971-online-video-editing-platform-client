@@ -6,6 +6,7 @@ import { FaCrown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVideos } from "../../../../features/demoVideos/demoVideosSlice";
 import Loader from "../../../Loader/Loader";
+import { setSelectedData2 } from "../../../../features/template/templateVideosSlice";
 
 const DemoVideo = () => {
   const { isLoading, videos, error } = useSelector((state) => state.videos);
@@ -25,6 +26,10 @@ const DemoVideo = () => {
   } else {
     console.log("Video category data not found in the data array.");
   }
+
+  const handleVideoDetails = (item) => {
+    dispatch(setSelectedData2(item));
+  };
 
   return (
     <>
@@ -55,7 +60,7 @@ const DemoVideo = () => {
       <div className="grid grid-cols-2 gap-2 relative">
         {videoData &&
           videoData.map((item, index) => (
-            <div key={index}>
+            <div onClick={() => handleVideoDetails(item)} key={index}>
               <HoverVideoPlayer
                 videoSrc={item.video_src}
                 title="Drag and drop on canvas"

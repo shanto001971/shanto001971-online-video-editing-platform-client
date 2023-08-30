@@ -13,11 +13,13 @@ import { BiMicrophone } from 'react-icons/bi';
 import { FiMusic } from 'react-icons/fi';
 import { BsFullscreen } from 'react-icons/bs';
 import screenfull from 'screenfull';
-
-
+import { useSelector } from "react-redux";
 
 const VideoPlayer = () => {
-    const videoSource = "https://v4.cdnpk.net/videvo_files/video/free/video0466/large_watermarked/_import_61490450321f37.49858282_FPpreview.mp4";
+    const selectedData = useSelector((state) => state.templateVideos.selectedData);
+
+    const videoSource = selectedData ? selectedData.video_src : "https://v4.cdnpk.net/videvo_files/video/free/video0466/large_watermarked/_import_61490450321f37.49858282_FPpreview.mp4";
+
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const [volume, setVolume] = useState(1);

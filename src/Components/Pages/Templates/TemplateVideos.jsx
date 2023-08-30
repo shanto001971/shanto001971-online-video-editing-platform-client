@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchVideosTemplate } from "../../../features/template/templateVideosSlice";
+import { fetchVideosTemplate, setSelectedData2 } from "../../../features/template/templateVideosSlice";
 import Loader from "../../Loader/Loader";
 import HoverVideoPlayer from "react-hover-video-player";
+import TemplateVideoModal from "./TemplateVideoModal";
 
 const TemplateVideos = () => {
+  let [isOpen, setIsOpen] = useState(false); //for modal
+  const [selectedData, setSelectedData] = useState(null); //for selected data
+
   const {
     isLoading,
     templateVideos: templateVideosData,
@@ -16,8 +20,6 @@ const TemplateVideos = () => {
     dispatch(fetchVideosTemplate());
   }, [dispatch]);
 
-  console.log(templateVideosData);
-
   const [selectedCategory, setSelectedCategory] = useState("Music");
 
   const handleCategoryClick = (category) => {
@@ -27,7 +29,13 @@ const TemplateVideos = () => {
   const selectedCategoryData = templateVideosData.find(
     (categoryItem) => categoryItem.category === selectedCategory
   );
-  console.log(selectedCategory);
+
+  const handleDetailsTemplate = (item) => {
+    dispatch(setSelectedData2(item));
+    setSelectedData(item); // Set the selected data when a video is clicked
+    setIsOpen(true); 
+  }
+
   return (
     <>
       <div>
@@ -56,23 +64,29 @@ const TemplateVideos = () => {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 my-6 gap-0 sm:gap-4 lg:gap-1">
+          {/* Template video modal */}
+          <TemplateVideoModal isOpen={isOpen} setIsOpen={setIsOpen} selectedData={selectedData} />
           {selectedCategoryData &&
             selectedCategoryData.data.map((item, index) => (
-              <div key={index} className="mx-2 my-2 rounded-xl group">
+              <div
+                onClick={() => handleDetailsTemplate(item)}
+                key={index}
+                className="mx-2 my-2 rounded-xl group"
+              >
                 <HoverVideoPlayer
-                className="lg:h-[360px]"
-                videoSrc={item.video_src}
-                videoStyle={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "10px",
-                }}
-                loadingOverlay={
-                  <div className="loading-overlay">
-                    <div className="loading-spinner" />
-                  </div>
-                }
-              />
+                  className="lg:h-[360px]"
+                  videoSrc={item.video_src}
+                  videoStyle={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "10px",
+                  }}
+                  loadingOverlay={
+                    <div className="loading-overlay">
+                      <div className="loading-spinner" />
+                    </div>
+                  }
+                />
                 <p className="text-sm text-gray-600 mt-2">{item.title}</p>
               </div>
             ))}
