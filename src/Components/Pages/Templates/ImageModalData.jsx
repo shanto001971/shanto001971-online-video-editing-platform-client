@@ -15,9 +15,9 @@ const ImageModalData = ({ selectedData, closeModal }) => {
       </div>
       <div className="md:flex justify-between gap-4">
         <div className="md:flex justify-between gap-4">
-          <img src={img} alt="" />
+          <img className="w-full rounded-lg" src={img} alt="" />
         </div>
-        <div className="lg:ml-10">
+        <div className="lg:ml-10 sm:mt-6 ">
           <h4 className="text-2xl font-bold">{title}</h4>
           <div className="flex items-center gap-2 mt-4 text-gray-600">
             <p className="text-xs font-medium border-[2px] px-2 py-1 rounded-sm">

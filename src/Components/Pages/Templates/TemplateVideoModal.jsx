@@ -43,7 +43,6 @@ export default function TemplateVideoModal({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-sm sm:max-w-3xl md:max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  Hellow world...
                   <VideoModalData
                     selectedData={selectedData}
                     closeModal={closeModal}
