@@ -14,6 +14,7 @@ import AutoScroll from '../../Home/AutoScroll.jsx/AutoScroll';
 import EditFeature from './EditFeature/EditFeature';
 import EditFeaturesReverse from './EditFeatureReverse/EditFeatureReverse';
 import { Link } from 'react-router-dom';
+
 const OnlineVideoEditor = () => {
 
     return (

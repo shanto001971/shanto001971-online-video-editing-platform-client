@@ -9,6 +9,8 @@ import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideo
 import About from "../Components/Pages/About/About";
 import VideoPlayer from "../Components/LayOut/Dashboard/DashboardContent/VideoPlayer/VideoPlayer";
 import Help from "../Components/Pages/Help/Help";
+import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
+import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
 // import ErrorPage from './../Components/Pages/ErrorPage';
 
 export const router = createBrowserRouter([
@@ -44,6 +46,14 @@ export const router = createBrowserRouter([
             {
                 path: '/onlinevideo',
                 element: <OnlineVideoEditor></OnlineVideoEditor>
+            },
+            {
+                path: "/desktopvideo",
+                element: <DesktopVideo></DesktopVideo>
+            },
+            {
+                path: "/mobilevideo",
+                element: <MobileVideo></MobileVideo>
             }
         ]
     },
