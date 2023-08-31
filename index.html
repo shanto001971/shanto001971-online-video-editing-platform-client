@@ -7,20 +7,17 @@
     <title>MingleMotion Express</title>
   </head>
   <body>
-    <div id="google_element"></div>
 
     <div id="root"></div>
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslateElementInit"></script>
     <script type="module" src="/src/main.jsx"></script>
 
-  
-      <script>
-        function loadGoogleTranslate(){
-          new google.translate.TranslateElement(
-            {pageLanguage:'en'},
-            'google_element'
-          )
-        }
-      </script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("cG6iKSknxUUl_PYBy");
+})();
+</script>
   </body>
 </html>

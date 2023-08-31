@@ -10,7 +10,6 @@ import Tools from './Tools/Tools';
 import Faq from './Faq/Faq';
 import Topics from './Topics/Topics';
 import GoToSignUp from './GoToSignUp/GoToSignUP';
-import AutoScroll from '../../Home/AutoScroll.jsx/AutoScroll';
 import EditFeature from './EditFeature/EditFeature';
 import EditFeaturesReverse from './EditFeatureReverse/EditFeatureReverse';
 import { Link } from 'react-router-dom';

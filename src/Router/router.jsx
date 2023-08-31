@@ -8,7 +8,7 @@ import DashboardPage from "../Components/LayOut/Dashboard/DashboardPage";
 import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideoEditor";
 import About from "../Components/Pages/About/About";
 import VideoPlayer from "../Components/LayOut/Dashboard/DashboardContent/VideoPlayer/VideoPlayer";
-import Help from "../Components/Pages/Help/Help";
+import EmailModal from "../Components/Pages/Help/EmailModal";
 // import ErrorPage from './../Components/Pages/ErrorPage';
 
 export const router = createBrowserRouter([
@@ -22,9 +22,10 @@ export const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/help",
-                element: <Help />
+                path: "/emailUs",
+                element: <EmailModal />
             },
+           
             {
                 path: "/templates",
                 element: <Templates />
