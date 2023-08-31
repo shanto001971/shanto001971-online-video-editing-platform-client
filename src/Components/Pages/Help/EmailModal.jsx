@@ -11,10 +11,10 @@ const EmailModal = () => {
 
     emailjs
       .sendForm(
-        "service_qr0ebqf",
-        "template_6p66hq7",
+        `${import.meta.env.VITE_SERVICE_ID}`,
+        `${import.meta.env.VITE_TEMPLATE_ID}`,
         form.current,
-        "cG6iKSknxUUl_PYBy"
+        `${import.meta.env.VITE_PUBLIC_KEY}`
       )
       .then(
         (result) => {
@@ -44,7 +44,7 @@ const EmailModal = () => {
   };
   return (
     <div>
-      <div className="w-full px-3 -mt-10 min-h-[calc(100vh-10px)] flex flex-col justify-center items-center text-gray-800 rounded-xl bg-gray-50">
+      <div className="w-full px-3 -mt-10 h-screen flex flex-col justify-center items-center text-gray-800 rounded-xl bg-gray-50">
         <form ref={form} onSubmit={sendEmail}>
           <div className="grid grid-cols-2 gap-10">
             <div className="space-y-1 text-sm">
