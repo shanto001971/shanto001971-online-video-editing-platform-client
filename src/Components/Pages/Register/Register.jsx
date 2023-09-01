@@ -33,18 +33,32 @@ const navigate = useNavigate()
       const loggedUser = result.user;
       console.log(loggedUser);
 
-      updateUserProfile(data.name, data.photo)
+      updateUserProfile(data.name, data.photoURL)
       .then(() => {
         console.log("User Profile Updated");
-        Swal.fire({
-          position: 'top-center',
-          icon: 'success',
-          title: 'Register successfull',
-          showConfirmButton: false,
-          timer: 1500
-        })
-        reset()
-        navigate("/")
+        const saveUser = {name: data.name, email: data.email, photo: data.photoURL}
+        fetch('https://online-video-editing-platform-server.vercel.app', {
+              method: "POST",
+              headers: {
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify(saveUser)
+            })
+            .then(res => res.json())
+            .then(data => {
+              if(data.insertedId){
+                Swal.fire({
+                  position: 'top-center',
+                  icon: 'success',
+                  title: 'User Updated Successfully',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+                reset();
+                navigate("/")
+              }
+            })
+
       })
      
       
