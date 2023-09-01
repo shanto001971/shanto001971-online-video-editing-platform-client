@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import ImageModalData from "./ImageModalData";
 
-export default function TemplateImgModal({ isOpen, setIsOpen, selectedData }) {
+export default function TemplateImgModal({ isOpen, setIsOpen, selectedData, selectedCategoryData }) {
   function closeModal() {
     setIsOpen(false);
   }
@@ -40,7 +40,7 @@ export default function TemplateImgModal({ isOpen, setIsOpen, selectedData }) {
               >
                 <Dialog.Panel className="w-full max-w-sm sm:max-w-3xl md:max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   {/* Modal content here */}
-                  <ImageModalData selectedData={selectedData} closeModal={closeModal} />
+                  <ImageModalData selectedData={selectedData} closeModal={closeModal} selectedCategoryData={selectedCategoryData} />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

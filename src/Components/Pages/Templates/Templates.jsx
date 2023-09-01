@@ -1,18 +1,80 @@
 import "./Template.css";
 import templateImage from "../../../assets/template.png";
 import { CiSearch } from "react-icons/ci";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import TemplateVideos from "./TemplateVideos";
 import TemplateImages from "./TemplateImages";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchImgTemplate } from "../../../features/template/templateImagesSlice";
 
 const Templates = () => {
   const [activeTab, setActiveTab] = useState(0); // 0 for Videos, 1 for Images
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredVideos, setFilteredVideos] = useState([]);
+  const [filteredImages, setFilteredImages] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("Videos");
+
+  const { isLoading, templateVideos: templateVideosData } = useSelector(
+    (state) => state.templateVideos
+  );
+
+  const { templateImg: templateImagesData } = useSelector(
+    (state) => state.templateImg
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchImgTemplate());
+  }, [dispatch]);
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchQuery, selectedCategory, templateVideosData, templateImagesData]);
 
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
+
+  const handleSearch = () => {
+    if (!searchQuery) {
+      setFilteredVideos(
+        templateVideosData.flatMap((categoryItem) => categoryItem.data)
+      );
+      setFilteredImages(
+        templateImagesData.flatMap((categoryItem) => categoryItem.data)
+      );
+      return;
+    }
+
+    const lowercaseQuery = searchQuery.toLowerCase();
+    const filteredVideoData = templateVideosData.flatMap((categoryItem) =>
+      categoryItem.data.filter(
+        (item) =>
+          item.category.toLowerCase().includes(lowercaseQuery) ||
+          item.title.toLowerCase().includes(lowercaseQuery)
+      )
+    );
+
+    const filteredImageData = templateImagesData.flatMap((categoryItem) =>
+      categoryItem.data.filter(
+        (item) =>
+          item.category.toLowerCase().includes(lowercaseQuery) ||
+          item.title.toLowerCase().includes(lowercaseQuery)
+      )
+    );
+
+    setFilteredVideos(filteredVideoData);
+    setFilteredImages(filteredImageData);
+  };
+
+  // console.log(selectedCategory);
+  // console.log(filteredVideos);
+  //console.log(filteredImages);
+  // console.log(searchQuery);
+  //console.log("template image --------->", templateImagesData);
+  // console.log("template videos --------->", templateVideosData);
 
   return (
     <div className="relative">
@@ -27,12 +89,25 @@ const Templates = () => {
           Motion mingle thousands of free trending templates are just a few
           clicks away. Create stunning videos and images with them effortlessly.
         </p>
-        <div className="mt-3">
-          <CiSearch className="absolute mt-3 ml-4 text-lg text-gray-700" />
+        <div className="mt-3 flex ">
+          <select
+            className="pl-2 text-sm font-medium rounded-s-xl w-full h-[39px] max-w-[80px] mt-[1px] bg-gray-100"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+          >
+            <option value="Videos">Videos</option>
+            <option value="Images">Images</option>
+          </select>
+          <CiSearch
+            // onClick={(e) => setSearchQuery(e.target.value)}
+            className="text-lg text-gray-700 z-10 mt-3 ml-2"
+          />
           <input
             type="text"
-            className="border bg-gray-100 rounded-3xl pl-10 h-10 w-3/4 sm:w-1/2 text-[13px]  focus:outline-none font-medium focus:border-blue-300"
-            placeholder="Search"
+            className="border bg-gray-100 rounded-e-xl -ml-7 pl-7 h-10 w-3/4 sm:w-1/2 text-[13px]  focus:outline-none font-medium focus:border-blue-300"
+            placeholder="Search category or title"
+            onChange={(e) => setSearchQuery(e.target.value)}
+            value={searchQuery}
           />
         </div>
       </div>
@@ -73,10 +148,17 @@ const Templates = () => {
           </TabList>
 
           <TabPanel>
-            <TemplateVideos />
+            <TemplateVideos
+              isLoading={isLoading}
+              searchQuery={searchQuery}
+              filteredVideos={filteredVideos}
+            />
           </TabPanel>
           <TabPanel>
-            <TemplateImages />
+            <TemplateImages
+              searchQuery={searchQuery}
+              filteredImages={filteredImages}
+            />
           </TabPanel>
         </Tabs>
       </div>

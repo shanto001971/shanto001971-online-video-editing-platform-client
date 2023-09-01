@@ -6,6 +6,7 @@ export default function TemplateVideoModal({
   isOpen,
   setIsOpen,
   selectedData,
+  selectedCategoryData
 }) {
   function closeModal() {
     setIsOpen(false);
@@ -42,10 +43,11 @@ export default function TemplateVideoModal({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-sm sm:max-w-3xl md:max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-sm sm:max-w-3xl md:max-w-[920px] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <VideoModalData
                     selectedData={selectedData}
                     closeModal={closeModal}
+                    selectedCategoryData={selectedCategoryData}
                   />
                 </Dialog.Panel>
               </Transition.Child>
