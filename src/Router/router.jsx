@@ -9,7 +9,6 @@ import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideo
 import About from "../Components/Pages/About/About";
 import VideoPlayer from "../Components/LayOut/Dashboard/DashboardContent/VideoPlayer/VideoPlayer";
 import EmailModal from "../Components/Pages/Help/EmailModal";
-import Help from "../Components/Pages/Help/Help";
 import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
 import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
 // import ErrorPage from './../Components/Pages/ErrorPage';
