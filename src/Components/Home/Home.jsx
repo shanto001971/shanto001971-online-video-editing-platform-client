@@ -6,7 +6,6 @@ import SideIcon from '../SideIcon/SideIcon';
 import TemplateVideo from '../TemplateVideoSection/TemplateVideo';
 import VoiceSection from '../VoiceSection/VoiceSection';
 import ScrollSection from './ScrollSection/ScrollSection';
-import Timeline from '../Pages/Timeline/Timeline';
 
 const Home = () => {
 	return (
