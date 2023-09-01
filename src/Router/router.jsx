@@ -8,7 +8,6 @@ import DashboardPage from "../Components/LayOut/Dashboard/DashboardPage";
 import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideoEditor";
 import About from "../Components/Pages/About/About";
 import VideoPlayer from "../Components/LayOut/Dashboard/DashboardContent/VideoPlayer/VideoPlayer";
-import Help from "../Components/Pages/Help/Help";
 import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
 import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
 import EmailModal from "../Components/Pages/Help/EmailModal";
