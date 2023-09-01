@@ -17,7 +17,6 @@ const Home = () => {
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
 			<SideIcon />
-			<Timeline />
 			<EndBanner />
 		</div>
 	);
