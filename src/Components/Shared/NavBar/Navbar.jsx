@@ -67,7 +67,7 @@ const Navbar = () => {
             >
               Tools
               {isToolsOpen && (
-                <ul className="tools-dropdown absolute flex-column justify-center pt-5 bg-[#1D232A]">
+                <ul className="pe-10 -ms-10 ps-10 backdrop-blur-sm bg-white/60 tools-dropdown absolute flex-column justify-center pt-5  rounded-lg">
                   <li className="text-left pe-10">
                     <NavLink
                       to="/onlinevideo"
@@ -81,24 +81,24 @@ const Navbar = () => {
                   </li>
                   <li className="py-3 text-left">
                     <NavLink
-                      to="/ Onlinevideoedit"
+                      to="/desktopvideo"
                       title=" Online video edit"
                       className={({ isActive }) =>
                         isActive ? "text-xl text-black font-bold" : "default"
                       }
                     >
-                      Video Crop
+                      Video editor for desktop
                     </NavLink>
                   </li>
                   <li className="text-left pb-3">
                     <NavLink
-                      to="/ Onlinevideoedit"
+                      to="/mobilevideo"
                       title=" Online video edit"
                       className={({ isActive }) =>
                         isActive ? "text-xl text-black font-bold" : "default"
                       }
                     >
-                      Video Merge
+                      Video editor for mobile
                     </NavLink>
                   </li>
                 </ul>
