@@ -18,14 +18,11 @@ const Home = () => {
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
 			<SideIcon />
-<<<<<<<<< Temporary merge branch 1
-			<Timeline />
-=========
 
 			<VideoLayout></VideoLayout>
 			<ScrollSection></ScrollSection>
 			<SideIcon />
->>>>>>>>> Temporary merge branch 2
+
 			<EndBanner />
 		</div>
 	);
