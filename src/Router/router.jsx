@@ -11,6 +11,7 @@ import VideoPlayer from "../Components/LayOut/Dashboard/DashboardContent/VideoPl
 import Help from "../Components/Pages/Help/Help";
 import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
 import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
+import EmailModal from "../Components/Pages/Help/EmailModal";
 // import ErrorPage from './../Components/Pages/ErrorPage';
 
 export const router = createBrowserRouter([
@@ -24,9 +25,10 @@ export const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/help",
-                element: <Help />
+                path: "/emailUs",
+                element: <EmailModal />
             },
+           
             {
                 path: "/templates",
                 element: <Templates />
