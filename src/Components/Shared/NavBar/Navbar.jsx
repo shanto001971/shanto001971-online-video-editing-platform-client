@@ -66,7 +66,7 @@ const Navbar = () => {
             >
               Tools
               {isToolsOpen && (
-                <ul className="pe-10 -ms-10 ps-10 backdrop-blur-md tools-dropdown absolute flex-column justify-center pt-5 bg-[#1D232A]">
+                <ul className="pe-10 -ms-10 ps-10 backdrop-blur-sm bg-white/60 tools-dropdown absolute flex-column justify-center pt-5  rounded-lg">
                   <li className="text-left pe-10">
                     <NavLink
                       to="/onlinevideo"

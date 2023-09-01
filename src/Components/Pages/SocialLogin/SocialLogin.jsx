@@ -20,17 +20,25 @@ const SocialLogin = () => {
     const handleGoogleSingIn = () => {
       
         googleLogin()
-        .then(()=> {
-          Swal.fire({
-            position: 'top-center',
-            icon: 'success',
-            title: 'Login successfull',
-            showConfirmButton: false,
-            timer: 1500
+        .then(result => {
+          const loggedUser = result.user;
+          console.log(loggedUser);
+
+          const saveUser = {name: loggedUser.displayName, email: loggedUser.email}
+          fetch('https://online-video-editing-platform-server.vercel.app', {
+            method: "POST",
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(saveUser)
           })
-          navigate(from, { replace: true } );
-          
-        })
+          .then(res => res.json())
+          .then(() => {
+            navigate(from, {replace: true});
+          })
+
+
+      })
         .catch(error => {
             console.log(error);
         })
