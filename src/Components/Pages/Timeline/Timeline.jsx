@@ -16,6 +16,7 @@ import {
 	FaTruckMoving,
 	FaTruckPickup,
 	FaUpload,
+	FaViadeoSquare,
 	FaVideo,
 } from 'react-icons/fa';
 import './Timeline.css';
