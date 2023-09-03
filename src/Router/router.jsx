@@ -4,13 +4,15 @@ import Home from "../Components/Home/Home";
 import Templates from "../Components/Pages/Templates/Templates";
 import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
-import DashboardPage from "../Components/LayOut/Dashboard/DashboardPage";
+
 import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideoEditor";
 import About from "../Components/Pages/About/About";
 import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
 import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
 import EmailModal from "../Components/Pages/Help/EmailModal";
 import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
+import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
+import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
 
 export const router = createBrowserRouter([
     {
@@ -59,11 +61,11 @@ export const router = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <DashboardPage />,
+        element: <VideoEditeLayout/>,
         children:[
             {
                 path:"/dashboard",
-                element:<></>
+                element:<VideoEditePage/>
             }
         ]
 

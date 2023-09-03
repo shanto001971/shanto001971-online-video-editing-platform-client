@@ -3,8 +3,6 @@
 :root {
     --color-black: #000;
     --color-white: #fff;
-    --color-primary: #FB8133;
-    --color-primary-alt: #565872;
     --color-dark: #1D1C1D
 }
 
@@ -215,7 +213,6 @@ img {
 
 a {
     text-decoration: none;
-    color: var(--color-primary)
 }
 
 .wrapper {
@@ -250,8 +247,8 @@ a {
 
 .btn {
     color: var(--color-white);
-    background: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    background: #FB8133;
+    border: 1px solid #FB8133;
     box-sizing: border-box;
     border-radius: 30px;
     font-size: 12px;
@@ -379,7 +376,7 @@ a {
     text-align: center;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--color-primary-alt);
+    color: #565872;
     margin-bottom: 47px;
     transform-origin: top center;
     transform-style: preserve-3d;
