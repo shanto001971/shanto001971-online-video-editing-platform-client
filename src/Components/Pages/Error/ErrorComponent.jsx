@@ -29,10 +29,11 @@ const ErrorComponent = () => {
                                             <div className="title">Opps! Page not found</div>
                                             <Link
                                                 to='/'
-                                                className='px-8 py-3 font-semibold rounded bg-gradient-to-r from-cyan-500 to-blue-500 text-gray-100'
+                                                className='px-8 py-3 font-semibold rounded bg-gradient-to-r from-indigo-500 to-blue-500 text-gray-100'
                                             >
-                                                Back to homepage
+                                               Back to homepage  
                                             </Link>
+                           
                                         </div>
                                     </div>
                             </div>
