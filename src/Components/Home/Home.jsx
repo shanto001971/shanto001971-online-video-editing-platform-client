@@ -19,7 +19,7 @@ const Home = () => {
 			<ScrollSection></ScrollSection>
 			<SideIcon />
 			<EndBanner />
-			<Feedback/>
+			{/* <Feedback/> */}
 		</div>
 	);
 };
