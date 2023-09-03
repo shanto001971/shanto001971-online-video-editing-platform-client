@@ -7,6 +7,7 @@ import TemplateVideo from '../TemplateVideoSection/TemplateVideo';
 import VoiceSection from '../VoiceSection/VoiceSection';
 import ScrollSection from './ScrollSection/ScrollSection';
 import Timeline from '../Pages/Timeline/Timeline';
+import Feedback from './Feedback/Feedback';
 
 const Home = () => {
 	return (
@@ -18,6 +19,7 @@ const Home = () => {
 			<ScrollSection></ScrollSection>
 			<SideIcon />
 			<EndBanner />
+			<Feedback/>
 		</div>
 	);
 };
