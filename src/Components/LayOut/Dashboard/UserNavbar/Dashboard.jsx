@@ -50,13 +50,13 @@ const Dashboard = () => {
           <CreateModal />
           <UserButton user={user} />
             {/* Open Drawer Button */}
-            <label
+            {/* <label
           htmlFor="my-drawer-2"
           className="   rounded-full py-auto 
             sm:inline-block lg:hidden"
         >
          <BiMenu className=" text-gray-500 h-12"/>
-        </label>
+        </label> */}
         </ul>
      {/* Conditional rendering of sidebar based on isSidebarOpen */}
      
