@@ -9,19 +9,19 @@ import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideo
 import About from "../Components/Pages/About/About";
 import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
 import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
-import EmailModal from "../Components/Pages/Help/EmailModal";
-import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
+// import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
 import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
 import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
 import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo";
 import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo";
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo";
+import HelpEmail from "../Components/Pages/Help/HelpEmail";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <LayOut />,
-        errorElement:<ErrorComponent/>,
+        // errorElement:<ErrorComponent/>,
         children: [
             {
                 path: "/",
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/emailUs",
-                element: <EmailModal />
+                element: <HelpEmail />
             },
            
             {
