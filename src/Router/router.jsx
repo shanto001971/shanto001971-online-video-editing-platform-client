@@ -13,6 +13,9 @@ import EmailModal from "../Components/Pages/Help/EmailModal";
 import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
 import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
 import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
+import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo";
+import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo";
+import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo";
 
 export const router = createBrowserRouter([
     {
@@ -56,7 +59,19 @@ export const router = createBrowserRouter([
             {
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
-            }
+            },
+            {
+                path: "/learn-educational-video",
+                element: <LearnEducationalVideo/>
+            },
+            {
+                path: "/learn-explainer-video",
+                element: <LearnExplainerVideo/>
+            },
+            {
+                path: "/learn-training-video",
+                element: <LearnTrainingVideo/>
+            },
         ]
     },
     {
