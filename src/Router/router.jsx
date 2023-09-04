@@ -16,6 +16,7 @@ import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoE
 import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
 import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
+import HelpEmail from "../Components/Pages/Help/HelpEmail";
 
 
 export const router = createBrowserRouter([
