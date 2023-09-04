@@ -4,25 +4,120 @@ import {
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import img from '../../../../public/breadcrumb-img.svg';
+import img2 from '../../../../public/customer-img.svg';
+import img3 from '../../../../public/customers.png';
 import {
+	FaArrowRight,
 	FaCut,
 	FaFilter,
 	FaHandScissors,
-	FaImage,
 	FaImages,
 	FaMusic,
-	FaReact,
 	FaTerminal,
-	FaTruckMoving,
-	FaTruckPickup,
 	FaUpload,
 	FaVideo,
 } from 'react-icons/fa';
 import './Timeline.css';
+import CountUp from 'react-countup';
+import img4 from '../../../../public/world-map.png';
+
+// #65325D
+// #7B61F3
 
 const Timeline = () => {
 	return (
 		<div>
+			<div className="h-[300px] bg-[#65325D] md:pr-20">
+				<div className="md:flex justify-between items-center pt-12">
+					<h1 className="text-7xl font-bold pl-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+						About Us
+					</h1>
+					<img src={img} alt="" />
+				</div>
+			</div>
+
+			<div className="md:flex my-20">
+				<div className="mr-10">
+					<img
+						className="w-[477px] h-[477px] bg-indigo-500"
+						src={img2}
+						alt=""
+					/>
+				</div>
+				<div>
+					<img src={img3} alt="" />
+					<h2 className="text-5xl font-bold pt-4 text-left">
+						People using{' '}
+						<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+							Motion Mingle
+						</span>
+					</h2>
+					<p className="text-5xl font-bold">with full satisfaction</p>
+					<div className="pt-10">
+						<p className="leading-8 text-lg">
+							We use as filler text for layouts, non-readability
+							is of great importance but because <br /> those who
+							do not know how to pursue pleasure.
+						</p>
+						<p className="pt-8 leading-8 text-lg">
+							Consequences that are extremely painful. Nor again
+							is there anyone who <br /> loves or pursues or
+							desires to obtain. know how to pursue pleasure
+							rationally encounter <br /> consequences that are
+							extremely painful. Nor again is there anyone who
+							loves.
+						</p>
+
+						<p className="flex items-center mt-[52px] text-blue-500">
+							View Case Studies{' '}
+							<FaArrowRight className="ml-3 mt-1" />
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div
+				style={{
+					backgroundImage: `url(${img4})`,
+					backgroundPosition: 'center',
+					backgroundSize: 'center',
+				}}
+				className="flex justify-around items-center h-[300px] border"
+			>
+				<CountUp start={0} end={200} delay={0}>
+					{({ countUpRef }) => (
+						<div>
+							<div className="text-5xl font-bold text-blue-500">
+								<span ref={countUpRef} />
+							</div>
+							<p className="text-xl pt-5">Countries Worldwide</p>
+						</div>
+					)}
+				</CountUp>
+				<CountUp start={0} end={256} delay={0}>
+					{({ countUpRef }) => (
+						<div>
+							<div className="text-5xl font-bold text-blue-500">
+								<span ref={countUpRef} />K
+							</div>
+							<p className="text-xl pt-5">Registered User</p>
+						</div>
+					)}
+				</CountUp>
+				<CountUp start={0} end={23} delay={0}>
+					{({ countUpRef }) => (
+						<div>
+							<div className="text-5xl font-bold text-blue-500">
+								<span ref={countUpRef} />K
+							</div>
+							<p className="text-xl pt-5">
+								Small & Big Companies
+							</p>
+						</div>
+					)}
+				</CountUp>
+			</div>
 			<h1 className="text-6xl font-bold text-center capitalize text-black mx-40 my-16">
 				The fastest, easiest way <br /> to create{' '}
 				<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">

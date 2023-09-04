@@ -6,6 +6,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import UserModal from "./UserModal";
+import HelpButton from "../../Pages/Help/HelpButton";
 // import "./Navbar.css";
 
 const Navbar = () => {
@@ -128,15 +129,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/help"
-              title="help"
-              className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
-              }
-            >
-              Help
-            </NavLink>
+           <HelpButton/>
           </li>
           <li>
             <NavLink
@@ -274,15 +267,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        to="/help"
-                        title="help"
-                        className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold" : "default"
-                        }
-                      >
-                        Help
-                      </NavLink>
+                    <HelpButton/>
+
                     </li>
 
                     {/* Conditional rendering login and logout */}
