@@ -12,10 +12,10 @@ import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo
 // import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
 import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
 import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
-import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo";
-import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo";
-import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo";
 import HelpEmail from "../Components/Pages/Help/HelpEmail";
+import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
+import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
+import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
 
 export const router = createBrowserRouter([
     {
