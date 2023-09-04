@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        text: 'text 5s ease infinite',
+      },
+    },
   },
   plugins: [require("daisyui")],
 }
