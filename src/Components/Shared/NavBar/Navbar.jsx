@@ -133,7 +133,7 @@ const Navbar = () => {
             >
               Learn
               {isLearnOpen && (
-                <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm">
+                <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500">
                   <li className="text-left pe-10">
                     <NavLink
                       to="/learn-educational-video"
@@ -299,17 +299,56 @@ const Navbar = () => {
                         Explore
                       </NavLink>
                     </li>
-                    <li>
+                    {/* Learn NavItem start */}
+                    <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
                       <NavLink
-                        to="/learn"
+                        to="/"
                         title="Learn"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold" : "default"
+                          isActive ? "default" : "default"
                         }
                       >
                         Learn
+                        {isLearnOpen && (
+                <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-4 -mt-1 rounded-lg text-sm z-10 shadow-slate-500">
+                  <li className="text-left pe-10">
+                    <NavLink
+                      to="/learn-educational-video"
+                      title="Educational Video Maker"
+                      className={({ isActive }) =>
+                        isActive ? "text-black font-medium" : "default"
+                      }
+                    >
+                     Educational Video Maker
+                    </NavLink>
+                  </li>
+                  <li className="py-2 text-left">
+                    <NavLink
+                      to="/learn-explainer-video"
+                      title="Explainer Video Software"
+                      className={({ isActive }) =>
+                        isActive ? "text-black font-medium" : "default"
+                      }
+                    >
+                     Explainer Video Software
+                    </NavLink>
+                  </li>
+                  <li className="text-left pb-2">
+                    <NavLink
+                      to="/learn-training-video"
+                      title=" Online video edit"
+                      className={({ isActive }) =>
+                        isActive ? "text-black font-medium" : "default"
+                      }
+                    >
+                      Training Videos
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
                       </NavLink>
                     </li>
+                    {/* Learn NavItem end */}
                     <li>
                     <HelpButton/>
 
