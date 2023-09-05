@@ -24,7 +24,7 @@ const SocialLogin = () => {
           const loggedUser = result.user;
           console.log(loggedUser);
 
-          const saveUser = {name: loggedUser.displayName, email: loggedUser.email}
+          const saveUser = {name: loggedUser.displayName, email: loggedUser.email, photo: loggedUser.photoURL}
           fetch('https://online-video-editing-platform-server.vercel.app/users', {
             method: "POST",
             headers: {

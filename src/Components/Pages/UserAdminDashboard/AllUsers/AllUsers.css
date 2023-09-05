@@ -1,0 +1,16 @@
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Border bottom for each row */
+  .table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Additional styling for table headers */
+  .table th {
+    text-align: left;
+    padding: 10px;
+  }
+  

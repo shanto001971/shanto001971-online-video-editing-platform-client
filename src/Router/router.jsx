@@ -13,6 +13,9 @@ import EmailModal from "../Components/Pages/Help/EmailModal";
 import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
 import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
 import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
+import UserAdminDashboard from "../Components/LayOut/UserAdminDashboard";
+import AllUsers from "../Components/Pages/UserAdminDashboard/AllUsers/AllUsers";
+import UsersChart from "../Components/Pages/UserAdminDashboard/UsersChart/UsersChart";
 
 export const router = createBrowserRouter([
     {
@@ -56,7 +59,8 @@ export const router = createBrowserRouter([
             {
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
-            }
+            },
+            
         ]
     },
     {
@@ -70,4 +74,20 @@ export const router = createBrowserRouter([
         ]
 
     },
+
+    {
+        path: "useradmindashboard",
+        element: <UserAdminDashboard></UserAdminDashboard>,
+        children: [
+            {
+                path: "allusers",
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: "userschart",
+                element: <UsersChart></UsersChart>
+            }
+        ]
+    }
+
 ]);
