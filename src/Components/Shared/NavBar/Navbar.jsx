@@ -7,7 +7,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import UserModal from "./UserModal";
 import HelpButton from "../../Pages/Help/HelpButton";
-// import "./Navbar.css";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto md:max-w-full   sticky top-0 z-10 bg-transparent backdrop-blur-md">
+    <div className=" bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto md:max-w-full   sticky top-0 z-10 bg-transparent backdrop-blur-md">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
@@ -50,12 +50,11 @@ const Navbar = () => {
         </Link>
         {/* Nav Items Section */}
         <ul className="items-center hidden space-x-8 lg:flex">
-          <li>
+          <li className="">
             <NavLink
               to="/templates"
-              title="Templates"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
+                isActive ? "text-xl text-black font-bold " : "default "
               }
             >
               Templates
@@ -65,9 +64,8 @@ const Navbar = () => {
           <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
             <NavLink
               to="/Tools"
-              title="Tools"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
+                isActive ? "text-xl text-black font-bold " : "default "
               }
             >
               Tools
@@ -114,9 +112,8 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/explore"
-              title="Explore"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
+                isActive ? "text-xl text-black font-bold " : "default "
               }
             >
               Explore
@@ -126,9 +123,8 @@ const Navbar = () => {
           <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
             <NavLink
               to="/"
-              title="Learn"
               className={({ isActive }) =>
-                isActive ? "" : "default"
+                isActive ? "" : "default "
               }
             >
               Learn
@@ -178,9 +174,8 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/pricing"
-              title="Pricing"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
+                isActive ? "text-xl text-black font-bold " : "default "
               }
             >
               Pricing
@@ -189,9 +184,8 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/about"
-              title="About"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
+                isActive ? "text-xl text-black font-bold  " : "default "
               }
             >
               About
@@ -217,11 +211,10 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to="/login"
-                  title="Log In"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[16px] text-black font-bold"
-                      : "default text-[16px]"
+                      ? "text-[16px] text-black font-bold "
+                      : "default text-[16px] "
                   }
                 >
                   Login
@@ -279,9 +272,8 @@ const Navbar = () => {
                     <li>
                       <Link
                         to="/templates"
-                        title="Templates"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold" : "default"
+                          isActive ? "text-xl text-black font-bold " : "default "
                         }
                       >
                         Templates
@@ -291,9 +283,8 @@ const Navbar = () => {
                     <li>
                       <NavLink
                         to="/explore"
-                        title="Explore"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold" : "default"
+                          isActive ? "text-xl text-black font-bold " : "default "
                         }
                       >
                         Explore
@@ -303,9 +294,8 @@ const Navbar = () => {
                     <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
                       <NavLink
                         to="/"
-                        title="Learn"
                         className={({ isActive }) =>
-                          isActive ? "default" : "default"
+                          isActive ? "default " : "default "
                         }
                       >
                         Learn
@@ -316,7 +306,7 @@ const Navbar = () => {
                       to="/learn-educational-video"
                       title="Educational Video Maker"
                       className={({ isActive }) =>
-                        isActive ? "text-black font-medium" : "default"
+                        isActive ? "text-black font-medium " : "default "
                       }
                     >
                      Educational Video Maker
@@ -371,11 +361,10 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to="/login"
-                  title="Log In"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[16px] text-black font-bold"
-                      : "default text-[16px]"
+                      ? "text-[16px] text-black font-bold "
+                      : "default text-[16px] "
                   }
                 >
                   Login
