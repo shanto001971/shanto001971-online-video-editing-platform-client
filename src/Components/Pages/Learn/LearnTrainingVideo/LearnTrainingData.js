@@ -3,6 +3,65 @@ import cardImg2 from "../../../../assets/learn/Training/cards/card2.png";
 import cardImg3 from "../../../../assets/learn/Training/cards/card3.png";
 
 
+export const trainingTemplateData = [
+  {
+      _id: 1,
+      img: "https://i.ibb.co/CQw1SWR/temp9.jpg",
+      title: "Team Year in Review Video",
+      category: ["Landscape", "Seasonal Events", "Internal Comms"],
+      description: "Showcase how your year is going with this Team Review template, highlighting your successes and your goals going forward.",
+  },
+  {
+      _id: 2,
+      img: "https://i.ibb.co/tckVsQS/temp10.webp",
+      title: "Job Posting Announcement Video Template",
+      category: ["Square", "Hiring & Onboarding"],
+      description: "Make your job posting announcement stand out from the rest by creating a hiring video using this template. Capture the attention of potential team members and get them to join your company!",
+  },
+  {
+      _id: 3,
+      img: "https://i.ibb.co/QDhFjWQ/temp11.webp",
+      title: "Quarterly Report Presentation Video",
+      category: ["Landscape", "Internal Comms"],
+      description: "A corporate report full of personality for presenting to your company.",
+  },
+  {
+      _id: 4,
+      img: "https://i.ibb.co/Nt8ZQvz/temp12.jpg",
+      title: "Internal Onboarding Video",
+      category: ["Landscape", "Internal Comms"],
+      description: "Welcome your new hires by creating an onboarding video using this template.",
+  },
+  {
+      _id: 5,
+      img: "https://i.ibb.co/BC1x3Tt/temp13.webp",
+      title: "Meet the Team Video",
+      category: ["Square", "Hiring & Onboarding"],
+      description: "Welcome new employees with this clean Meet the Team video and introduce them to the company.",
+  },
+  {
+      _id: 6,
+      img: "https://i.ibb.co/3pV53rN/temp14.webp",
+      title: "Marketing Job Posting Video Template",
+      category: ["Square", "Hiring & Onboarding"],
+      description: "Get the best copywriter for your marketing team by creating a hiring video using this template. Stand out from similar job postings!",
+  },
+  {
+      _id: 7,
+      img: "https://i.ibb.co/crxNjmW/temp15.jpg",
+      title: "Join Us! We're Hiring - Video Template",
+      category: ["Square", "Hiring & Onboarding"],
+      description: "Encourage the right people to join your team by creating a we're hiring video using this template. Let potential team members know why it's great to work for your company!",
+  },
+  {
+      _id: 8,
+      img: "https://i.ibb.co/YND3Gxg/temp16.jpg",
+      title: "Tech Company Job Posting Video Template",
+      category: ["Portrait", "Hiring & Onboarding"],
+      description: "Entice the best technology professionals to join your company by creating a job posting video using this template. Let them know what makes it great to join your team!",
+  },
+]
+
 export const trainingSubsectionData = [
   {
     _id: 1,

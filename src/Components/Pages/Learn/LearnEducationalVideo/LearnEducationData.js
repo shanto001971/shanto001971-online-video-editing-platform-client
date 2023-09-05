@@ -5,6 +5,66 @@ import blogImg1 from "../../../../assets/learn/Educational/blogs/educational-blo
 import blogImg2 from "../../../../assets/learn/Educational/blogs/educational-blog2.webp";
 import blogImg3 from "../../../../assets/learn/Educational/blogs/educational-blog3.webp";
 
+
+export const educationTemplateData = [
+    {
+        _id: 1,
+        img: "https://i.ibb.co/SrLXd0t/temp1.webp",
+        title: "Basic Photography Tutorial",
+        category: ["Landscape", "Training", "E-Learning"],
+        description: "Teach your clients some simple and effective photography tips in this beautiful, photographic template.",
+    },
+    {
+        _id: 2,
+        img: "https://i.ibb.co/7YtTx6f/temp2.jpg",
+        title: "Veed Video Editing Tutorial",
+        category: ["Portrait", "Social", "Sales", "For you"],
+        description: "An engaging template to promote clips from your video editing tutorial using animated text.",
+    },
+    {
+        _id: 3,
+        img: "https://i.ibb.co/86tjPvX/temp3.png",
+        title: "Educational Christmas Fun Facts",
+        category: ["Seasonal Events"],
+        description: "Create a Christmas trivia video with this template. Customise it with Christmas Stickers and your own images!",
+    },
+    {
+        _id: 4,
+        img: "https://i.ibb.co/d0wX9HB/temp4.webp",
+        title: "Guided Meditation Video Invite",
+        category: ["Square", "Training"],
+        description: "A simple, tranquil video invite for workshops or events you are organising.",
+    },
+    {
+        _id: 5,
+        img: "https://i.ibb.co/tXwk8X9/temp5.jpg",
+        title: "Video Subscription Tutorial",
+        category: ["Portrait", "Social", "Sales"],
+        description: "Promote your youtube series with this minimal template using animated text.",
+    },
+    {
+        _id: 6,
+        img: "https://i.ibb.co/7JcDKSm/temp6.jpg",
+        title: "Online Workshop Invitation",
+        category: ["Landscape", "Training"],
+        description: "A clean template to showcase an upcoming workshop or educational event. Featuring animated text.",
+    },
+    {
+        _id: 7,
+        img: "https://i.ibb.co/2WVmhbK/temp7.webp",
+        title: "Lecture Overview Youtube",
+        category: ["Landscape", "E-Learning"],
+        description: "A clean and sophisticated educational presentation for remote classes and students.",
+    },
+    {
+        _id: 8,
+        img: "https://i.ibb.co/bmhcTrt/temp8.webp",
+        title: "Online Class Invitation",
+        category: ["Landscape", "E-Learning"],
+        description: "A video invite to an online educational class or lecture, with space to add details and information about the event.",
+    },
+]
+
 export const educationCardData = [
   {
     _id: 1,
