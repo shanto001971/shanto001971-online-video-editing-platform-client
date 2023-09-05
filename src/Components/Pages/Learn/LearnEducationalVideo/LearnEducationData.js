@@ -1,6 +1,6 @@
 import cardImg1 from "../../../../assets/learn/Educational/cards/card1.png";
-import cardImg2 from "../../../../assets/learn/Educational/cards/card2.png";
-import cardImg3 from "../../../../assets/learn/Educational/cards/card3.png";
+import cardImg2 from "../../../../assets/learn/Educational/cards/card2.webp";
+import cardImg3 from "../../../../assets/learn/Educational/cards/card3.webp";
 import blogImg1 from "../../../../assets/learn/Educational/blogs/educational-blog1.webp";
 import blogImg2 from "../../../../assets/learn/Educational/blogs/educational-blog2.webp";
 import blogImg3 from "../../../../assets/learn/Educational/blogs/educational-blog3.webp";
@@ -68,10 +68,10 @@ export const educationTemplateData = [
 export const educationCardData = [
   {
     _id: 1,
-    img: cardImg1,
+    img: cardImg3,
     title: "Upload or record your video",
     description:
-      "Upload the video you’ve recorded to MingleMotion. Or you can record your webcam using our recorder tool.",
+      "Upload the video you’ve recorded to Mingle Motion. Or you can record your webcam using our recorder tool.",
   },
   {
     _id: 2,
@@ -82,7 +82,7 @@ export const educationCardData = [
   },
   {
     _id: 3,
-    img: cardImg3,
+    img: cardImg1,
     title: "Download",
     description:
       "Download your video in your desired format. You can export it as MP4, AVI, MOV, and more.",
@@ -150,7 +150,7 @@ export const feedbackData = [
         _id: 1,
         name: "Diana B",
         designation: "Social Media Strategist, Self Employed",
-        feedback: " seen on the market. It has enabled me to edit my videos in just a few minutes and bring my video content to the next levelLaura Haleydt - Brand Marketing Manager, Carlsberg ImportersThe Best & Most Easy to Use Simple Video Editing Software! I had tried tons of other online editors on the market and been disappointed. With Mingle Motion I haven't experienced any issues with the videos I create on there. It has everything I need in one place such as the progress bar for my 1-minute clips, auto transcriptions for all my video content, and custom fonts for consistency in my visual branding.",
+        feedback: "The Best & Most Easy to Use Simple Video Editing Software! I had tried tons of other online editors on the market and been disappointed. With Mingle Motion I haven't experienced any issues with the videos I create on there. It has everything I need in one place such as the progress bar for my 1-minute clips, auto transcriptions for all my video content, and custom fonts for consistency in my visual branding.",
     },
     {
         _id: 2,
@@ -161,7 +161,7 @@ export const feedbackData = [
     {
         _id: 3,
         name: "Chris Y",
-        designation: "",
+        designation: "Visual Designer, Carlsberg Importers",
         feedback: "Mingle Motion is a great piece of browser software with the best team I've ever seen. Mingle Motion allows for subtitling, editing, effect/text encoding, and many more advanced features that other editors just can't compete with. The free version is wonderful, but the Pro version is beyond perfect. Keep in mind that this a browser editor we're talking about and the level of quality that Mingle Motion allows is stunning and a complete game changer at worst.",
     },
 ]

@@ -4,6 +4,13 @@ import LearnEducationalBanner from "./LearnEducationalBanner";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import BrandLogoContainer from "./BrandLogoContainer";
 import EducationTextContainer from "./EducationTextContainer";
+import LearnEducationTemplate from "./LearnEducationTemplate";
+import LearnEducationalCard from "./LearnEducationalCard";
+import VideoTutorial from "../VideoTutorial";
+import LearnEducationalBlog from "./LearnEducationalBlog";
+import LearnEducationFAQ from "./LearnEducationFAQ";
+import LearnFeedbackSection from "../LearnFeedbackSection";
+import EducationLastSection from "./EducationLastSection";
 
 const LearnEducationalVideo = () => {
   return (
@@ -21,6 +28,13 @@ const LearnEducationalVideo = () => {
         <LearnEducationalBanner />
         <BrandLogoContainer/>
         <EducationTextContainer/>
+        <LearnEducationTemplate/>
+        <LearnEducationalCard/>
+        <VideoTutorial title={"‘Educational Video’ Tutorial"}/>
+        <LearnEducationalBlog/>
+        <LearnEducationFAQ/>
+        <LearnFeedbackSection/>
+        <EducationLastSection/>
       </Container>
     </div>
   );
