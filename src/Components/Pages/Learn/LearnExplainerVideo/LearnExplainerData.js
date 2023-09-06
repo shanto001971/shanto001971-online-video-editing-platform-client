@@ -1,6 +1,6 @@
 import cardImg1 from "../../../../assets/learn/Explainer/cards/explainer-card1.webp";
 import cardImg2 from "../../../../assets/learn/Explainer/cards/Explainer-card2.webp";
-import cardImg3 from "../../../../assets/learn/Explainer/cards/";
+import cardImg3 from "../../../../assets/learn/Explainer/cards/explainer-card3.png";
 import blogImg1 from "../../../../assets/learn/Explainer/blogs/explainer-blog1.png";
 import blogImg2 from "../../../../assets/learn/Explainer/blogs/explainer-blog2.png";
 import blogImg3 from "../../../../assets/learn/Explainer/blogs/explainer-blog3.png";
@@ -25,7 +25,7 @@ export const explainerCardData = [
     img: cardImg3,
     title: "Start with a template, use magic cut, and add a CTA",
     description:
-      "If you don’t know where to start, use one of our customizable video templates. Or upload your raw video and let our AI magic cut tool select the best clips and turn it into a masterpiece. Add a CTA from our Elements menu. All that and more on Mingle Motion’s online video editor.",
+      "If you don’t know where to start, use one of our customizable video templates. Or upload your raw video and let our AI magic cut tool select the best clips and turn it into a masterpiece. Add a CTA from our Elements menu.",
   },
 ];
 
@@ -47,7 +47,8 @@ export const explainerBlogData = [
   {
     _id: 3,
     img: blogImg3,
-    title:
+    title: "Create accessible content with captions and translations",
+    description:
       "Text and captions are key elements in informative videos. This is especially helpful to your viewers, who like to read along as they watch. Some people also learn better by reading. Mingle Motion can automatically generate subtitles for you, and you can translate them into multiple languages for better accessibility.",
   },
 ];
