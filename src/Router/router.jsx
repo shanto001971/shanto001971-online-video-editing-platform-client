@@ -17,6 +17,12 @@ import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVid
 import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
 
+import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
+import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
+import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
+import HelpEmail from "../Components/Pages/Help/HelpEmail";
+
+
 export const router = createBrowserRouter([
     {
         path: "/",
