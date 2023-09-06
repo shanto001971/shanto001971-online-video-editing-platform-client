@@ -54,7 +54,7 @@ const Navbar = () => {
             <NavLink
               to="/templates"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
               }
             >
               Templates
@@ -113,7 +113,7 @@ const Navbar = () => {
             <NavLink
               to="/explore"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
               }
             >
               Explore
@@ -175,7 +175,7 @@ const Navbar = () => {
             <NavLink
               to="/pricing"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
               }
             >
               Pricing
@@ -185,7 +185,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  " : "default "
+                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
               }
             >
               About
@@ -213,8 +213,8 @@ const Navbar = () => {
                   to="/login"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[16px] text-black font-bold "
-                      : "default text-[16px] "
+                      ? "text-[16px] text-black font-bold nav-link"
+                      : "default text-[16px] nav-link"
                   }
                 >
                   Login
@@ -273,7 +273,7 @@ const Navbar = () => {
                       <Link
                         to="/templates"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold " : "default "
+                          isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
                         }
                       >
                         Templates
@@ -284,7 +284,7 @@ const Navbar = () => {
                       <NavLink
                         to="/explore"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold " : "default "
+                          isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
                         }
                       >
                         Explore

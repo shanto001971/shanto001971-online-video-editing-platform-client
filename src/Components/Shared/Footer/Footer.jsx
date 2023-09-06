@@ -5,7 +5,7 @@ const Footer = () => {
 
     return (
     <>
-    <footer className=" footer p-4 md:p-10 bg-neutral text-neutral-content" style={{rowGap:'0px'}} >
+    <footer className=" footer p-4 md:p-10 bg-neutral text-neutral-content " style={{rowGap:'0px'}} >
   <div className='flex   items-center md:items-start md:flex-col'>
 <div><p className='text-4xl'>MotionMingle Express</p>    <p className='w-48 mb-5 md:mb-0'>Free all-in-one video editor for everyone to create anything anywhere
 </p></div>
@@ -90,7 +90,7 @@ const Footer = () => {
 </footer>
     <footer className=" footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300">
   
-  <div className="md:place-self-center md:justify-self-center">
+  <div className=" md:place-self-center md:justify-self-center">
   <p>Copyright © 2023 - All right reserved by MitionMingle Express</p>
 
   </div>
