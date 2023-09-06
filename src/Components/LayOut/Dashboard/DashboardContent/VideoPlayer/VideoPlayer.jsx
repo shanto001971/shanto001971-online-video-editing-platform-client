@@ -179,7 +179,8 @@ const VideoPlayer = () => {
                     </div>
                 </div>
             </div>
-            );
+        </div>
+    );
 };
 
-            export default VideoPlayer;
+export default VideoPlayer;
