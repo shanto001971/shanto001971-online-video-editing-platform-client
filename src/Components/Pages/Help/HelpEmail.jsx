@@ -48,11 +48,11 @@ const HelpEmail = () => {
    
     <div className="container-1  w-full px-3 h-screen flex flex-col justify-center items-center text-gray-800 rounded-xl " >
         <form ref={form} onSubmit={sendEmail}>
-        <h2 className='text-3xl font-semibold text-blue-900'>Contact With Us</h2>
+        <h2 className='text-3xl font-semibold text-white'>Contact With Us</h2>
 
           <div className="grid grid-cols-2 gap-10">
             <div className="space-y-1 text-sm">
-              <label htmlFor="name" className="block text-gray-600">
+              <label htmlFor="name" className="block text-white">
                 Name
               </label>
               <input
@@ -63,7 +63,7 @@ const HelpEmail = () => {
               />
             </div>
             <div className="space-y-1 text-sm">
-              <label htmlFor="Email" className="block text-gray-600">
+              <label htmlFor="Email" className="block text-white">
                 Email
               </label>
               <input
@@ -77,7 +77,7 @@ const HelpEmail = () => {
             
           </div>
           <div className="space-y-1 text-sm mt-2">
-              <label htmlFor="Message" className="block text-gray-600">
+              <label htmlFor="Message" className="block text-white">
                 Message
               </label>
 
