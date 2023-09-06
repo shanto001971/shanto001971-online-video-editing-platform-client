@@ -1,5 +1,5 @@
 import "./Template.css";
-import templateImage from "../../../assets/template.png";
+import templateImage from "../../../../assets/template.png";
 import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -7,7 +7,7 @@ import "react-tabs/style/react-tabs.css";
 import TemplateVideos from "./TemplateVideos";
 import TemplateImages from "./TemplateImages";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchImgTemplate } from "../../../features/template/templateImagesSlice";
+import { fetchImgTemplate } from "../../../../features/template/templateImagesSlice";
 
 const Templates = () => {
   const [activeTab, setActiveTab] = useState(0); // 0 for Videos, 1 for Images

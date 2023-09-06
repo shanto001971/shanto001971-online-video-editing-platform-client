@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import LayOut from "../Components/LayOut/LayOut";
 import Home from "../Components/Home/Home";
-import Templates from "../Components/Pages/Templates/Templates";
 import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
 
@@ -19,6 +18,8 @@ import HelpEmail from "../Components/Pages/Help/HelpEmail";
 import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
 import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
+import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
+import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
 
 
 
@@ -38,8 +39,12 @@ export const router = createBrowserRouter([
             },
            
             {
-                path: "/templates",
+                path: "/templates-for-mobile",
                 element: <Templates />
+            },
+            {
+                path: "/all-templates",
+                element: <AllTemplates />
             },
             {
                 path: '/login',
