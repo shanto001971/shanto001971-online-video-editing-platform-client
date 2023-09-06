@@ -14,10 +14,10 @@ import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 const LearnFeedbackSection = () => {
   return (
-    <div className="lg:flex items-center">
-      <div className="flex-col md:w-[450px] space-y-4">
-        <BiSolidQuoteAltLeft className="text-6xl text-blue-600 mx-auto" />
-        <h2 className="text-4xl font-semibold mx-auto">
+    <div className="my-20 md:my-32 lg:flex items-center">
+      <div className="text-center lg:text-start lg:mb-0 mb-10 flex-col lg:w-[450px] space-y-4">
+        <BiSolidQuoteAltLeft className="text-5xl md:text-6xl text-blue-600 mx-auto" />
+        <h2 className="text-2xl md:text-4xl font-semibold mx-auto leading-10">
           What they say about Mingle Motion
         </h2>
       </div>
@@ -34,9 +34,9 @@ const LearnFeedbackSection = () => {
             feedbackData.length > 0 &&
             feedbackData.map((item) => (
               <SwiperSlide key={item._id}>
-                <div className="py-6">
-                    <h6 className="italic">{item.feedback}</h6>
-                    <h4 className="text-xl font-semibold mt-4 ">{item.name} - {item.designation}</h4>
+                <div className="pb-3 md:py-6">
+                    <h6 className="text-center text-sm md:text-base lg:text-start italic">{item.feedback}</h6>
+                    <h4 className="text-center lg:text-start text-base md:text-xl font-semibold mt-4 ">{item.name} - {item.designation}</h4>
                 </div>
               </SwiperSlide>
             ))}
