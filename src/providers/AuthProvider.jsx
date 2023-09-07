@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../Components/Firebase/firebase.config";
+import axios from "axios";
 
 export const AuthContext = createContext(null)
 const auth = getAuth(app);
@@ -62,6 +63,19 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, loggedUser => {
             console.log('logged user inside the onAuthStateChanage', loggedUser);
             setUser(loggedUser);
+
+           if(loggedUser){
+                axios.post('https://online-video-editing-platform-server.vercel.app/jwt', 
+                {email: loggedUser.email})
+                .then(data => {
+                    console.log(data.data.token)
+                    localStorage.setItem('access-token', data.data.token)
+                })
+           }
+           else{
+                localStorage.removeItem('access-token')
+           }
+
             setLoading(false);
         })
         return () => {
