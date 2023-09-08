@@ -2,6 +2,7 @@ import { PiMessengerLogo } from "react-icons/pi";
 import { MdOutlinePhotoSizeSelectActual } from "react-icons/md";
 import { BsFolder2 } from "react-icons/bs";
 import { useState } from "react";
+import { FacebookProvider, CustomChat } from 'react-facebook';
 
 const SideIcon = (props) => {
   const [hovered, setHovered] = useState(false);
@@ -42,6 +43,9 @@ const SideIcon = (props) => {
           Connect us
         </p>
       </div>
+      <FacebookProvider appId="1030485761479705" chatSupport>
+        <CustomChat pageId="116994098167601" minimized={true}/>
+      </FacebookProvider> 
     </div>
   );
 };
