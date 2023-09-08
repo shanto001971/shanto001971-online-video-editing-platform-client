@@ -47,7 +47,7 @@ const PricingTab = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='first-c '>
+                        <div className='first-cc '>
 
                             <div className='p-7 '>
                                 <div className='relative'> <p className='corneL '>Limited offer</p></div>

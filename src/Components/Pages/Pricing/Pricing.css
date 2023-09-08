@@ -6,6 +6,10 @@
 
 }
 
+.priced {
+    position: relative;
+}
+
 .corner {
     background-color: #31b0d3;
     width: 160px;
@@ -13,11 +17,11 @@
     transform: rotate(-45deg) translate(0, -100%);
     transform-origin: 0 0;
     position: absolute;
-    bottom: 24rem;
+    bottom: 74rem;
     right: 60rem;
     display: inline-block;
     /* clip-path: polygon(10% 20%, 100% 0, 90% 100%, 15% 100%); */
-    clip-path: polygon(11.3% 0, calc(100% - 25px) 0, 100% 100%, -3.9% 100%);
+    clip-path: polygon(11.3% 0, calc(100% - 40px) 0, 100% 100%, -3.9% 100%);
 }
 
 .bg {

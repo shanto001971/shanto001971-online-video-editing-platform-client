@@ -20,6 +20,7 @@ import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/L
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
 import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
 import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
+import Pricing from "../Components/Pages/Pricing/Pricing";
 
 
 
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
                 path: "/emailUs",
                 element: <HelpEmail />
             },
-           
+
             {
                 path: "/templates-for-mobile",
                 element: <Templates />
@@ -70,28 +71,32 @@ export const router = createBrowserRouter([
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
             },
-            
+
             {
                 path: "/learn-educational-video",
-                element: <LearnEducationalVideo/>
+                element: <LearnEducationalVideo />
             },
             {
                 path: "/learn-explainer-video",
-                element: <LearnExplainerVideo/>
+                element: <LearnExplainerVideo />
             },
             {
                 path: "/learn-training-video",
-                element: <LearnTrainingVideo/>
+                element: <LearnTrainingVideo />
+            },
+            {
+                path: "/pricing",
+                element: <Pricing />
             },
         ]
     },
     {
         path: "/dashboard",
-        element: <VideoEditeLayout/>,
-        children:[
+        element: <VideoEditeLayout />,
+        children: [
             {
-                path:"/dashboard",
-                element:<VideoEditePage/>
+                path: "/dashboard",
+                element: <VideoEditePage />
             }
         ]
 
