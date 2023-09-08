@@ -74,7 +74,7 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <span className="flex justify-center items-center gap-1 max-w-sm bg-slate-200 rounded-lg p-2  ">
+          <span className="flex justify-center items-center gap-1 max-w-sm bg-slate-200 rounded-xl p-2  ">
             <TfiWorld className="text-black " />
 
             <div id="google_translate_element"></div>
