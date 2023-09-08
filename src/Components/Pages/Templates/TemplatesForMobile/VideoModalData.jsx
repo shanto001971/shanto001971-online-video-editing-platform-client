@@ -6,7 +6,7 @@ import { RxCross1 } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setSelectedData2 } from "../../../features/template/templateVideosSlice";
+import { setSelectedData2 } from "../../../../features/template/templateVideosSlice";
 
 const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
   const dispatch = useDispatch();

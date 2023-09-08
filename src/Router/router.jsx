@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import LayOut from "../Components/LayOut/LayOut";
 import Home from "../Components/Home/Home";
-import Templates from "../Components/Pages/Templates/Templates";
 import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
 
@@ -12,10 +11,17 @@ import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo
 // import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
 import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
 import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
+import UserAdminDashboard from "../Components/LayOut/UserAdminDashboard";
+import AllUsers from "../Components/Pages/UserAdminDashboard/AllUsers/AllUsers";
+import UsersChart from "../Components/Pages/UserAdminDashboard/UsersChart/UsersChart";
 import HelpEmail from "../Components/Pages/Help/HelpEmail";
 import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
 import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
+import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
+import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
+
+
 
 export const router = createBrowserRouter([
     {
@@ -33,8 +39,12 @@ export const router = createBrowserRouter([
             },
            
             {
-                path: "/templates",
+                path: "/templates-for-mobile",
                 element: <Templates />
+            },
+            {
+                path: "/all-templates",
+                element: <AllTemplates />
             },
             {
                 path: '/login',
@@ -60,6 +70,7 @@ export const router = createBrowserRouter([
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
             },
+            
             {
                 path: "/learn-educational-video",
                 element: <LearnEducationalVideo/>
@@ -85,4 +96,20 @@ export const router = createBrowserRouter([
         ]
 
     },
+
+    {
+        path: "useradmindashboard",
+        element: <UserAdminDashboard></UserAdminDashboard>,
+        children: [
+            {
+                path: "allusers",
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: "userschart",
+                element: <UsersChart></UsersChart>
+            }
+        ]
+    }
+
 ]);

@@ -5,6 +5,7 @@ import { observer } from "mobx-react";
 import { VideoResource } from "../entity/VideoResource";
 import { UploadButton } from "../shared/UploadButton";
 
+
 export const VideoResourcesPanel = observer(() => {
   const store = React.useContext(StoreContext);
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -3,7 +3,7 @@ import React from "react";
 import { EditorElement } from "../../../types";
 import { StoreContext } from "../../store";
 import { observer } from "mobx-react";
-import { MdOutlineTextFields, MdMovie } from "react-icons/md";
+import { MdOutlineTextFields, MdMovie,MdDelete } from "react-icons/md";
 
 export type ElementProps = {
   element: EditorElement;
@@ -76,7 +76,7 @@ export const Element = observer((props: ElementProps) => {
         ) : null}
       </div>
       <button
-        className="bg-red-500 hover:bg-red-700 text-white mr-2 text-xs py-0 px-1 rounded"
+        className=" hover:text-black mr-2 text-xs py-0 px-1 rounded"
         onClick={(e) => {
           store.removeEditorElement(element.id);
           store.refreshElements();
@@ -84,7 +84,7 @@ export const Element = observer((props: ElementProps) => {
           e.stopPropagation();
         }}
       >
-        X
+        <MdDelete className="w-6 h-6"/>
       </button>
     </div>
   );

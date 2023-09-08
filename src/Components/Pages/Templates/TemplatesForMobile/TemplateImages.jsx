@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchImgTemplate } from "../../../features/template/templateImagesSlice";
-import Loader from "../../Loader/Loader";
+import { fetchImgTemplate } from "../../../../features/template/templateImagesSlice";
+import Loader from "../../../Loader/Loader";
 import TemplateImgModal from "./TemplateImgModal";
 
 const TemplateImages = ({ searchQuery, filteredImages }) => {

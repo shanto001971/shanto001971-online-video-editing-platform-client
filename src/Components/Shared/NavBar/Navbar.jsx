@@ -14,9 +14,14 @@ const Navbar = () => {
  
  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isTemplateOpen, setIsTemplateOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isLearnOpen, setIsLearnOpen] = useState(false);
   const { user, logOut} = useContext(AuthContext);
+
+  const toggleTemplate = () => {
+    setIsTemplateOpen(!isTemplateOpen);
+  };
 
   const toggleTools = () => {
     setIsToolsOpen(!isToolsOpen);
@@ -53,14 +58,40 @@ const Navbar = () => {
         </Link>
         {/* Nav Items Section */}
         <ul className="items-center hidden space-x-8 lg:flex">
-          <li className="">
+        <li onMouseEnter={toggleTemplate} onMouseLeave={toggleTemplate}>
             <NavLink
-              to="/templates"
+              to="/"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
+                isActive ? "text-xl text-black font-bold " : "default "
               }
             >
-              Templates
+              Templates 
+              {isTemplateOpen && (
+                <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500">
+                  <li className="text-left pe-10">
+                    <NavLink
+                      to="/all-templates"
+                      title="All Categories Templates"
+                      className={({ isActive }) =>
+                        isActive ? "text-black font-medium" : "default"
+                      }
+                    >
+                     All Categories Templates
+                    </NavLink>
+                  </li>
+                  <li className="py-3 text-left">
+                    <NavLink
+                      to="/templates-for-mobile"
+                      title="Templates for Mobile"
+                      className={({ isActive }) =>
+                        isActive ? "text-black font-medium" : "default"
+                      }
+                    >
+                     Templates for Mobile
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
             </NavLink>
           </li>
           {/* tool section  start =================== */}
