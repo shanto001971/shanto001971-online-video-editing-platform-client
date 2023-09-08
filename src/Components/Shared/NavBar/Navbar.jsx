@@ -197,6 +197,18 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
+          {/* useradmindasboard  route  */}
+          <li>
+            <NavLink
+              to="/useradmindashboard"
+              title="Dashboard"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+              Dashboard
+            </NavLink>
+          </li>
         </ul>
 
         <ul className="items-center hidden space-x-8 lg:flex  text-gray-400 font-semibold text-xl">
