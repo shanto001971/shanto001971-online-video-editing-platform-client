@@ -11,7 +11,6 @@ const Footer = () => {
     );
     document.body.appendChild(addScript);
     window.googleTranslateElementInit = googleTranslateElementInit;
-    console.log("form google");
   }, []);
 
   const googleTranslateElementInit = () => {

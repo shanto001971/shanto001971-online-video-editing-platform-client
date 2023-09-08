@@ -13,6 +13,10 @@
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
   }
-  .VIpgJd-ZVi9od-ORHb{
-    display: none;
-    }
+ 
+  
+    .VIpgJd-ZVi9od-ORHb {
+      margin: 0;
+      background-color:  #000 !important;
+      overflow: hidden;
+  }

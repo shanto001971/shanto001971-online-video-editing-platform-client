@@ -61,31 +61,4 @@ footer .wave{
   .goog-te-gadget {
     color: white !important;
 }
-  .goog-te-banner-frame.skiptranslate .goog-te-gadget-simple img {
-    display: none !important;
-  }
-  
-  .goog-tootlip {
-    display: none !important;
-  }
-  
-  .goog-tootlip:hover {
-    display: none !important;
-  }
-  
-  .element.style {
-    background-color: transparent !important;
-    background-image: none !important;
-  }
-  
-  .goog-text-highlight {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-  
-  
-  body {
-    top: 0px !important;
-  }
   
