@@ -43,3 +43,49 @@ footer .wave{
 }
 
 } */
+
+#google_translate_element {
+    /* Add your custom styles here */
+  }
+  #google_translate_element img{
+    display: none !important;
+  }
+  .goog-te-gadget-simple {
+    background-color: rgb(226 232 240 / var(--tw-bg-opacity)) !important ;   
+    border-left: 0px solid #D5D5D5  !important;
+    border-top: 0px solid #9B9B9B !important;
+    border-bottom: 0px solid #E8E8E8 !important;
+    border-right: 0px solid #D5D5D5 !important;
+    color: #E8E8E8 !important;
+  }
+  .goog-te-gadget {
+    color: white !important;
+}
+  .goog-te-banner-frame.skiptranslate .goog-te-gadget-simple img {
+    display: none !important;
+  }
+  
+  .goog-tootlip {
+    display: none !important;
+  }
+  
+  .goog-tootlip:hover {
+    display: none !important;
+  }
+  
+  .element.style {
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+  
+  .goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  
+  body {
+    top: 0px !important;
+  }
+  
