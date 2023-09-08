@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
@@ -21,26 +21,91 @@ import {
 import './Timeline.css';
 import CountUp from 'react-countup';
 import img4 from '../../../../public/world-map.png';
+import { Link } from 'react-router-dom';
 
-// #65325D
-// #7B61F3
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Timeline = () => {
+	useEffect(() => {
+		Aos.init();
+		// AOS.refresh();
+	}, []);
 	return (
 		<div>
-			<div className="h-[300px] bg-[#65325D] md:pr-20">
-				<div className="md:flex justify-between items-center pt-12">
-					<h1 className="text-7xl font-bold pl-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-						About Us
-					</h1>
-					<img src={img} alt="" />
+			<div className="h-[500px] bg-[#65325D] flex items-center justify-center">
+				<div className="flex items-center justify-between">
+					<div
+						data-aos="flip-right"
+						// data-aos-offset="200"
+						// data-aos-delay="50"
+						// data-aos-duration="1000"
+						// data-aos-easing="ease-in-out"
+						// data-aos-mirror="true"
+						// data-aos-once="false"
+						// data-aos-anchor-placement="top-center"
+						className="px-20"
+					>
+						<h1 className="text-7xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+							About Us
+						</h1>
+						<p className="text-white pt-5">
+							Motion Mingle is a video editing platform for
+							editing video. In this website, a user can upload
+							his own video and edit the video by cutting,
+							cropping, trimming, or scaling the video. The user
+							can also create his own video by clicking on the
+							video. The video will be automatically uploaded to
+							your server and then automatically uploaded to the
+							server. User can put layer and different types of
+							animations into the video.
+						</p>
+					</div>
+					<img
+						className="px-20  w-[600px] h-[450px]"
+						src={img}
+						alt=""
+					/>
 				</div>
+			</div>
+
+			<div>
+				<h1 className="text-7xl font-bold text-center my-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+					Our History
+				</h1>
+				<p className="text-justify text-md mx-40">
+					Motion Mingle stands as a premier destination for those
+					passionate about the world of video editing, offering an
+					expansive platform where both novice enthusiasts and
+					seasoned professionals can seamlessly merge their creative
+					ideas and technical expertise. At the heart of our website,
+					Motion Mingle, lies a bustling hub dedicated to the art of
+					video editing and the magic of collaborative storytelling.
+					Our robust suite of video editing tools empowers users to
+					bring their vision to life, transforming raw footage into
+					visually stunning and emotionally compelling narratives.
+					With a wealth of resources and a thriving community of
+					like-minded creators, Motion Mingle fosters an environment
+					where innovation and collaboration flourish. Whether you're
+					an aspiring filmmaker keen on perfecting your craft or an
+					experienced video editor in search of fresh inspiration,
+					Motion Mingle provides the ideal platform to embark on a
+					captivating video editing journey. Join us today, and
+					together, let's explore the limitless possibilities of video
+					editing while forging meaningful connections within our
+					creative community.
+				</p>
+				<Link to="/dashboard">
+					<button className="flex justify-center items-center mx-auto p-5 my-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-xl font-semibold hover:rounded-3xl duration-500">
+						Start Editing Now <FaArrowRight className="ml-3" />
+					</button>
+				</Link>
 			</div>
 
 			<div className="md:flex my-20">
 				<div className="mr-10">
 					<img
-						className="w-[477px] h-[477px] bg-indigo-500"
+						className="w-[477px] h-[477px] bg-[#D14DBE]"
 						src={img2}
 						alt=""
 					/>
@@ -88,7 +153,7 @@ const Timeline = () => {
 				<CountUp start={0} end={200} delay={0}>
 					{({ countUpRef }) => (
 						<div>
-							<div className="text-5xl font-bold text-blue-500">
+							<div className="text-5xl font-bold text-[#7B61F3]">
 								<span ref={countUpRef} />
 							</div>
 							<p className="text-xl pt-5">Countries Worldwide</p>
@@ -98,7 +163,7 @@ const Timeline = () => {
 				<CountUp start={0} end={256} delay={0}>
 					{({ countUpRef }) => (
 						<div>
-							<div className="text-5xl font-bold text-blue-500">
+							<div className="text-5xl font-bold text-[#7B61F3]">
 								<span ref={countUpRef} />K
 							</div>
 							<p className="text-xl pt-5">Registered User</p>
@@ -108,7 +173,7 @@ const Timeline = () => {
 				<CountUp start={0} end={23} delay={0}>
 					{({ countUpRef }) => (
 						<div>
-							<div className="text-5xl font-bold text-blue-500">
+							<div className="text-5xl font-bold text-[#7B61F3]">
 								<span ref={countUpRef} />K
 							</div>
 							<p className="text-xl pt-5">
@@ -354,6 +419,12 @@ const Timeline = () => {
 					<p>Just Wow, isn't it?</p>
 				</VerticalTimelineElement>
 			</VerticalTimeline>
+
+			<Link to="/dashboard">
+				<button className="flex justify-center items-center mx-auto p-5 my-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-xl font-semibold hover:rounded-3xl duration-500">
+					Start Editing Now <FaArrowRight className="ml-3" />
+				</button>
+			</Link>
 		</div>
 	);
 };
