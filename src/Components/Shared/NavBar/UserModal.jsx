@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { RiPencilFill } from "react-icons/ri";
 import { MdOutlineLogout } from "react-icons/md";
 import { BsPlusCircle } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 import { TbPointFilled } from "react-icons/tb";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
@@ -14,13 +15,14 @@ function UserModal({ handleLogOut }) {
       return (
     <div>
       <div className="dropdown   lg:dropdown-end">
-        <label tabIndex={0} className="md:flex items-center gap-1 m-1">
+        <label tabIndex={0} className="flex items-center gap-1 m-1">
           <img
             style={{ width: "40px", borderRadius: "50%", marginLeft: "7px" }}
             src={user.photoURL}
             alt=""
           />
-        </label>
+{user ?           <BsChevronDown className="font-bold text-black h-3" /> : ''
+}        </label>
         <ul
           tabIndex={0}
           className="dropdown-content mb-52 bg-indigo-50 z-[1] menu -mt-24 lg:-mt-0 ml-12 md:ml-20 lg:ml-0 p-3 md:p-5 text-center shadow-lg  rounded-box max-w-[400px] md:w-[400px]"
@@ -51,7 +53,7 @@ function UserModal({ handleLogOut }) {
           </p>
           <div       onClick={openGoogleAccount}
  className="text-center">
-            <button class=" py-1 text-sm w-56 text-indigo-600 font-semibold rounded-full border  border-gray-400">
+            <button className=" py-1 text-sm w-56 text-indigo-600 font-semibold rounded-full border  border-gray-400">
               Manage Your Google Account
             </button>
           </div>

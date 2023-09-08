@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HelpButton = () => {
     return (
-        <div>
+        
           <div className="dropdown dropdown-hover">
   <label tabIndex={0} className="text-slate-500 font-medium m-1">Help</label>
   <div tabIndex={0} className="dropdown-content z-[1] menu p-6 -ml-2 w-[280px] md:w-[360px] shadow-lg shadow-slate-500 bg-base-100 rounded-box">
@@ -24,7 +24,7 @@ const HelpButton = () => {
 </div>
   </div>
 </div>  
-        </div>
+       
     );
 };
 

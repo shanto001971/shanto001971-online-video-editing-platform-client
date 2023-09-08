@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   fetchVideosTemplate,
   setSelectedData2,
-} from "../../../features/template/templateVideosSlice";
-import Loader from "../../Loader/Loader";
+} from "../../../../features/template/templateVideosSlice";
+import Loader from "../../../Loader/Loader";
 import HoverVideoPlayer from "react-hover-video-player";
 import TemplateVideoModal from "./TemplateVideoModal";
 

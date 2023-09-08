@@ -38,3 +38,30 @@
 /* .hover_test:hover .tools-dropdown{
     display:  block;
 } */
+
+/* Add underline with gap on hover */
+.nav-link {
+  position: relative;
+}
+
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 20px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(77, 53, 175);
+  transition: width 0.3s ease;
+  transform-origin: left;
+  margin-top: 10px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+

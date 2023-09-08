@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import LayOut from "../Components/LayOut/LayOut";
 import Home from "../Components/Home/Home";
-import Templates from "../Components/Pages/Templates/Templates";
 import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
 
@@ -19,6 +18,11 @@ import HelpEmail from "../Components/Pages/Help/HelpEmail";
 import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
 import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
 import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
+import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
+import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
+import Pricing from "../Components/Pages/Pricing/Pricing";
+
+
 
 export const router = createBrowserRouter([
     {
@@ -34,10 +38,14 @@ export const router = createBrowserRouter([
                 path: "/emailUs",
                 element: <HelpEmail />
             },
-           
+
             {
-                path: "/templates",
+                path: "/templates-for-mobile",
                 element: <Templates />
+            },
+            {
+                path: "/all-templates",
+                element: <AllTemplates />
             },
             {
                 path: '/login',
@@ -63,28 +71,32 @@ export const router = createBrowserRouter([
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
             },
-            
+
             {
                 path: "/learn-educational-video",
-                element: <LearnEducationalVideo/>
+                element: <LearnEducationalVideo />
             },
             {
                 path: "/learn-explainer-video",
-                element: <LearnExplainerVideo/>
+                element: <LearnExplainerVideo />
             },
             {
                 path: "/learn-training-video",
-                element: <LearnTrainingVideo/>
+                element: <LearnTrainingVideo />
+            },
+            {
+                path: "/pricing",
+                element: <Pricing />
             },
         ]
     },
     {
         path: "/dashboard",
-        element: <VideoEditeLayout/>,
-        children:[
+        element: <VideoEditeLayout />,
+        children: [
             {
-                path:"/dashboard",
-                element:<VideoEditePage/>
+                path: "/dashboard",
+                element: <VideoEditePage />
             }
         ]
 
