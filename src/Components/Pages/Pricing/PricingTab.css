@@ -1,0 +1,70 @@
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    /* Centers vertically and takes full viewport height */
+}
+
+.first-c {
+    width: 80 px;
+    height: 500px;
+    border: 3px solid rgb(143, 140, 136);
+    border-radius: 10px;
+    /* padding: 20px; */
+}
+
+.first-cc {
+    width: 80 px;
+    height: 500px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    /* padding: 20px; */
+}
+
+.second-c {
+    background-color: rgba(221, 217, 217, 0.938);
+    width: 80 px;
+    height: 232px;
+
+
+}
+
+.corneL {
+    background-color: #31b0d3;
+    width: 160px;
+    text-align: center;
+    transform: rotate(45deg) translate(0, -100%);
+    transform-origin: 0 0;
+    position: absolute;
+    top: -2rem;
+    left: 8rem;
+    display: inline-block;
+    z-index: 1;
+    /* Adjust the z-index as needed to ensure visibility */
+    clip-path: polygon(19% 0, calc(100% - 25px) 0, 100% 100%, 3% 100%);
+    /* padding: 10px 0; */
+    /* Adjust padding as needed */
+    color: white;
+    /* Text color */
+    /* font-weight: bold; */
+}
+
+.first-c {
+    position: relative;
+    /* Add any other necessary styles for your container */
+}
+
+.bgP {
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+
+
+}
