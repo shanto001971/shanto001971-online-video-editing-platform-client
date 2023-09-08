@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchVideos = createAsyncThunk("videos/fetchVideos", async () => {
-  const res = await axios.get(`${import.meta.env.VITE_API_URL}/demoVideos`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/demoVideosData`); //TODO changes url
   return res.data;
 });
 
