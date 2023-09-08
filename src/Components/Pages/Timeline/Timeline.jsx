@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
@@ -23,15 +23,29 @@ import CountUp from 'react-countup';
 import img4 from '../../../../public/world-map.png';
 import { Link } from 'react-router-dom';
 
-// #65325D
-// #7B61F3
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Timeline = () => {
+	useEffect(() => {
+		Aos.init();
+		// AOS.refresh();
+	}, []);
 	return (
 		<div>
 			<div className="h-[500px] bg-[#65325D] flex items-center justify-center">
 				<div className="flex items-center justify-between">
-					<div className="px-20">
+					<div
+						data-aos="flip-right"
+						// data-aos-offset="200"
+						// data-aos-delay="50"
+						// data-aos-duration="1000"
+						// data-aos-easing="ease-in-out"
+						// data-aos-mirror="true"
+						// data-aos-once="false"
+						// data-aos-anchor-placement="top-center"
+						className="px-20"
+					>
 						<h1 className="text-7xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 							About Us
 						</h1>
