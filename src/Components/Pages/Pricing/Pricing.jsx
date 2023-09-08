@@ -1,10 +1,11 @@
 import './Pricing.css'
-import Tabs from './Tabs';
+import PricingTab from './PricingTab';
+
 
 const Pricing = () => {
     return (
         <div className='mb-10'>
-            <div className='flex justify-center '>
+            <div className='flex justify-center  '>
                 <div className='BG p-10 mb-10 cursor-pointer'>
                     <div> <p className='corner p-0'>Limited offer</p></div>
                     <h3 className="text-center font-bold text-3xl">Lifetime plans for MingleMotion Express</h3>
@@ -18,7 +19,7 @@ const Pricing = () => {
             </div>
 
             <div><h3 className='text-center font-semibold text-2xl'>The right plans,for the right price</h3></div>
-            <Tabs />
+            <PricingTab />
         </div >
     );
 };
