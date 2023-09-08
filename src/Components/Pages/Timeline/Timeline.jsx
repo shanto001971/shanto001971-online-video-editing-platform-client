@@ -50,13 +50,15 @@ const Timeline = () => {
 							About Us
 						</h1>
 						<p className="text-white pt-5">
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Adipisci tempore voluptate quia, sed
-							perspiciatis ipsa temporibus assumenda, quam harum
-							et voluptatem architecto autem vero. Culpa quibusdam
-							corporis fugit blanditiis magnam fugiat,
-							exercitationem vero alias tempora molestias sit,
-							pariatur earum iusto?
+							Motion Mingle is a video editing platform for
+							editing video. In this website, a user can upload
+							his own video and edit the video by cutting,
+							cropping, trimming, or scaling the video. The user
+							can also create his own video by clicking on the
+							video. The video will be automatically uploaded to
+							your server and then automatically uploaded to the
+							server. User can put layer and different types of
+							animations into the video.
 						</p>
 					</div>
 					<img
