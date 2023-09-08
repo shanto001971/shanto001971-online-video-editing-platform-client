@@ -44,16 +44,24 @@
   position: relative;
 }
 
+
+
 .nav-link::after {
-  content: ""; 
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease; 
+  top: 20px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(77, 53, 175);
+  transition: width 0.3s ease;
+  transform-origin: left;
+  margin-top: 10px;
 }
 
 .nav-link:hover::after {
-  border-color: rgb(77, 53, 175); 
+  width: 100%;
 }
+
+
