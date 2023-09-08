@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchVideosTemplate = createAsyncThunk("templateVideos/templateVideosData", async()=> {
-    const res = await axios.get(`${import.meta.env.VITE_API_URL}/templateVideosData`)
+export const fetchVideosTemplate = createAsyncThunk("templateVideos/demoVideoTemplate", async()=> {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/demoVideoTemplate`)
     return res.data;
 })
 
