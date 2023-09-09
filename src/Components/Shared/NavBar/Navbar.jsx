@@ -315,7 +315,8 @@ const Navbar = () => {
                 {/* Mobile Nav Items Section */}
                 <nav>
                   <ul className="space-y-1">
-                    <li>
+                    {/* Template Nav Item start */}
+                  <li onMouseEnter={toggleTemplate} onMouseLeave={toggleTemplate}>
                       <Link
                         to="/templates"
                         className={({ isActive }) =>
@@ -323,9 +324,35 @@ const Navbar = () => {
                         }
                       >
                         Templates
+                        {isTemplateOpen && (
+                        <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500">
+                          <li className="text-left pe-10">
+                            <NavLink
+                              to="/all-templates"
+                              title="All Categories Templates"
+                              className={({ isActive }) =>
+                                isActive ? "text-black font-medium" : "default"
+                              }
+                              >
+                               All Categories Templates
+                              </NavLink>
+                            </li>
+                            <li className="py-3 text-left">
+                              <NavLink
+                                to="/templates-for-mobile"
+                                title="Templates for Mobile"
+                                className={({ isActive }) =>
+                                  isActive ? "text-black font-medium" : "default"
+                                }
+                              >
+                               Templates for Mobile
+                              </NavLink>
+                            </li>
+                          </ul>
+                        )}
                       </Link>
                     </li>
-
+                    {/* Template Nav Item end */}
                     <li>
                       <NavLink
                         to="/explore"

@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchImages = createAsyncThunk("images/fetchImages", async()=> {
-    const res = await axios.get(`${import.meta.env.VITE_API_URL}/demoImages`)
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/demoImagesData`) // TODO: URL changes here
     return res.data;
 })
 

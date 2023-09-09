@@ -24,7 +24,7 @@ const Feedback = () => {
   //   }, []);
 
   return (
-    <div className="mx-0 sm:mx-6 md:mx-10 lg:mx-32 my-20">
+    <div className="mx-0 sm:mx-6 md:mx-20 lg:mx-40 my-20">
             <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -35,7 +35,7 @@ const Feedback = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
