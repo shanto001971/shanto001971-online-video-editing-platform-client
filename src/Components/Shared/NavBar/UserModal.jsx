@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { RiPencilFill } from "react-icons/ri";
 import { MdOutlineLogout } from "react-icons/md";
 import { BsPlusCircle } from "react-icons/bs";
-import { BsChevronDown } from "react-icons/bs";
+import { BiChevronDown } from "react-icons/bi";
 import { TbPointFilled } from "react-icons/tb";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
@@ -13,15 +13,15 @@ function UserModal({ handleLogOut }) {
       window.open('https://myaccount.google.com/', '_blank'); 
     }
       return (
-    <div>
-      <div className="dropdown   lg:dropdown-end">
-        <label tabIndex={0} className="flex items-center gap-1 m-1">
-          <img
+    <div >
+      <div className="dropdown   lg:dropdown-end ">
+        <label tabIndex={0} className="flex items-center  m-1">
+          <img className="cursor-pointer"
             style={{ width: "40px", borderRadius: "50%", marginLeft: "7px" }}
             src={user.photoURL}
             alt=""
           />
-{user ?           <BsChevronDown className="font-bold text-black h-3" /> : ''
+{user ?           <BiChevronDown className=" text-black cursor-pointer" /> : ''
 }        </label>
         <ul
           tabIndex={0}
