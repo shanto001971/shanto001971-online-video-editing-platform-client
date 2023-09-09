@@ -54,7 +54,7 @@ function UserModal({ handleLogOut }) {
           <div       onClick={openGoogleAccount}
  className="text-center">
             <button className=" py-1 text-sm w-56 text-indigo-600 font-semibold rounded-full border  border-gray-400">
-              Manage Your Google Account
+              Manage Your Account
             </button>
           </div>
           <div className="md:flex text-start">
