@@ -16,10 +16,10 @@ export const UploadButton = (props: UploadButtonProps) => {
         className="hidden"
         onChange={props.onChange}
       />
-      <label htmlFor="" className="flex justify-center items-center gap-2">
+      <span className="flex justify-center items-center gap-2">
         Upload
-        <AiOutlineCloudUpload className="w-6 h-6"/>
-      </label>
+        <AiOutlineCloudUpload className="w-6 h-6" />
+      </span>
 
     </label>
   );
