@@ -62,7 +62,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? " " : "default "
               }
             >
               Templates 
