@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchVideos } from "../../../../features/demoVideos/demoVideosSlice";
 import HoverVideoPlayer from "react-hover-video-player";
 import Loader from "../../../Loader/Loader";
-import TemplateVideoModal from "../TemplatesForMobile/TemplateVideoModal";
+//import TemplateVideoModal from "../TemplatesForMobile/TemplateVideoModal";
+import AllTemplateModal from "./AllTemplateModal";
 
 const AllTemplates = () => {
   let [isOpen, setIsOpen] = useState(false); //for modal
@@ -64,7 +65,7 @@ const AllTemplates = () => {
         )}
           <div className="grid grid-cols-2 sm:grid-cols-3 my-6 gap-0 sm:gap-4 lg:gap-1">
             {/* Template video modal */}
-            <TemplateVideoModal
+            <AllTemplateModal
                 selectedCategoryData={selectedCategoryData}
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
