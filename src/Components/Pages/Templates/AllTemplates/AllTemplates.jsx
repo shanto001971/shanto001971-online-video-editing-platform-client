@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchVideos } from "../../../../features/demoVideos/demoVideosSlice";
 import HoverVideoPlayer from "react-hover-video-player";
 import Loader from "../../../Loader/Loader";
-//import TemplateVideoModal from "../TemplatesForMobile/TemplateVideoModal";
 import AllTemplateModal from "./AllTemplateModal";
 
 const AllTemplates = () => {

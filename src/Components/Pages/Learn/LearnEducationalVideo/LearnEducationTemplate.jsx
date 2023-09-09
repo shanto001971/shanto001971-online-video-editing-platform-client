@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 import { educationTemplateData } from "./LearnEducationData";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const LearnEducationTemplate = () => {
   return (
@@ -27,10 +28,12 @@ const LearnEducationTemplate = () => {
             </div>
           ))}
       </Marquee>
+      <Link to="/all-templates">
       <button className="btn btn-sm text-black md:min-w-[200px] md:h-[53px] bg-transparent hover:bg-gray-200 group">
         <p className="text-lg capitalize">Browse Templates</p>
         <FaArrowRight className="text-lg group-hover:translate-x-[2px]" />
       </button>
+      </Link>
     </div>
   );
 };
