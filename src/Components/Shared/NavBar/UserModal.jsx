@@ -21,8 +21,8 @@ function UserModal({ handleLogOut }) {
             src={user.photoURL}
             alt=""
           />
-          <BsChevronDown className="font-bold text-black h-3" />
-        </label>
+{user ?           <BsChevronDown className="font-bold text-black h-3" /> : ''
+}        </label>
         <ul
           tabIndex={0}
           className="dropdown-content mb-52 bg-indigo-50 z-[1] menu -mt-24 lg:-mt-0 ml-12 md:ml-20 lg:ml-0 p-3 md:p-5 text-center shadow-lg  rounded-box max-w-[400px] md:w-[400px]"

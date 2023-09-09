@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
+
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import UserModal from "./UserModal";
@@ -10,6 +11,8 @@ import HelpButton from "../../Pages/Help/HelpButton";
 import "./Navbar.css";
 
 const Navbar = () => {
+ 
+ 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTemplateOpen, setIsTemplateOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
@@ -48,7 +51,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
           <img src={logo} alt="logo" className=" w-20 rounded-full" />
-
+        
           <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Motion Mingle
           </span>
@@ -59,7 +62,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "" : "default "
+                isActive ? "text-xl text-black font-bold " : "default "
               }
             >
               Templates 
@@ -144,7 +147,7 @@ const Navbar = () => {
             <NavLink
               to="/explore"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
               }
             >
               Explore
@@ -206,7 +209,7 @@ const Navbar = () => {
             <NavLink
               to="/pricing"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
               }
             >
               Pricing
@@ -216,10 +219,22 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  " : "default "
+                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
               }
             >
               About
+            </NavLink>
+          </li>
+          {/* useradmindasboard  route  */}
+          <li>
+            <NavLink
+              to="/useradmindashboard"
+              title="Dashboard"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold" : "default"
+              }
+            >
+              Dashboard
             </NavLink>
           </li>
         </ul>
@@ -244,8 +259,8 @@ const Navbar = () => {
                   to="/login"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[16px] text-black font-bold "
-                      : "default text-[16px] "
+                      ? "text-[16px] text-black font-bold nav-link"
+                      : "default text-[16px] nav-link"
                   }
                 >
                   Login
@@ -305,7 +320,7 @@ const Navbar = () => {
                       <Link
                         to="/templates"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold " : "default "
+                          isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
                         }
                       >
                         Templates
@@ -342,7 +357,7 @@ const Navbar = () => {
                       <NavLink
                         to="/explore"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold " : "default "
+                          isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
                         }
                       >
                         Explore
