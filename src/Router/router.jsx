@@ -21,6 +21,7 @@ import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/Lea
 import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
 import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
 import Pricing from "../Components/Pages/Pricing/Pricing";
+import WorkWithUS from "../Components/Pages/WorkWithUs/WorkWithUS";
 
 
 
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
             {
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
+            },
+            {
+                path: "/work-with-us",
+                element: <WorkWithUS/>
             },
 
             {

@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { RiPencilFill } from "react-icons/ri";
 import { MdOutlineLogout } from "react-icons/md";
 import { BsPlusCircle } from "react-icons/bs";
 import { BiChevronDown } from "react-icons/bi";
@@ -9,20 +8,22 @@ import { Link } from "react-router-dom";
 
 function UserModal({ handleLogOut }) {
   const { user } = useContext(AuthContext);
-    const openGoogleAccount = () => {
-      window.open('https://myaccount.google.com/', '_blank'); 
-    }
-      return (
-    <div >
+  const openGoogleAccount = () => {
+    window.open("https://myaccount.google.com/", "_blank");
+  };
+
+  return (
+    <div>
       <div className="dropdown   lg:dropdown-end ">
         <label tabIndex={0} className="flex items-center  m-1">
-          <img className="cursor-pointer"
+          <img
+            className="cursor-pointer"
             style={{ width: "40px", borderRadius: "50%", marginLeft: "7px" }}
             src={user.photoURL}
             alt=""
           />
-{user ?           <BiChevronDown className=" text-black cursor-pointer" /> : ''
-}        </label>
+          {user ? <BiChevronDown className=" text-black cursor-pointer" /> : ""}{" "}
+        </label>
         <ul
           tabIndex={0}
           className="dropdown-content mb-52 bg-indigo-50 z-[1] menu -mt-24 lg:-mt-0 ml-12 md:ml-20 lg:ml-0 p-3 md:p-5 text-center shadow-lg  rounded-box max-w-[400px] md:w-[400px]"
@@ -33,34 +34,26 @@ function UserModal({ handleLogOut }) {
             <div className="btn btn-circle relative text-white text-base font-bold bg-violet-500 hover:text-white hover:bg-violet-500">
               {user?.displayName?.slice(0, 1) || "User"}
             </div>
-            <div className="hidden md:block ml-5"
-          
-              style={{
-                position: "absolute",
-                top: "85px",
-                right: "172px",
-                backgroundColor: "white",
-                width: "20px",
-                height: "20px",
-                borderRadius: "50%",
-              }}
-            >
-              <RiPencilFill className="hidden md:block h-5 text-gray-700  text-center " />
-            </div>
+           
           </div>
           <p className="py-2">
             Hi,{user?.displayName?.split(" ")[0] || "User"}
           </p>
-          <div       onClick={openGoogleAccount}
- className="text-center">
+          <div onClick={openGoogleAccount} className="text-center">
             <button className=" py-1 text-sm w-56 text-indigo-600 font-semibold rounded-full border  border-gray-400">
               Manage Your Account
             </button>
           </div>
           <div className="md:flex text-start">
-           <Link to="login"> <span className="  md:rounded-l-xl text-sm  text-gray-600 md:ml-6 py-2 px-8 font-semibold my-3  bg-gray-200 flex items-center gap-2  ">
-              <BsPlusCircle className=" text-blue-700 " /> Add Account
-            </span></Link>
+            <Link to="login">
+              {" "}
+              <span className="  md:rounded-l-xl text-sm  text-gray-600 md:ml-6 py-2 px-8 font-semibold my-3  bg-gray-200 flex items-center gap-2  ">
+                <BsPlusCircle
+                  className=" text-blue-700 "
+                />{" "}
+                Add Account
+              </span>
+            </Link>
             <span
               onClick={handleLogOut}
               style={{ marginLeft: "2px" }}
