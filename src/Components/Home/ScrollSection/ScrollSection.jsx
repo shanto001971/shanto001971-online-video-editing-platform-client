@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import img1 from '../../../assets/img1.png';
-import img2 from '../../../assets/img2.webp';
-import img3 from '../../../assets/img3.webp';
+import img1 from '../../../assets/scroll_image/img1.png';
+import img2 from '../../../assets/scroll_image/img2.webp';
+import img3 from '../../../assets/scroll_image/img3.webp';
 
 
 const ScrollSection = () => {
