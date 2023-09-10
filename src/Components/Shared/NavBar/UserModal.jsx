@@ -29,6 +29,7 @@ function UserModal({ handleLogOut }) {
         >
           {" "}
           <p className="py-2">{user?.email}</p>
+          <Link to="/user-profile">
           <div className="text-center">
             <div className="btn btn-circle relative text-white text-base font-bold bg-violet-500 hover:text-white hover:bg-violet-500">
               {user?.displayName?.slice(0, 1) || "User"}
@@ -48,6 +49,7 @@ function UserModal({ handleLogOut }) {
               <RiPencilFill className="hidden md:block h-5 text-gray-700  text-center " />
             </div>
           </div>
+          </Link>
           <p className="py-2">
             Hi,{user?.displayName?.split(" ")[0] || "User"}
           </p>

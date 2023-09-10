@@ -21,6 +21,7 @@ import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/Lea
 import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
 import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
 import Pricing from "../Components/Pages/Pricing/Pricing";
+import UserProfile from "../Components/Pages/UserProfilePage/UserProfilePage";
 
 
 
@@ -87,6 +88,10 @@ export const router = createBrowserRouter([
             {
                 path: "/pricing",
                 element: <Pricing />
+            },
+            {
+                path: "/user-profile",
+                element: <UserProfile />
             },
         ]
     },
