@@ -1,11 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 import { FaChartPie, FaUser, FaHome, FaMailBulk } from 'react-icons/fa';
+import useAdmin from "../../hooks/useAdmin";
 
  
 
 const UserAdminDashboard = () => {
     // TODO: load admin based data from the database
-    const isAdmin = true;
+    // const isAdmin = true;
+
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="drawer lg:drawer-open ">
@@ -21,13 +24,15 @@ const UserAdminDashboard = () => {
                 
                 <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                 {/* Sidebar content here */}
+                {/* conditional rendaring user and admin */}
+
                 {
                     isAdmin ? <>
 
                 <h2 className="text-3xl py-10">Motion Mingle </h2>
                 <li> <Link > <FaHome></FaHome> Admin Home</Link> </li>
                 <li> <Link to="/useradmindashboard/allusers"> <FaUser></FaUser> All Users</Link> </li>
-                <li> <Link to="/useradmindashboard/userschart"> <FaChartPie></FaChartPie> Admin Chart</Link> </li>
+                <li> <Link to="/useradmindashboard/adminchart"> <FaChartPie></FaChartPie> Admin Chart</Link> </li>
 
                  <div className="divider"></div>
 
@@ -41,7 +46,7 @@ const UserAdminDashboard = () => {
                 <>  
                 <h2 className="text-3xl py-10">Motion Mingle </h2>
                 <li> <Link > <FaHome></FaHome> User Home</Link> </li>
-                <li> <Link to="/useradmindashboard/allusers"> <FaUser></FaUser> All Users</Link> </li>
+                <li> <Link to="/useradmindashboard/paidusers"> <FaUser></FaUser> paid Users</Link> </li>
                 <li> <Link to="/useradmindashboard/userschart"> <FaChartPie></FaChartPie> Users Chart</Link> </li>
 
                  <div className="divider"></div>

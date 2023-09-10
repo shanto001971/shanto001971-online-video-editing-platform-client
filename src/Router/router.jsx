@@ -21,6 +21,7 @@ import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/Lea
 import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
 import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
 import Pricing from "../Components/Pages/Pricing/Pricing";
+import AdminChart from "../Components/Pages/UserAdminDashboard/AdminChart/AdminChart";
 
 
 
@@ -113,6 +114,11 @@ export const router = createBrowserRouter([
             {
                 path: "userschart",
                 element: <UsersChart></UsersChart>
+            },
+            // admin routes
+            {
+                path: "adminchart",
+                element: <AdminChart></AdminChart>
             }
         ]
     }
