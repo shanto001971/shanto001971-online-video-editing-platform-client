@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import UserModal from "./UserModal";
 import HelpButton from "../../Pages/Help/HelpButton";
 import "./Navbar.css";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
  
@@ -18,6 +19,7 @@ const Navbar = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isLearnOpen, setIsLearnOpen] = useState(false);
   const { user, logOut} = useContext(AuthContext);
+  const [isAdmin] = useAdmin();
 
   const toggleTemplate = () => {
     setIsTemplateOpen(!isTemplateOpen);
@@ -225,10 +227,11 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-          {/* useradmindasboard  route  */}
+          {/* Conditional useradmindasboard  route  */}
+          
           <li>
             <NavLink
-              to="/useradmindashboard"
+              to={isAdmin ? "/useradmindashboard/adminhome" : "/useradmindashboard/userhome"}
               title="Dashboard"
               className={({ isActive }) =>
                 isActive ? "text-xl text-black font-bold" : "default"

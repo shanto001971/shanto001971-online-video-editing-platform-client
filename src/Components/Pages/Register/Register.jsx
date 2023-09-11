@@ -37,6 +37,7 @@ const navigate = useNavigate()
       .then(() => {
         console.log("User Profile Updated");
         const saveUser = {name: data.name, email: data.email, photo: data.photoURL}
+        console.log(saveUser)
         fetch('https://online-video-editing-platform-server.vercel.app/users', {
               method: "POST",
               headers: {
