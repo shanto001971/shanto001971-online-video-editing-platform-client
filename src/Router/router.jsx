@@ -22,6 +22,7 @@ import Templates from "../Components/Pages/Templates/TemplatesForMobile/Template
 import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
 import Pricing from "../Components/Pages/Pricing/Pricing";
 import UserProfile from "../Components/Pages/UserProfilePage/UserProfilePage";
+import WorkWithUS from "../Components/Pages/WorkWithUs/WorkWithUS";
 
 
 
@@ -71,6 +72,10 @@ export const router = createBrowserRouter([
             {
                 path: "/mobilevideo",
                 element: <MobileVideo></MobileVideo>
+            },
+            {
+                path: "/work-with-us",
+                element: <WorkWithUS/>
             },
 
             {

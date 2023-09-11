@@ -38,7 +38,8 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="grid grid-flow-col gap-4 ">
+        <div className="">
+        <div className="flex gap-2 ml-6 md:ml-0">
             <a href="https://www.twitter.com" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,11 +74,12 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <span className="flex justify-center items-center gap-1 max-w-sm bg-slate-200 rounded-xl p-2  ">
+          <div className="flex justify-center items-center gap-1 max-w-sm bg-slate-200 rounded-xl p-2 mt-2 -ml-4 md:-ml-0">
             <TfiWorld className="text-black " />
 
             <div id="google_translate_element"></div>
-          </span>
+          </div>
+        </div>
         </div>
         <div className="hidden md:inline-grid">
           <span className="footer-title">Tools</span>
