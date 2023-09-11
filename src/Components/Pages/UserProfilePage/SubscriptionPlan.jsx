@@ -26,10 +26,10 @@ const SubscriptionPlan = () => {
   ];
   return (
     <>
-      <h4 className="mt-8 md:mt-0 text-xl font-semibold">Subscription Plan</h4>
+      <h4 className="mt-8 md:mt-0 text-lg sm:text-xl font-semibold">Subscription Plan</h4>
       <hr className="my-4" />
-      <div className="md:flex items-center gap-8">
-        <div className="w-full md:w-[440px] p-8 bg-gray-100 rounded-md">
+      <div className="w-full md:flex items-center gap-8">
+        <div className="md:w-[440px] md:h-[460px] lg:h-[360px] p-8 bg-gray-100 rounded-md">
           <div className="flex items-center gap-2 my-4">
             <MdOndemandVideo />
             <p>Videos Exported</p>
@@ -53,20 +53,20 @@ const SubscriptionPlan = () => {
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 p-8 bg-gray-100 rounded-md">
+        <div className="mt-4 md:mt-0 p-8 lg:h-[360px] md:w-[500px] bg-gray-100 rounded-md">
           <p>Plan</p>
           <h6 className="text-lg font-medium my-2">
             Free Plan <span className="text-[#71AA00]">(Upgrade)</span>
           </h6>
-          <div className="sm:flex items-center gap-8 mr-14">
-            <div className="relative">
+          <div className="sm:flex md:block lg:flex items-center gap-8">
+            <div className="mb-0 sm:mb-5 lg:mb-0">
               <img src={watermark} alt="" />
-              <p className="absolute bottom-2 left-32 text-white font-medium">
+              <p className="ml-2 text-sm lg:text-base -mt-7 text-white font-medium">
                 Remove Watermark
               </p>
             </div>
             <div>
-              <p className="mb-1">Try Business Plan</p>
+              <p className="mb-1 mt-6 md:mt-0">Try Business Plan</p>
               <div className="space-y-1">
                 {freePlan.map((item, index) => (
                   <div key={index} className="flex items-center gap-1">
@@ -84,10 +84,11 @@ const SubscriptionPlan = () => {
           </div>
         </div>
       </div>
+
       <div className="my-4">
-        <h4 className="text-xl font-semibold">Current Plan Features</h4>
+        <h4 className="text-lg sm:text-xl font-semibold">Current Plan Features</h4>
         <hr className="my-4" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mr-36">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 space-y-1 mr-0 lg:mr-36">
           {currentFeature.map((item, index) => (
             <div key={index} className="flex items-center gap-1">
               <AiOutlineCheck />

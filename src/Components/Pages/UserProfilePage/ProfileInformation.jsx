@@ -5,6 +5,8 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import SocialProfiles from "./SocialProfiles";
+import { updateUser } from "../../../api/users";
+import Swal from "sweetalert2";
 
 const ProfileInformation = () => {
   const { user } = useContext(AuthContext);
@@ -13,11 +15,37 @@ const ProfileInformation = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const userData = {
+      name: data?.name,
+      email: data?.email,
+      profession: data?.profession,
+      location: data?.location,
+      plan: data?.plan,
+      phone: data?.phone,
+    };
+    //console.log(userData);
+
+    //post admission data in database
+    updateUser(userData)
+      .then((data) => {
+        Swal.fire({
+          icon: "success",
+          title: "Yep...",
+          text: "User Information Update Successfully!",
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
-      <h4 className="text-xl mt-8 md:mt-0  font-semibold">Personal Information</h4>
-      <hr className="my-4" />
+      <h4 className="text-lg sm:text-xl mt-8 md:mt-0  font-semibold">
+        Personal Information
+      </h4>
+      <hr className="my-2 sm:my-4" />
       <div className="md:flex justify-between gap-6 w-full">
         <div className="w-full">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -114,7 +142,7 @@ const ProfileInformation = () => {
             <input
               type="submit"
               value="Save Changes"
-              className="btn bg-sky-500 hover:bg-sky-600 border-none w-32 rounded-3xl"
+              className="btn btn-sm sm:btn-md bg-sky-500 hover:bg-sky-600 border-none w-32 rounded-3xl"
             />
           </form>
         </div>
@@ -123,7 +151,7 @@ const ProfileInformation = () => {
         </div>
       </div>
       {/* Social Profiles */}
-      <SocialProfiles/>
+      <SocialProfiles />
     </>
   );
 };
