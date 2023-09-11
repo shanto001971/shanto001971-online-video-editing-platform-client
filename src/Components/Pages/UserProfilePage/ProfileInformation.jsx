@@ -16,8 +16,8 @@ const ProfileInformation = () => {
   const onSubmit = (data) => console.log(data);
   return (
     <>
-      <h4 className="text-xl font-semibold">Personal Information</h4>
-      <hr className="mt-4" />
+      <h4 className="text-xl mt-8 md:mt-0  font-semibold">Personal Information</h4>
+      <hr className="my-4" />
       <div className="md:flex justify-between gap-6 w-full">
         <div className="w-full">
           <form onSubmit={handleSubmit(onSubmit)}>
