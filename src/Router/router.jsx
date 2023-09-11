@@ -23,6 +23,7 @@ import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplate
 import Pricing from "../Components/Pages/Pricing/Pricing";
 import UserProfile from "../Components/Pages/UserProfilePage/UserProfilePage";
 import WorkWithUS from "../Components/Pages/WorkWithUs/WorkWithUS";
+import AdminChart from "../Components/Pages/UserAdminDashboard/AdminChart/AdminChart";
 
 
 
@@ -123,6 +124,11 @@ export const router = createBrowserRouter([
             {
                 path: "userschart",
                 element: <UsersChart></UsersChart>
+            },
+            // admin routes
+            {
+                path: "adminchart",
+                element: <AdminChart></AdminChart>
             }
         ]
     }
