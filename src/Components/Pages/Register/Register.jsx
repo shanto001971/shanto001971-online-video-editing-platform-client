@@ -27,6 +27,9 @@ const navigate = useNavigate()
       console.log("Passwords do not match");
       return;
     }
+    
+// TODO: const imageFilename = data.image[0] ? data.image[0].name : '';
+// (photo: imageFilename) in the saveUser  
 
     createUser(data.email, data.password)
     .then(result => {
@@ -37,6 +40,7 @@ const navigate = useNavigate()
       .then(() => {
         console.log("User Profile Updated");
         const saveUser = {name: data.name, email: data.email, photo: data.photoURL}
+        console.log(saveUser)
         fetch('https://online-video-editing-platform-server.vercel.app/users', {
               method: "POST",
               headers: {
