@@ -6,16 +6,35 @@ const UserFeedback = () => {
 
     const {user} = useContext(AuthContext);
 
+    // feedback validation
+    const isFeedbackValid = (feedback) => {
+        const words = feedback.split(' ').filter(word => word.trim() !== '');
+        return words.length >= 10;
+      }
+
     const handleSubmitFeedback = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const email = user.email; 
-        // const photoPath = form.photo.value;
+        const photoPath = form.photo.value;
+        const designation = form.designation.value;
+        const ratings = parseInt(form.ratings.value);
         const message = form.message.value;
-        // const photoFileName = photoPath.split('\\').pop();
+        const photoFileName = photoPath.split('\\').pop();
 
-        const feedback = {name, email, message}
+        if (!isFeedbackValid(message)) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Feedback is too short',
+              text: 'Please provide more than 10 words of feedback.',
+            });
+            return;
+          }
+
+
+
+        const feedback = {name, email, message, designation, ratings, photo: photoFileName}
         console.log(feedback)
 
 
@@ -45,7 +64,7 @@ const UserFeedback = () => {
     }
 
     return (
-        <div className="w-1/2 h-full">
+        <div className="w-full md:w-1/2 h-full">
             <div  className="text-3xl py-10 text-center">Dear {user.displayName} <br /> Please Provide Us Feedback </div>
             <div className="">
                 <form onSubmit={handleSubmitFeedback} >
@@ -61,12 +80,37 @@ const UserFeedback = () => {
                         </label>
                         <input type="email" defaultValue={user.email} name="email" placeholder="Your Email" className="input input-bordered w-full" />
                     </div>
-                    {/* <div className="form-control w-full ">
+                    <div className="form-control w-full ">
                         <label className="label">
                             <span className="label-text">Your Photo</span>
                         </label>
                         <input type="file" name="photo" placeholder="Your Photo" className="input input-bordered w-full" />
-                    </div> */}
+                    </div>
+                    {/* ratings and designationa start */}
+                    <div className="flex py-6">
+                    <div className="dropdown dropdown-hover flex-1 ">
+                    <label for="designation" className="p-3">Designation</label>
+                        <select name="designation" id="designation">
+                            <option value="Web Developer">Web Developer</option>
+                            <option value="Web Designer">Web Designer</option>
+                            <option value="Web Instructor">Web Instructor</option>
+                            <option value="Software Engneer">Software Engneer</option>
+                            <option value="Software Developer">Software Developer</option> 
+                        </select>
+                    </div>
+                    <div className="dropdown dropdown-hover ">
+                    <label for="ratings" className="p-3">Ratings</label> 
+                        <select name="ratings" id="colors">
+                            <option value="1">1 star</option>
+                            <option value="2">2 star</option>
+                            <option value="3">3 star</option>
+                            <option value="4">4 star</option>
+                            <option value="5">5 star</option>
+                        </select>
+                    </div>
+
+                    </div>
+                     {/* ratings and designationa end */}
                     <div className="form-control w-full">
                     <label className="label">
                         <span className="label-text">Your Feedback</span>

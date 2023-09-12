@@ -27,6 +27,9 @@ const navigate = useNavigate()
       console.log("Passwords do not match");
       return;
     }
+    
+// TODO: const imageFilename = data.image[0] ? data.image[0].name : '';
+// (photo: imageFilename) in the saveUser  
 
     createUser(data.email, data.password)
     .then(result => {
