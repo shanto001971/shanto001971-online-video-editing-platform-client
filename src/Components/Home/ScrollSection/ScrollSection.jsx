@@ -2,16 +2,27 @@ import { useState, useEffect } from 'react';
 import img1 from '../../../assets/scroll_image/img1.png';
 import img2 from '../../../assets/scroll_image/img2.webp';
 import img3 from '../../../assets/scroll_image/img3.webp';
+import { useRef } from 'react';
 
 
 const ScrollSection = () => {
-  const images = [img1, img2, img3];
+  const images = [ img2, img3,img1];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const scrollableSectionRef = useRef(null);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const imageIndex = Math.round(scrollPosition / window.innerHeight) % images.length;
-    setCurrentImageIndex(imageIndex);
+    const sectionTop = scrollableSectionRef.current.offsetTop;
+    const sectionBottom = sectionTop + scrollableSectionRef.current.offsetHeight;
+
+    if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+      // Calculate the image index based on scroll position within the section
+      const sectionHeight = sectionBottom - sectionTop;
+      const scrollPercentage = (scrollPosition - sectionTop) / sectionHeight;
+      const imageIndex = Math.round(scrollPercentage * images.length);
+      
+      setCurrentImageIndex(imageIndex);
+    }
   };
 
   useEffect(() => {
@@ -20,6 +31,7 @@ const ScrollSection = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
   return (
   <>
@@ -71,7 +83,7 @@ const ScrollSection = () => {
 <img src={img3} alt="" className='object-fill pt-3 md:pt-7' />
 </div>
   </div>
-   <div className='hidden lg:block'>
+   <div className='hidden lg:block' ref={scrollableSectionRef}>
      <div className="flex my-8 py-16 scroll-smooth">
      <div className="w-1/2 overflow-y-auto">
         {/* Scrolling Content */}

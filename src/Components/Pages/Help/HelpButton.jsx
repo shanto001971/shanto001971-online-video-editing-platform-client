@@ -12,8 +12,8 @@ const HelpButton = () => {
     <p className='text-slate-700'>Support</p>
    <p>Contact Support</p>
   <Link to='emailUs'>Email Us</Link>
-  <p>Tutorials</p>
-    
+<p>  <Link to='work-with-us'>Join Us</Link>
+</p>    
 </div>
 <div  style={{marginTop:'0px'}}>
   <p className='text-slate-700'>Learn</p>  
