@@ -15,8 +15,6 @@ const LayOut = () => {
       </div>
       {noHeaderFooter || <Footer />}
       <BackToTop/>
-
-      <Footer />
     </>
   );
 };

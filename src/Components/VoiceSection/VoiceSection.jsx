@@ -4,14 +4,23 @@ import "./VoiceSection.css";
 //using AOS packages
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const VoiceSection = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  
+  let sectionBackgroundColor;
+  const changedTheme = () => {
+    return sectionBackgroundColor = theme === "dark" ? "bg-gray-700" : "bg-gray-100";
+  }
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
+  useEffect(() => {
+    changedTheme()
+  }, [theme]);
   return (
     <section
       // data-aos="fade-up"
@@ -57,7 +66,7 @@ const VoiceSection = () => {
         </div>
       </div>
       
-      <div className="relative w-full md:w-[40%] md:h-[450px] lg:h-[600px] h-auto bg-gray-100 rounded-3xl mt-8 md:mt-0 group">
+      <div key={theme} className={`relative w-full md:w-[40%] md:h-[450px] lg:h-[600px] h-auto  rounded-3xl mt-8 md:mt-0 group ${sectionBackgroundColor}`}>
         <h2 className="absolute top-6 md:to-pink-100 text-[22px] md:text-2xl lg:text-4xl font-bold lg:font-extrabold pl-6">
           Brands Kids
         </h2>
