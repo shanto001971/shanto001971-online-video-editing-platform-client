@@ -16,6 +16,16 @@ const Templates = () => {
   const [filteredImages, setFilteredImages] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Videos");
 
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  const changedTextColor = () => {
+    return theme === "dark" ? "text-[var(--dark-mode-bg)]" : "text-black"
+  }
+
+  useEffect(() => {
+    changedTextColor();
+  }, [theme]);
+
   const { isLoading, templateVideos: templateVideosData } = useSelector(
     (state) => state.templateVideos
   );
@@ -69,6 +79,21 @@ const Templates = () => {
     setFilteredImages(filteredImageData);
   };
 
+  const tabStyles = {
+    border: "none",
+    backgroundColor: "transparent",
+    fontSize: "24px",
+    fontWeight: "bold",
+  };
+  
+  const tabColor = (tabIndex, activeTab, theme) =>
+    activeTab === tabIndex
+      ? "#000"
+      : theme === "dark"
+      ? "text-[var(--dark-text-white)]"
+      : "text-gray-600";
+  
+
   // console.log(selectedCategory);
   // console.log(filteredVideos);
   //console.log(filteredImages);
@@ -84,14 +109,14 @@ const Templates = () => {
         alt=""
       />
       <div className="absolute top-6 sm:top-8 left-4 lg:left-40">
-        <h4 className="text-2xl font-bold">Templates</h4>
+        <h4 className={`text-2xl font-bold ${changedTextColor()}`}>Templates</h4>
         <p className="text-sm sm:text-[17px] text-gray-600 mt-3 sm:w-3/4 sm:leading-6">
           Motion mingle thousands of free trending templates are just a few
           clicks away. Create stunning videos and images with them effortlessly.
         </p>
         <div className="mt-3 flex ">
           <select
-            className="pl-2 text-sm font-medium rounded-s-xl w-full h-[39px] max-w-[80px] mt-[1px] bg-gray-100"
+            className="pl-2 text-sm font-medium rounded-s-xl w-full h-[39px] max-w-[80px] mt-[10px] bg-gray-100"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
@@ -100,7 +125,7 @@ const Templates = () => {
           </select>
           <CiSearch
             // onClick={(e) => setSearchQuery(e.target.value)}
-            className="text-lg text-gray-700 z-10 mt-3 ml-2"
+            className="text-lg text-gray-700 z-10 mt-[22px] ml-2"
           />
           <input
             type="text"
@@ -123,11 +148,8 @@ const Templates = () => {
             <Tab
               onClick={() => handleTabClick(0)}
               style={{
-                border: "none",
-                backgroundColor: "transparent",
-                color: activeTab === 0 ? "#000" : "#888",
-                fontSize: "24px",
-                fontWeight: "bold",
+                ...tabStyles,
+                color: tabColor(0, activeTab, theme),
               }}
             >
               Video
@@ -135,11 +157,8 @@ const Templates = () => {
             <Tab
               onClick={() => handleTabClick(1)}
               style={{
-                border: "none",
-                backgroundColor: "transparent",
-                color: activeTab === 1 ? "#000" : "#888",
-                fontSize: "24px",
-                fontWeight: "bold",
+                ...tabStyles,
+                color: tabColor(1, activeTab, theme),
                 marginLeft: "-10px",
               }}
             >
