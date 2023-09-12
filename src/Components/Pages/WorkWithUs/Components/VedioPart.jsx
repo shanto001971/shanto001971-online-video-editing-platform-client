@@ -2,6 +2,7 @@ import React from 'react';
 import JobBtn from './JobBtn';
 
 const VedioPart = () => {
+    
     return (
         <div className="relative overflow-hidden min-w-full min-h-full">
                 <video loop autoPlay playsInline muted className="" src="https://165225.fs1.hubspotusercontent-na1.net/hubfs/165225/careers-hero-video-no-audio.mp4" type="video/mp4"></video>

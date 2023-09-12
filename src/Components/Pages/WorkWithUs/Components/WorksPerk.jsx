@@ -75,9 +75,12 @@ const WorksPerk = () => {
   },]
   return (
     <div className="bg-violet-50">
-      <div className="grid mx-5 md:m-7 lg:m-16 pt-7 md:gap-3 lg:gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2">
+      <h1 className='text-3xl font-bold pt-5 md:pt-8 leading-none text-center sm:text-4xl '>
+      MotionMingle work perks
+        </h1>
+      <div className="grid mx-5 md:m-7 lg:m-16  md:gap-3 lg:gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2">
         {perks.map((perk) => (
-          <div className="border-t-4 border-indigo-200 bg-white p-6 rounded-3xl rounded-tr-sm mt-5 md:mt-0  shadow-lg relative">
+          <div key={perk.id} className="border-t-4 border-indigo-200 bg-white p-6 rounded-3xl rounded-tr-sm mt-5 md:mt-0  shadow-lg relative">
             <div>
               <div className="absolute p-4 rounded-full  rounded-tr-none bg-indigo-200 -top-1 left-0">
                 {" "}
@@ -112,7 +115,7 @@ const WorksPerk = () => {
       </div>
       <div className="grid mx-5 md:m-7 lg:m-16  md:gap-3 lg:gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2">
         {perks1.map((perk) => (
-          <div className="border-t-4 border-pink-200 bg-white p-6 rounded-3xl rounded-tr-sm mt-5 md:mt-0   shadow-lg relative">
+          <div key={perk.id} className="border-t-4 border-pink-200 bg-white p-6 rounded-3xl rounded-tr-sm mt-5 md:mt-0   shadow-lg relative">
             <div>
               <div className="absolute p-4 rounded-full  rounded-tr-none bg-pink-200 -top-1 left-0">
                 {" "}
@@ -147,7 +150,7 @@ const WorksPerk = () => {
       </div>
       <div className="grid mx-5 md:m-7 lg:m-16 pb-7  md:gap-3 lg:gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2">
         {perks2.map((perk) => (
-          <div className="border-t-4 border-violet-200 bg-white p-6 rounded-3xl rounded-tr-sm mt-5 md:mt-0   shadow-lg relative">
+          <div key={perk.id} className="border-t-4 border-violet-200 bg-white p-6 rounded-3xl rounded-tr-sm mt-5 md:mt-0   shadow-lg relative">
             <div>
               <div className="absolute p-4 rounded-full  rounded-tr-none bg-violet-200 -top-1 left-0">
                 {" "}
