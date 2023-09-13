@@ -1,10 +1,34 @@
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import { BsArrowBarUp } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 const Application = () => {
+  const navigate = useNavigate();
   const { register, control, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+  console.log(data);
+    
+    fetch('http://localhost:5000/jobPost',{
+      method: 'POST',
+      headers:{
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then( data =>{
+      console.log(data);
+      
+    })
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Sent successfully',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    navigate('/')
   };
 
   return (
@@ -29,9 +53,9 @@ const Application = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
-          <ul className="menu  px-4 w-4/5 md:w-1/2  min-h-full absolute z-10 bg-base-200 text-base-content">
+          <ul className="menu overflow-y-auto  px-4 w-4/5 md:w-1/2  min-h-[1100px] md:min-h-[1400px]  absolute z-10 bg-base-200 text-base-content">
             {/* Sidebar content here */}
-            <p className="font-normal mt-2 text-lg">General Application</p>
+            <p className="font-normal mt-20 lg:mt-0 text-lg">General Application</p>
             <div className="divider "></div>
 
             <div className="w-full  flex flex-col justify-center items-center text-gray-800 rounded-xl ">
@@ -39,7 +63,7 @@ const Application = () => {
                 <div className="md:flex gap-4 lg:gap-8">
                   <div className="form-control  md:w-full ">
                     <label className="label">
-                      <span class="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
+                      <span className="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
                          Name
                       </span>
                     </label>
@@ -51,7 +75,7 @@ const Application = () => {
                   </div>
                   <div className="form-control md:w-full ">
                     <label className="label">
-                      <span class="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
+                      <span className="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
                         Email
                       </span>
                     </label>
@@ -65,11 +89,11 @@ const Application = () => {
                 <div className="md:flex gap-8">
                 <div className="form-control md:w-full">
                   <label>
-                    <span class="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 -ml-48 md:-ml-20  pb-2">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 -ml-48 md:-ml-20 lg:-ml-36 pb-2">
                       CV/Resume
                     </span>
                     <Controller
-                      name="fileInput"
+                      name="resume"
                       control={control}
                       render={({ field }) => (
                         <input
@@ -80,16 +104,17 @@ const Application = () => {
                         />
                       )}
                     />
-                    <div className=" w-full flex justify-center items-center gap-2 py-2  border rounded-md focus:outline-none border-indigo-300 focus:border-indigo-500 bg-gray-100 text-gray-900 ">
+                    <div className=" w-full flex justify-center items-center gap-2 py-2  border rounded-md focus:outline-none border-indigo-300 focus:border-indigo-500 bg-gray-100 text-gray-800 ">
                       <BsArrowBarUp className="text-black " />{" "}
                       <span> Attach CV/Resume</span>
                     </div>
                   </label>
+                  
                 </div>
-
+                <span className=" md:hidden text-sm font-normal text-slate-400 -mt-4 -ml-2  "><span className="font-semibold">Tip:</span> Allowed file types; pdf, doc, docx, rtf, jpg, jpeg. No larger than 10mb.</span>
                 <div className="form-control md:w-full md:-mt-3">
                     <label className="label">
-                      <span class="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
+                      <span className="mt-2 md:mt-0 after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
                         Phone Number
                       </span>
                     </label>
@@ -101,10 +126,11 @@ const Application = () => {
                   </div>
                 </div>
                 
+                <span className="hidden md:block text-sm font-normal text-slate-400 -mt-4 -ml-2 md:-ml-4 lg:-ml-10 mb-2"><span className="font-semibold">Tip:</span> Allowed file types; pdf, doc, docx, rtf, jpg, jpeg. No larger than 10mb.</span>
 
                 <div className="form-control">
                   <label className="label">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
                       {" "}
                      Head Line{" "}
                     </span>
@@ -113,10 +139,11 @@ const Application = () => {
                     {...register("headline", { required: true })}
                     className="textarea textarea-bordered h-4 input  w-full px-3 py-2 border rounded-md focus:outline-none border-indigo-300 focus:border-indigo-500 bg-gray-100 text-gray-900"
                   ></textarea>
+                  <span className="text-sm text-slate-400 -ml-2 md:-ml-4 lg:-ml-10 lg:mb-2"><span className="font-semibold">Tip:</span> Short description that describes what you do, e.g. Graphic Designer.</span>
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span class="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-indigo-500 block text-sm font-medium text-slate-700 ">
                       {" "}
                       Cover Letter{" "}
                     </span>
