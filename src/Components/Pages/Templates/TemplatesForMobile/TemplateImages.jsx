@@ -7,6 +7,21 @@ import TemplateImgModal from "./TemplateImgModal";
 const TemplateImages = ({ searchQuery, filteredImages }) => {
   let [isOpen, setIsOpen] = useState(false); //for modal
   const [selectedData, setSelectedData] = useState(null);
+    //For dark and light mode
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  
+    const changedTheme = () => {
+      return theme === "dark" ? "bg-[var(--dark-mode-bg)] text-[var(--dark-text-white)]" : "bg-gray-100";
+    }
+  
+    const changedTextColor = () => {
+      return theme === "dark" ? "text-[var(--dark-text-gray)]" : "text-gray-600"
+    }
+  
+    useEffect(() => {
+      changedTheme();
+      changedTextColor();
+    }, [theme]);
 
   const {
     isLoading,

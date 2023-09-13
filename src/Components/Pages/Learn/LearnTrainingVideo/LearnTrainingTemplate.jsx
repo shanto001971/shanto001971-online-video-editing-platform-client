@@ -1,10 +1,11 @@
 import Marquee from "react-fast-marquee";
 import { trainingTemplateData } from "./LearnTrainingData";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const LearnTrainingTemplate = () => {
-    return (
-        <div className="text-center my-20 md:my-32 bg-gray-100 py-10 md:py-16 rounded-xl">
+  return (
+    <div className="text-center my-20 md:my-32 bg-gray-100 py-10 md:py-16 rounded-xl">
       <h2 className="text-2xl md:text-4xl font-semibold">Get Inspired</h2>
       <h6 className="text-base mt-3 md:mt-6 mb-14 px-2 md:px-0">
         Click on a Template to get started right away. Education video creation
@@ -16,7 +17,8 @@ const LearnTrainingTemplate = () => {
         speed={100}
         pauseOnHover={true}
       >
-        {trainingTemplateData && trainingTemplateData.length > 0 &&
+        {trainingTemplateData &&
+          trainingTemplateData.length > 0 &&
           trainingTemplateData.map((item) => (
             <div key={item._id}>
               <img
@@ -27,12 +29,14 @@ const LearnTrainingTemplate = () => {
             </div>
           ))}
       </Marquee>
-      <button className="btn btn-sm text-black md:min-w-[200px] md:h-[53px] bg-transparent hover:bg-gray-200 group">
-        <p className="text-lg capitalize">Browse Templates</p>
-        <FaArrowRight className="text-lg group-hover:translate-x-[2px]" />
-      </button>
+      <Link to="/all-templates">
+        <button className="btn btn-sm text-black md:min-w-[200px] md:h-[53px] bg-transparent hover:bg-gray-200 group">
+          <p className="text-lg capitalize">Browse Templates</p>
+          <FaArrowRight className="text-lg group-hover:translate-x-[2px]" />
+        </button>
+      </Link>
     </div>
-    );
+  );
 };
 
 export default LearnTrainingTemplate;

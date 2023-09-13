@@ -21,7 +21,14 @@ import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/Lea
 import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
 import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
 import Pricing from "../Components/Pages/Pricing/Pricing";
+import UserProfile from "../Components/Pages/UserProfilePage/UserProfilePage";
 import WorkWithUS from "../Components/Pages/WorkWithUs/WorkWithUS";
+import AdminChart from "../Components/Pages/UserAdminDashboard/AdminChart/AdminChart";
+import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
+import AdminHome from "../Components/Pages/UserAdminDashboard/AdminHome/AdminHome";
+import UserHome from "../Components/Pages/UserAdminDashboard/UserHome/UserHome";
+import UserFeedback from "../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback";
 
 
 
@@ -93,6 +100,10 @@ export const router = createBrowserRouter([
                 path: "/pricing",
                 element: <Pricing />
             },
+            {
+                path: "/user-profile",
+                element: <UserProfile />
+            },
         ]
     },
     {
@@ -107,17 +118,36 @@ export const router = createBrowserRouter([
 
     },
 
+    //  user and admin dashboard routes 
     {
         path: "useradmindashboard",
-        element: <UserAdminDashboard></UserAdminDashboard>,
+        element: <PrivateRoute><UserAdminDashboard></UserAdminDashboard></PrivateRoute>,
         children: [
+            // users route
             {
-                path: "allusers",
-                element: <AllUsers></AllUsers>
+                path: "userhome",
+                element: <UserHome></UserHome>
             },
             {
                 path: "userschart",
                 element: <UsersChart></UsersChart>
+            },
+            {
+                path: "userfeedback",
+                element: <UserFeedback></UserFeedback>
+            },
+            // admin routes
+            {
+                path: "adminhome",
+                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+            },
+            {
+                path: "allusers",
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            {
+                path: "adminchart",
+                element: <AdminRoute><AdminChart></AdminChart></AdminRoute>
             }
         ]
     }

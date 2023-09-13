@@ -11,6 +11,21 @@ import TemplateVideoModal from "./TemplateVideoModal";
 const TemplateVideos = ({ filteredVideos, searchQuery }) => {
   let [isOpen, setIsOpen] = useState(false); //for modal
   const [selectedData, setSelectedData] = useState(null); //for selected data
+  //For dark and light mode
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  
+  const changedTheme = () => {
+    return theme === "dark" ? "bg-[var(--dark-mode-bg)] text-gray-50" : "bg-gray-100";
+  }
+
+  const changedTextColor = () => {
+    return theme === "dark" ? "text-[var(--dark-text-gray)]" : "text-gray-600"
+  }
+
+  useEffect(() => {
+    changedTheme();
+    changedTextColor();
+  }, [theme]);
 
   const {
     isLoading,
@@ -38,7 +53,6 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
     setSelectedData(item); // Set the selected data when a video is clicked
     setIsOpen(true);
   };
-  //console.log(filteredVideos);
 
   return (
     <>
@@ -84,7 +98,7 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
                         </div>
                       }
                     />
-                    <p className="text-sm text-gray-600 mt-2">{item.title}</p>
+                    <p className={`text-sm mt-2 ${theme === "dark" ? "text-[#ffffff]" : "text-gray-600 "}`}>{item.title}</p>
                   </div>
                 ))}
             </div>
@@ -95,10 +109,10 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
               {templateVideosData.map((categoryItem, index) => (
                 <button
                   key={index}
-                  className={`text-xs sm:text-sm md:text-base whitespace-nowrap px-3 py-1 rounded-md ${
+                  className={`text-xs sm:text-sm md:text-base whitespace-nowrap px-3 py-1 rounded-md ${changedTheme()} ${
                     selectedCategory === categoryItem.category
-                      ? "bg-gray-200 text-gray-950 font-medium"
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-600"
+                      ? " text-gray-950 font-medium"
+                      : " text-gray-600"
                   }`}
                   onClick={() => handleCategoryClick(categoryItem.category)}
                 >
@@ -136,7 +150,7 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
                         </div>
                       }
                     />
-                    <p className="text-sm text-gray-600 mt-2">{item.title}</p>
+                    <p className={`text-sm mt-2 ${changedTextColor()}`}>{item.title}</p>
                   </div>
                 ))}
             </div>
