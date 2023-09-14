@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+.font {
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.gradient-border:hover {
+	border: 5px solid;
+	border-image: linear-gradient(to top, #ff365b, #ff9436) 1;
+}
+.gradient-border2:hover {
+	border: 5px solid transparent;
+	border-image: linear-gradient(to top, #00d4ff, #0062ff) 1;
+}
+.gradient-border3:hover {
+	border: 5px solid;
+	border-image: linear-gradient(to top, #de2898, #9166ff) 1;
+}
