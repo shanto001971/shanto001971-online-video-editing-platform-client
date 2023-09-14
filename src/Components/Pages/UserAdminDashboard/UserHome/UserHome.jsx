@@ -14,7 +14,7 @@ const UserHome = () => {
 
     return (
         <div className="w-full h-full  px-6">
-            <div className="text-2xl text-center py-10 font-bold text-white">Hi, {user.displayName}</div>
+            <div className="text-2xl text-center py-10 font-bold text-black">Hi, {user.displayName}!</div>
 
 {/* grid container */}
 <h2 className="text-left text-black uppercase font-bold">my progress</h2>
@@ -23,7 +23,7 @@ const UserHome = () => {
        <div className="grid grid-cols-2">
 
         <div className="p-5">
-          <p className="text-xl">Hi, {user.displayName}!</p>
+          <p className="text-xl text-white">Hi, {user.displayName}!</p>
           <p className="text-2xl text-white pt-5">You have completed 6 video <br /> editing this week</p>
          <div className="py-10"> <button className="text-black bg-white px-3 py-1 rounded-lg ">see all</button></div>
         </div>
