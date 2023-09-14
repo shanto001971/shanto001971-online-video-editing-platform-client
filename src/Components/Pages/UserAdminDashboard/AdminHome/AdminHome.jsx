@@ -102,7 +102,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-full px-8">
             <div className="text-2xl py-10 text-center">Hello, {user.displayName}</div>
        
              <div className="grid grid-cols-2 gap-3">
