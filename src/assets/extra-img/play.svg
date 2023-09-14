@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 160 160">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_21869" data-name="Rectangle 21869" width="160" height="160" transform="translate(1533 3298)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eaccf7"/>
+      <stop offset="0.478" stop-color="#90c4ea"/>
+      <stop offset="1" stop-color="#3686e9"/>
+    </radialGradient>
+    <filter id="Path_24999" x="10.6" y="22.939" width="138.797" height="138.797" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.6" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.229" y1="0.097" x2="0.711" y2="0.993" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#c0d2f5"/>
+    </linearGradient>
+    <filter id="play" x="27.593" y="44.494" width="95.822" height="98.811" filterUnits="userSpaceOnUse">
+      <feOffset dx="-12" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-color="#3a89e9"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <radialGradient id="radial-gradient-2" cx="0.823" cy="0.632" r="0.704" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f5c0df"/>
+      <stop offset="0.433" stop-color="#f560b6"/>
+      <stop offset="1" stop-color="#ff4c75"/>
+    </radialGradient>
+  </defs>
+  <g id="Section_6_Illustration_Left" data-name="Section 6_Illustration_Left" transform="translate(-1533 -3298)" clip-path="url(#clip-path)">
+    <g id="Section_6_Illustration_Left-2" data-name="Section 6_Illustration_Left" transform="translate(1388.393 -1133.864)">
+      <g id="Illustration_play" transform="matrix(0.883, -0.469, 0.469, 0.883, 134.608, 4496.687)">
+        <g data-type="innerShadowGroup">
+          <path id="Path_24999-2" data-name="Path 24999" d="M56.107,0A56.107,56.107,0,1,1,0,56.107,56.107,56.107,0,0,1,56.107,0Z" transform="matrix(0.978, 0.208, -0.208, 0.978, 23.33, 0)" fill="url(#radial-gradient)"/>
+          <g transform="matrix(0.88, 0.47, -0.47, 0.88, 39.26, -52.54)" filter="url(#Path_24999)">
+            <path id="Path_24999-3" data-name="Path 24999" d="M56.107,0A56.107,56.107,0,1,1,0,56.107,56.107,56.107,0,0,1,56.107,0Z" transform="translate(10.6 53.87) rotate(-16)" fill="#fff"/>
+          </g>
+        </g>
+        <g transform="matrix(0.88, 0.47, -0.47, 0.88, 39.26, -52.54)" filter="url(#play)">
+          <path id="play-2" data-name="play" d="M44.55,20.945,10.277.933A6.831,6.831,0,0,0,0,6.865V47.01A6.831,6.831,0,0,0,10.277,53L44.55,32.929a6.891,6.891,0,0,0,0-11.984Z" transform="matrix(0.91, -0.41, 0.41, 0.91, 54.59, 73.03)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <ellipse id="Illustration_Pink_ball" data-name="Illustration_Pink ball" cx="11.233" cy="11.233" rx="11.233" ry="11.233" transform="translate(241.351 4463.866) rotate(-101)" fill="url(#radial-gradient-2)"/>
+    </g>
+  </g>
+</svg>
