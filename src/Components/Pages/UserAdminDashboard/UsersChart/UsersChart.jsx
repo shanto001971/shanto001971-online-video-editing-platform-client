@@ -1,8 +1,9 @@
+import React from 'react';
 
 const UsersChart = () => {
     return (
-        <div>
-            <h2 className="text-3xl text-center">Users Chart</h2>
+        <div className='w-full h-full'>
+            <h2 className='text-2xl text-center '>user chart</h2>
         </div>
     );
 };
