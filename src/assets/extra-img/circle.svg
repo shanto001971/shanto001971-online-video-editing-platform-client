@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="120" viewBox="0 0 140 120">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_21862" data-name="Rectangle 21862" width="140" height="120" transform="translate(1994 3320)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.823" cy="0.632" r="0.704" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e5fff4"/>
+      <stop offset="0.517" stop-color="#59e8b3"/>
+      <stop offset="1" stop-color="#2cc4ad"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8c83f7"/>
+      <stop offset="1" stop-color="#655be2"/>
+    </linearGradient>
+    <filter id="Illustration_Ellipse_Outline_purple" x="32.227" y="-0.364" width="97.233" height="97.224" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.502" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Section_6_Illustration_right" data-name="Section 6_Illustration_right" transform="translate(-1994 -3320)" clip-path="url(#clip-path)">
+    <g id="Section_6_Illustration_right-2" data-name="Section 6_Illustration_right" transform="translate(-2087.615 936.493) rotate(-45)">
+      <ellipse id="Illustration_green_ball" cx="13.878" cy="13.878" rx="13.878" ry="13.878" transform="translate(1160.266 4672.719) rotate(178)" fill="url(#radial-gradient)"/>
+      <g data-type="innerShadowGroup">
+        <path id="Illustration_Ellipse_Outline_purple-2" data-name="Illustration_Ellipse  Outline_purple" d="M43.04,73.177c-16.264,0-29.449-13.491-29.449-30.132S26.776,12.914,43.04,12.914,72.489,26.4,72.489,43.046,59.3,73.177,43.04,73.177m0,12.914A43.046,43.046,0,1,0,0,43.045,43.091,43.091,0,0,0,43.04,86.091Z" transform="matrix(-0.799, 0.602, -0.602, -0.799, 1284.071, 4671.289)" fill="url(#linear-gradient)"/>
+        <g transform="matrix(0.71, 0.71, -0.71, 0.71, 1200.74, 4571.53)" filter="url(#Illustration_Ellipse_Outline_purple)">
+          <path id="Illustration_Ellipse_Outline_purple-3" data-name="Illustration_Ellipse  Outline_purple" d="M43.04,73.177c-16.264,0-29.449-13.491-29.449-30.132S26.776,12.914,43.04,12.914,72.489,26.4,72.489,43.046,59.3,73.177,43.04,73.177m0,12.914A43.046,43.046,0,1,0,0,43.045,43.091,43.091,0,0,0,43.04,86.091Z" transform="translate(129.46 11.62) rotate(98)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

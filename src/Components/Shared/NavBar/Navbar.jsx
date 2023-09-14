@@ -75,7 +75,7 @@ const Navbar = () => {
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
-          <img src={logo} alt="logo" className=" w-10 rounded-full" />
+          <img src={logo} alt="logo" className=" w-10 h-10 rounded-full" />
         
           <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Motion Mingle
