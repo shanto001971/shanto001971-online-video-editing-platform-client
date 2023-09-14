@@ -289,20 +289,15 @@ const Navbar = () => {
               </svg>
         </label> */}
 
-        {/* <div className="flex flex-col items-center gap-0">
-      <input type="checkbox" className="toggle"  onChange={handleToggle}/>
-      <p className="text-xs -mt-3">{theme == 'dark' ? "light" : 'Dark'}</p>
-      </div> */}
-
         <div className="-mr-5 mt-2">
           {theme == "dark" ? (
-            <a href="">
+            
               <BiSolidSun title="Make Light" className="text-4xl cursor-pointer" onClick={() => handleClick("light")} />
-            </a>
+            
           ) : (
-            <a href="">
+            
               <BsFillMoonFill title="Make Dark" className="text-2xl cursor-pointer" onClick={() => handleClick("dark")} />
-            </a>
+            
           )}
         </div>
 
