@@ -8,7 +8,7 @@ const SideIcon = () => {
   // const [hovered, setHovered] = useState(false);
   return (
     <div className="fixed overflow-y-scroll overflow-x-hidden z-10 top-[80%] md:top-[70%] bottom-0  flex flex-col -right-4 sm:-right-7 gap-[2px] overflow-auto ">
-     
+
 
       {/* <div className="flex flex-row-reverse group text-white">
         <MdOutlinePhotoSizeSelectActual className="w-[55px] h-[42px] sm:w-[70px] sm:h-[57px] bg-red-500 py-2 sm:py-3 ps-2 sm:ps-3 pr-7 hover:transition-transform ease-out transition-all hover:-translate-x-1" />
@@ -44,8 +44,8 @@ const SideIcon = () => {
         </p>
       </div> */}
       <FacebookProvider appId="1030485761479705" chatSupport>
-        <CustomChat pageId="116994098167601" minimized={true}/>
-      </FacebookProvider> 
+        <CustomChat pageId="116994098167601" minimized={true} />
+      </FacebookProvider>
     </div>
   );
 };

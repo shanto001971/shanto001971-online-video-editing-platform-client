@@ -29,6 +29,9 @@ import AdminRoute from "./AdminRoute";
 import AdminHome from "../Components/Pages/UserAdminDashboard/AdminHome/AdminHome";
 import UserHome from "../Components/Pages/UserAdminDashboard/UserHome/UserHome";
 import UserFeedback from "../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback";
+import DonationSection from "../Components/Pages/Donation/DonationSection";
+import Donate from "../Components/Pages/Donation/Donate";
+
 
 
 
@@ -81,7 +84,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/work-with-us",
-                element: <WorkWithUS/>
+                element: <WorkWithUS />
             },
 
             {
@@ -103,6 +106,14 @@ export const router = createBrowserRouter([
             {
                 path: "/user-profile",
                 element: <UserProfile />
+            },
+            {
+                path: "/donation",
+                element: <DonationSection />
+            },
+            {
+                path: "/donate",
+                element: <Donate />
             },
         ]
     },
