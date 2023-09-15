@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Sacramento';
+    src: url('./fonts/Sacramento-Regular.woff2') format('woff2'),
+        /* Add all font formats you downloaded */
+        url('./fonts/Sacramento-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.stylish-text {
+    font-family: 'Sacramento', cursive;
+    /* Additional styling properties here */
+
+}
