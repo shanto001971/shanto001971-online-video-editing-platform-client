@@ -1,0 +1,187 @@
+.BackG {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.856)), url("../../../assets/images/donationImg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+
+}
+
+.VolenTere {}
+
+.volenters {
+    background-color: white;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    transition: background-color 0.3s ease;
+    /* Add a smooth transition effect */
+}
+
+.volenters:hover {
+    background-color: rgba(255, 0, 157, 0.623);
+    /* Change the background color on hover */
+}
+
+.bottom-right-info {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* YourComponent.css */
+
+/* Default styles for the button */
+/* YourComponent.css */
+
+/* Default styles for the button */
+/* YourComponent.css */
+
+/* Default styles for the button */
+/* YourComponent.css */
+
+/* Default styles for the button */
+.btn {
+    background-color: #007bff;
+    /* Change to your desired background color */
+    color: #fff;
+    /* Change to your desired text color */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    position: relative;
+    /* Needed for absolute positioning of the arrow */
+    overflow: hidden;
+    /* Hide the overflowing arrow and text */
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Styles for the button content */
+.btn-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Needed for absolute positioning of the arrow */
+}
+
+/* Styles for the arrow image */
+.btn img {
+    width: 30px;
+    margin-right: 10px;
+    /* Adjust spacing between arrow and text as needed */
+    position: absolute;
+    /* Position the arrow absolutely within the button content */
+    left: -40px;
+    /* Start the arrow image outside the button content */
+    transition: left 0.3s, color 0.3s;
+    /* Apply transition to left position and color */
+}
+
+/* Hover effect styles for the button */
+.btn:hover {
+    transform: scale(1.1);
+    /* Zoom up the button by 10% on hover */
+    color: #ff5733;
+    /* Change to your desired text color on hover */
+}
+
+/* Hover effect styles for the arrow image */
+.btn:hover img {
+    left: calc(100% + 10px);
+    /* Move the arrow image to the right of the button content */
+    color: #ff5733;
+    /* Change to your desired text color on hover */
+}
+
+/* Hover effect styles for the "Learn More" text */
+.btn:hover .learn-more-text {
+    transform: scale(1.1);
+    /* Zoom up the text by 10% on hover */
+}
+
+/* Styles for the "Learn More" text */
+.learn-more-text {
+    transition: transform 0.3s;
+}
+
+/* YourComponent.css */
+
+/* Styles for the text container */
+.text-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styles for the "poor" text */
+.font-serif.text-9xl {
+    display: inline;
+    position: relative;
+    z-index: 1;
+}
+
+/* Styles for the curve image */
+.curve-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    /* Prevent the image from blocking interactions with text */
+}
+
+/* Styles for the "curve-text" class (to style the text "poor") */
+.curve-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* YourComponent.css */
+
+/* Keyframes for the zoom animation */
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Styles for the curve image */
+.curve-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    animation: zoomInOut 2s infinite;
+    /* Apply the animation */
+}
+
+/* YourComponent.css */
+
+/* YourComponent.css */
+
+.green-line::before {
+    content: "";
+    display: block;
+    margin-left: 32px;
+    width: 60px;
+    /* Adjust the width of the line as needed */
+    height: 2px;
+    /* Adjust the height of the line as needed */
+    background-color: rgb(128, 0, 107);
+    position: absolute;
+    left: -30px;
+    /* Adjust the distance of the line from the text */
+    top: 50%;
+    transform: translateY(-50%);
+}

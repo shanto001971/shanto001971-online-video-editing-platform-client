@@ -21,7 +21,7 @@
     right: 60rem;
     display: inline-block;
     /* clip-path: polygon(10% 20%, 100% 0, 90% 100%, 15% 100%); */
-    clip-path: polygon(11.3% 0, calc(100% - 40px) 0, 100% 100%, -3.9% 100%);
+    clip-path: polygon(11.3% 0, calc(100% - 40Jpx) 0, 100% 100%, -3.9% 100%);
 }
 
 .bg {

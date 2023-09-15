@@ -4,6 +4,7 @@ import Navbar from "./../Shared/NavBar/Navbar";
 import BackToTop from "../Home/BackToTop/BackToTop";
 
 
+
 const LayOut = () => {
   const location = useLocation();
   const noHeaderFooter = location.pathname.includes("user-profile");
@@ -14,7 +15,7 @@ const LayOut = () => {
         <Outlet />
       </div>
       {noHeaderFooter || <Footer />}
-      <BackToTop/>
+      <BackToTop />
     </>
   );
 };
