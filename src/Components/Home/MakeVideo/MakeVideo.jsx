@@ -40,7 +40,7 @@ const MakeVideo = () => {
         <img
           src={play}
           alt=""
-          className="hidden md:block animate-timing-6 animate-pulse absolute  md:bottom-96 right-2 lg:right-9"
+          className="hidden md:block animate-timing-6 animate-pulse absolute md:-mt-40 lg:-mt-48 right-2 lg:right-9"
         />
       </div>
     </div>
