@@ -45,7 +45,7 @@ const AllUsers = () => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`https://online-video-editing-platform-server.vercel.app/users/${user._id}`, {
+          fetch(`http://localhost:5000/users/${user._id}`, {
             method: 'DELETE'
           })
           .then(res => res.json())
@@ -68,7 +68,7 @@ const AllUsers = () => {
     return (
         
         
-    <div className="text-4xl w-full">
+    <div className="text-4xl w-full px-8">
             All User : {users.length}
        <div>
        <div className="overflow-x-auto">
