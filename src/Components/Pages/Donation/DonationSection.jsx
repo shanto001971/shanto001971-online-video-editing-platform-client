@@ -24,7 +24,6 @@ const DonationSection = () => {
             currentCount += step;
             if (currentCount >= targetValue) {
                 currentCount = targetValue;
-                clearInterval(interval);
             }
             setCount(currentCount);
         }, 16); // 60 FPS
