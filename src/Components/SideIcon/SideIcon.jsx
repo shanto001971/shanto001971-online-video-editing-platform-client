@@ -6,6 +6,15 @@ import { FacebookProvider, CustomChat } from 'react-facebook';
 
 const SideIcon = () => {
   // const [hovered, setHovered] = useState(false);
+  const location = useLocation();
+
+  // Check if the current pathname is the home page ("/")
+  const isHomePage = location.pathname === '/';
+
+  // Render the SideIcon only if it's the home page
+  if (!isHomePage) {
+    return null;
+  }
   return (
     <div className="fixed overflow-y-scroll overflow-x-hidden z-10 top-[80%] md:top-[70%] bottom-0  flex flex-col -right-4 sm:-right-7 gap-[2px] overflow-auto ">
      
@@ -44,8 +53,8 @@ const SideIcon = () => {
         </p>
       </div> */}
       <FacebookProvider appId="1030485761479705" chatSupport>
-        <CustomChat pageId="116994098167601" minimized={true}/>
-      </FacebookProvider> 
+        <CustomChat pageId="116994098167601" minimized={true} />
+      </FacebookProvider>
     </div>
   );
 };
