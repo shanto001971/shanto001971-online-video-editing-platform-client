@@ -32,7 +32,7 @@ const Application = () => {
   };
 
   return (
-    <div className="max-w-[307px]md:max-w-[500px] text-center mx-3 md:mx-9 my-8 md:my-14 ">
+    <div className="max-w-[307px] md:max-w-[500px] text-center mx-3 md:mx-9 my-8 md:my-14 ">
       <h1 className="text-3xl font-medium leading-none py-2 ">
         General Application
       </h1>
@@ -121,7 +121,7 @@ const Application = () => {
                     <input
                       type="number"
                       {...register("contactNo", { required: true })}
-                      className=" w-full md:px-3 md:py-2 border rounded-md focus:outline-none border-indigo-300 focus:border-indigo-500 bg-gray-100 text-gray-900 "
+                      className=" w-full md:px-3 md:py-2 -mt-[2px] border rounded-md focus:outline-none border-indigo-300 focus:border-indigo-500 bg-gray-100 text-gray-900 "
                     />
                   </div>
                 </div>
