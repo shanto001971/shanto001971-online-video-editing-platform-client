@@ -98,7 +98,7 @@ const Application = () => {
                       render={({ field }) => (
                         <input
                           type="file"
-                          hidden
+                          hidden required
                           {...field}
                           accept=".jpg, .jpeg, .png, .pdf" // Specify allowed file types
                         />
