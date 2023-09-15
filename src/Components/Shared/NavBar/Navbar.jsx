@@ -75,7 +75,7 @@ const Navbar = () => {
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
-          <img src={logo} alt="logo" className=" w-10 rounded-full" />
+          <img src={logo} alt="logo" className=" w-10 h-10 rounded-full" />
         
           <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Motion Mingle
@@ -289,20 +289,15 @@ const Navbar = () => {
               </svg>
         </label> */}
 
-        {/* <div className="flex flex-col items-center gap-0">
-      <input type="checkbox" className="toggle"  onChange={handleToggle}/>
-      <p className="text-xs -mt-3">{theme == 'dark' ? "light" : 'Dark'}</p>
-      </div> */}
-
         <div className="-mr-5 mt-2">
           {theme == "dark" ? (
-            <a href="">
+            
               <BiSolidSun title="Make Light" className="text-4xl cursor-pointer" onClick={() => handleClick("light")} />
-            </a>
+            
           ) : (
-            <a href="">
+            
               <BsFillMoonFill title="Make Dark" className="text-2xl cursor-pointer" onClick={() => handleClick("dark")} />
-            </a>
+            
           )}
         </div>
 

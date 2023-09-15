@@ -9,6 +9,9 @@ import Swal from 'sweetalert2';
 import { FaGoogle } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
+const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
+console.log(img_hosting_token)
+
 const Register = () => {
 
 const {createUser, updateUserProfile, googleLogin} = useContext(AuthContext);
@@ -22,11 +25,32 @@ const navigate = useNavigate()
     formState: { errors },
   } = useForm()
 
+
+  const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
+
   const onSubmit = (data) => {
     if (data.password !== data.confirmPassword) {
       console.log("Passwords do not match");
       return;
     }
+
+    const formData = new FormData();
+    formData.append('photo', data.image[0])
+
+    fetch(img_hosting_url, {
+      method: "POST", 
+      body: formData
+    })
+    .then(res => res.json())
+    .then(imageResponse => {
+       if(imageResponse.success){
+        const photoURL = imageResponse.data.display_url;
+        const users = data;
+        users.photo = photoURL
+        console.log(data)
+       }
+    })
+
     
 // TODO: const imageFilename = data.image[0] ? data.image[0].name : '';
 // (photo: imageFilename) in the saveUser  

@@ -3,9 +3,19 @@
 // import { BsFolder2 } from "react-icons/bs";
 import { useState } from "react";
 import { FacebookProvider, CustomChat } from 'react-facebook';
+import { useLocation } from "react-router-dom";
 
 const SideIcon = () => {
   // const [hovered, setHovered] = useState(false);
+  const location = useLocation();
+
+  // Check if the current pathname is the home page ("/")
+  const isHomePage = location.pathname === '/';
+
+  // Render the SideIcon only if it's the home page
+  if (!isHomePage) {
+    return null;
+  }
   return (
     <div className="fixed overflow-y-scroll overflow-x-hidden z-10 top-[80%] md:top-[70%] bottom-0  flex flex-col -right-4 sm:-right-7 gap-[2px] overflow-auto ">
 

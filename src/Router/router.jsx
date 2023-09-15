@@ -8,7 +8,7 @@ import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideo
 import About from "../Components/Pages/About/About";
 import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
 import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
-// import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
+import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
 import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
 import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
 import UserAdminDashboard from "../Components/LayOut/UserAdminDashboard";
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <LayOut />,
-        // errorElement:<ErrorComponent/>,
+        errorElement:<ErrorComponent/>,
         children: [
             {
                 path: "/",
