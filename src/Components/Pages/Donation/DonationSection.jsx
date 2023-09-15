@@ -73,7 +73,7 @@ const DonationSection = () => {
                     </h3>
 
                     <h3 className="font-bold text-3xl text-blue-400">Helping each other <br /> can make world better</h3>
-                    <p className="font-semibold mt-5">Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt ut labore et simply free text dolore magna aliqua lonm andhn.</p>
+                    <p className="font-semibold mt-5">Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed dot ut labore et simply free text dolore </p>
 
                     <div className="flex gap-5 mt-7">
                         <div>
