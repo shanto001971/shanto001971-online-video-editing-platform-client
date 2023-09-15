@@ -70,7 +70,7 @@ const Donate = () => {
             <form onSubmit={handleAddToy} >
 
 
-                <div className=''>
+                <div >
                     <div className="form-control border border-blue-400 p-4 mb-7 ">
                         <label className="label">
                             <span className="label-text">Your Donation</span>
