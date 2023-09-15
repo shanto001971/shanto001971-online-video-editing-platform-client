@@ -31,7 +31,7 @@ const MakeVideo = () => {
         <div className="pl-4">
           <p className="text-3xl lg:text-4xl font-bold ">Make a Video for Free with <br /> MotionMingle Now</p>
           <div>
-<Link to='/dashboard'> <button  className='text-white btn glass font-bold mt-2 max-h-8  hover:text-slate-700 transition duration-100 hover:duration-500 px-2' >
+<Link to='/dashboard'> <button  className='text-white btn glass font-bold mt-2 max-h-8  hover:text-indigo-700 transition duration-100 hover:duration-500 px-2' >
            Get Started<FaArrowRight />
             </button> </Link>         </div>
         </div>
