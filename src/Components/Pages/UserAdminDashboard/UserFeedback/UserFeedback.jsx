@@ -38,7 +38,7 @@ const UserFeedback = () => {
         console.log(feedback)
 
 
-        fetch('http://localhost:5000/feedback', {
+        fetch('https://online-video-editing-platform-server.vercel.app/feedback', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

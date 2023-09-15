@@ -9,7 +9,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000', 
+    baseURL: 'https://online-video-editing-platform-server.vercel.app', 
   });
 
   useEffect(() => {

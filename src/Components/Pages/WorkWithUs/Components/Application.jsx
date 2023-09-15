@@ -9,7 +9,7 @@ const Application = () => {
   const onSubmit = (data) => {
   console.log(data);
     
-    fetch('http://localhost:5000/jobPost',{
+    fetch('https://online-video-editing-platform-server.vercel.app/jobPost',{
       method: 'POST',
       headers:{
         'content-type': 'application/json'
