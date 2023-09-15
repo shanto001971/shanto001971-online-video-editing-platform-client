@@ -28,12 +28,9 @@
     "nouislider-react": "^3.4.1",
     "react": "^18.2.0",
     "react-accessible-accordion": "^5.0.0",
-<<<<<<<<< Temporary merge branch 1
+    "react-circular-progressbar": "^2.1.0",
     "react-calendar": "^4.6.0",
     "react-chartjs-2": "^5.2.0",
-=========
-    "react-circular-progressbar": "^2.1.0",
->>>>>>>>> Temporary merge branch 2
     "react-color": "^2.19.3",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
