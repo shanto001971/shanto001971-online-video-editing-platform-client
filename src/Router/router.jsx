@@ -1,112 +1,110 @@
-import { createBrowserRouter } from "react-router-dom";
-import LayOut from "../Components/LayOut/LayOut";
-import Home from "../Components/Home/Home";
-import Login from "../Components/Pages/Login/Login";
-import Register from "../Components/Pages/Register/Register";
+import { createBrowserRouter } from 'react-router-dom';
+import LayOut from '../Components/LayOut/LayOut';
+import Home from '../Components/Home/Home';
+import Login from '../Components/Pages/Login/Login';
+import Register from '../Components/Pages/Register/Register';
 
-import OnlineVideoEditor from "../Components/Pages/OnlineVideoEditor/OnlineVideoEditor";
-import About from "../Components/Pages/About/About";
-import DesktopVideo from "../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo";
-import MobileVideo from "../Components/Pages/MobileVideo/MobileVideo/MobileVideo";
-import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
-import VideoEditeLayout from "../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout";
-import VideoEditePage from "../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage";
-import UserAdminDashboard from "../Components/LayOut/UserAdminDashboard";
-import AllUsers from "../Components/Pages/UserAdminDashboard/AllUsers/AllUsers";
-import UsersChart from "../Components/Pages/UserAdminDashboard/UsersChart/UsersChart";
-import HelpEmail from "../Components/Pages/Help/HelpEmail";
-import LearnEducationalVideo from "../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo";
-import LearnExplainerVideo from "../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo";
-import LearnTrainingVideo from "../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo";
-import Templates from "../Components/Pages/Templates/TemplatesForMobile/Templates";
-import AllTemplates from "../Components/Pages/Templates/AllTemplates/AllTemplates";
-import Pricing from "../Components/Pages/Pricing/Pricing";
-import UserProfile from "../Components/Pages/UserProfilePage/UserProfilePage";
-import WorkWithUS from "../Components/Pages/WorkWithUs/WorkWithUS";
-import AdminChart from "../Components/Pages/UserAdminDashboard/AdminChart/AdminChart";
-import PrivateRoute from "./PrivateRoute";
-import AdminRoute from "./AdminRoute";
-import AdminHome from "../Components/Pages/UserAdminDashboard/AdminHome/AdminHome";
-import UserHome from "../Components/Pages/UserAdminDashboard/UserHome/UserHome";
-import UserFeedback from "../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback";
-import DonationSection from "../Components/Pages/Donation/DonationSection";
-import Donate from "../Components/Pages/Donation/Donate";
-
-
-
+import OnlineVideoEditor from '../Components/Pages/OnlineVideoEditor/OnlineVideoEditor';
+import About from '../Components/Pages/About/About';
+import DesktopVideo from '../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo';
+import MobileVideo from '../Components/Pages/MobileVideo/MobileVideo/MobileVideo';
+// import ErrorComponent from "../Components/Pages/Error/ErrorComponent";
+import VideoEditeLayout from '../Components/LayOut/Dashboard/videoEditePage/VideoEditeLayout/VideoEditeLayout';
+import VideoEditePage from '../Components/LayOut/Dashboard/videoEditePage/videoEditePage/VideoEditePage';
+import UserAdminDashboard from '../Components/LayOut/UserAdminDashboard';
+import AllUsers from '../Components/Pages/UserAdminDashboard/AllUsers/AllUsers';
+import UsersChart from '../Components/Pages/UserAdminDashboard/UsersChart/UsersChart';
+import HelpEmail from '../Components/Pages/Help/HelpEmail';
+import LearnEducationalVideo from '../Components/Pages/Learn/LearnEducationalVideo/LearnEducationalVideo';
+import LearnExplainerVideo from '../Components/Pages/Learn/LearnExplainerVideo/LearnExplainerVideo';
+import LearnTrainingVideo from '../Components/Pages/Learn/LearnTrainingVideo/LearnTrainingVideo';
+import Templates from '../Components/Pages/Templates/TemplatesForMobile/Templates';
+import AllTemplates from '../Components/Pages/Templates/AllTemplates/AllTemplates';
+import Pricing from '../Components/Pages/Pricing/Pricing';
+import UserProfile from '../Components/Pages/UserProfilePage/UserProfilePage';
+import WorkWithUS from '../Components/Pages/WorkWithUs/WorkWithUS';
+import AdminChart from '../Components/Pages/UserAdminDashboard/AdminChart/AdminChart';
+import PaymentSuccess from '../Components/Pages/Pricing/PaymentSuccess';
+import Donate from '../Components/Pages/Donation/Donate';
+import DonationSection from '../Components/Pages/Donation/DonationSection';
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: '/',
         element: <LayOut />,
-        errorElement:<ErrorComponent/>,
+        // errorElement:<ErrorComponent/>,
         children: [
             {
-                path: "/",
-                element: <Home />
+                path: '/',
+                element: <Home />,
             },
             {
-                path: "/emailUs",
-                element: <HelpEmail />
+                path: '/emailUs',
+                element: <HelpEmail />,
             },
 
             {
-                path: "/templates-for-mobile",
-                element: <Templates />
+                path: '/templates-for-mobile',
+                element: <Templates />,
             },
             {
-                path: "/all-templates",
-                element: <AllTemplates />
+                path: '/all-templates',
+                element: <AllTemplates />,
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <Login></Login>,
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <About></About>,
             },
             {
                 path: '/register',
-                element: <Register></Register>
+                element: <Register></Register>,
             },
             {
                 path: '/onlinevideo',
-                element: <OnlineVideoEditor></OnlineVideoEditor>
+                element: <OnlineVideoEditor></OnlineVideoEditor>,
             },
             {
-                path: "/desktopvideo",
-                element: <DesktopVideo></DesktopVideo>
+                path: '/desktopvideo',
+                element: <DesktopVideo></DesktopVideo>,
             },
             {
-                path: "/mobilevideo",
-                element: <MobileVideo></MobileVideo>
+                path: '/mobilevideo',
+                element: <MobileVideo></MobileVideo>,
             },
             {
-                path: "/work-with-us",
-                element: <WorkWithUS />
+                path: '/work-with-us',
+                element: <WorkWithUS />,
             },
 
             {
-                path: "/learn-educational-video",
-                element: <LearnEducationalVideo />
+                path: '/learn-educational-video',
+                element: <LearnEducationalVideo />,
             },
             {
-                path: "/learn-explainer-video",
-                element: <LearnExplainerVideo />
+                path: '/learn-explainer-video',
+                element: <LearnExplainerVideo />,
             },
             {
-                path: "/learn-training-video",
-                element: <LearnTrainingVideo />
+                path: '/learn-training-video',
+                element: <LearnTrainingVideo />,
             },
             {
-                path: "/pricing",
-                element: <Pricing />
+                path: '/pricing',
+                element: <Pricing />,
             },
             {
-                path: "/user-profile",
-                element: <UserProfile />
+                path: '/user-profile',
+                element: <UserProfile />,
             },
+            {
+                path: '/payments/success/:tran_id',
+                element: <PaymentSuccess />,
+            },
+
             {
                 path: "/donation",
                 element: <DonationSection />
@@ -115,52 +113,36 @@ export const router = createBrowserRouter([
                 path: "/donate",
                 element: <Donate />
             },
-        ]
+        ],
     },
     {
-        path: "/dashboard",
+        path: '/dashboard',
         element: <VideoEditeLayout />,
         children: [
             {
-                path: "/dashboard",
-                element: <VideoEditePage />
-            }
-        ]
-
+                path: '/dashboard',
+                element: <VideoEditePage />,
+            },
+        ],
     },
 
-    //  user and admin dashboard routes 
     {
-        path: "useradmindashboard",
-        element: <PrivateRoute><UserAdminDashboard></UserAdminDashboard></PrivateRoute>,
+        path: 'useradmindashboard',
+        element: <UserAdminDashboard></UserAdminDashboard>,
         children: [
-            // users route
             {
-                path: "userhome",
-                element: <UserHome></UserHome>
+                path: 'allusers',
+                element: <AllUsers></AllUsers>,
             },
             {
-                path: "userschart",
-                element: <UsersChart></UsersChart>
-            },
-            {
-                path: "userfeedback",
-                element: <UserFeedback></UserFeedback>
+                path: 'userschart',
+                element: <UsersChart></UsersChart>,
             },
             // admin routes
             {
-                path: "adminhome",
-                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+                path: 'adminchart',
+                element: <AdminChart></AdminChart>,
             },
-            {
-                path: "allusers",
-                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-            },
-            {
-                path: "adminchart",
-                element: <AdminRoute><AdminChart></AdminChart></AdminRoute>
-            }
-        ]
-    }
-
+        ],
+    },
 ]);
