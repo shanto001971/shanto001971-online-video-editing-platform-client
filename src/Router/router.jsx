@@ -26,6 +26,7 @@ import WorkWithUS from '../Components/Pages/WorkWithUs/WorkWithUS';
 import AdminChart from '../Components/Pages/UserAdminDashboard/AdminChart/AdminChart';
 import PaymentSuccess from '../Components/Pages/Pricing/PaymentSuccess';
 import Donate from '../Components/Pages/Donation/Donate';
+import DonationSection from '../Components/Pages/Donation/DonationSection';
 
 export const router = createBrowserRouter([
     {
@@ -106,7 +107,7 @@ export const router = createBrowserRouter([
 
             {
                 path: "/donation",
-                element: <DonationSectio />
+                element: <DonationSection />
             },
             {
                 path: "/donate",
