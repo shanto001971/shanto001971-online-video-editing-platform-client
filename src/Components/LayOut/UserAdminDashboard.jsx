@@ -46,7 +46,7 @@ const UserAdminDashboard = () => {
                 <>  
                 <h2 className="text-3xl py-10">Motion Mingle </h2>
                 <li> <Link to="/useradmindashboard/userhome"> <FaHome></FaHome> User Home</Link> </li>
-                <li> <Link to="/useradmindashboard/paidusers"> <FaUser></FaUser> paid Users</Link> </li>
+                {/* <li> <Link to="/useradmindashboard/paidusers"> <FaUser></FaUser> paid Users</Link> </li> */}
                 <li> <Link to="/useradmindashboard/userschart"> <FaChartPie></FaChartPie> Users Chart</Link> </li>
                 <li> <Link to="/useradmindashboard/userfeedback"> <FaComments></FaComments>Give Feedback</Link> </li>
 

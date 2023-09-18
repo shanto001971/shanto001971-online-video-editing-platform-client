@@ -27,6 +27,10 @@ import AdminChart from '../Components/Pages/UserAdminDashboard/AdminChart/AdminC
 import PaymentSuccess from '../Components/Pages/Pricing/PaymentSuccess';
 import Donate from '../Components/Pages/Donation/Donate';
 import DonationSection from '../Components/Pages/Donation/DonationSection';
+import UserHome from '../Components/Pages/UserAdminDashboard/UserHome/UserHome';
+import UserFeedback from '../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback';
+import AdminHome from '../Components/Pages/UserAdminDashboard/AdminHome/AdminHome';
+import AdminRoute from './AdminRoute';
 
 export const router = createBrowserRouter([
     {
@@ -130,19 +134,32 @@ export const router = createBrowserRouter([
         path: 'useradmindashboard',
         element: <UserAdminDashboard></UserAdminDashboard>,
         children: [
+            // users route
             {
-                path: 'allusers',
-                element: <AllUsers></AllUsers>,
+                path: "userhome",
+                element: <UserHome></UserHome>
             },
             {
-                path: 'userschart',
-                element: <UsersChart></UsersChart>,
+                path: "userschart",
+                element: <UsersChart></UsersChart>
+            },
+            {
+                path: "userfeedback",
+                element: <UserFeedback></UserFeedback>
             },
             // admin routes
             {
-                path: 'adminchart',
-                element: <AdminChart></AdminChart>,
+                path: "adminhome",
+                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
             },
+            {
+                path: "allusers",
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            {
+                path: "adminchart",
+                element: <AdminRoute><AdminChart></AdminChart></AdminRoute>
+            }
         ],
     },
 ]);
