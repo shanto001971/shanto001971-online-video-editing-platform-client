@@ -6,10 +6,10 @@ const JobBtn = ({buttonText}) => {
       };
     return (
         <div >
-            <button onClick={viewJobs} className='text-white btn glass max-h-8 hover:text-slate-700 transition duration-100 hover:duration-500 ' style={{paddingLeft:'5px',paddingRight:'5px'}}>
+           <button onClick={viewJobs} className='text-white btn glass hover:text-slate-700 transition duration-100 hover:duration-500 ' style={{paddingLeft:'5px',paddingRight:'5px'}}>
             {buttonText} 
              <span className="arrow-icon "><FaArrowRight /></span>
-            </button>    
+            </button> 
         </div>
     );
 };
