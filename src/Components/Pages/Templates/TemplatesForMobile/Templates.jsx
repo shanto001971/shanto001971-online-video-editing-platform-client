@@ -8,6 +8,7 @@ import TemplateVideos from "./TemplateVideos";
 import TemplateImages from "./TemplateImages";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImgTemplate } from "../../../../features/template/templateImagesSlice";
+import { Helmet } from "react-helmet-async";
 
 const Templates = () => {
   const [activeTab, setActiveTab] = useState(0); // 0 for Videos, 1 for Images
@@ -103,6 +104,9 @@ const Templates = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>MingleMotion Express | Templates For Mobile</title>
+      </Helmet>
       <img
         className="mx-1 sm:mx-auto rounded-xl h-[215px]"
         src={templateImage}
