@@ -116,11 +116,11 @@ export const router = createBrowserRouter([
         ],
     },
     {
-        path: '/dashboard',
+        path: '/video-edit-page',
         element: <VideoEditeLayout />,
         children: [
             {
-                path: '/dashboard',
+                path: '/video-edit-page',
                 element: <VideoEditePage />,
             },
         ],
