@@ -11,10 +11,15 @@ import LearnTrainingFAQ from "./LearnTrainingFAQ";
 import LearnFeedbackSection from "../LearnFeedbackSection";
 import TrainingLastSection from "./TrainingLastSection";
 import TrainingVideoSubsection from "./TrainingVideoSubsection";
+import { Helmet } from "react-helmet-async";
 
 const LearnTrainingVideo = () => {
   return (
-    <div className="mb-20">
+    <>
+      <Helmet>
+        <title>MingleMotion Express | Learn Training Video</title>
+      </Helmet>
+      <div className="mb-20">
       <div className="flex items-center gap-2 md:gap-4 text-[15px] font-semibold text-gray-500 ml-6 mt-4">
         <Link to="/">
           <p className="cursor-pointer">Home</p>
@@ -37,6 +42,7 @@ const LearnTrainingVideo = () => {
         <TrainingLastSection/>
       </Container>
     </div>
+    </>
   );
 };
 

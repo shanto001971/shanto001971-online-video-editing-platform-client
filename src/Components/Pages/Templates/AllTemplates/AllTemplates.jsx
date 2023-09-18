@@ -5,6 +5,7 @@ import { fetchVideos } from "../../../../features/demoVideos/demoVideosSlice";
 import HoverVideoPlayer from "react-hover-video-player";
 import Loader from "../../../Loader/Loader";
 import AllTemplateModal from "./AllTemplateModal";
+import { Helmet } from "react-helmet-async";
 
 const AllTemplates = () => {
   let [isOpen, setIsOpen] = useState(false); //for modal
@@ -39,7 +40,11 @@ const AllTemplates = () => {
   };
 
   return (
-    <div className="mx-10">
+    <>
+      <Helmet>
+        <title>MingleMotion Express | All Templates</title>
+      </Helmet>
+      <div className="mx-10">
       <div className="w-full lg:w-1/2">
         <h2 className="text-2xl sm:text-3xl text-start font-bold">
           Explore Unlimited <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent'>Mingle Motion Templates!</span>
@@ -138,6 +143,7 @@ const AllTemplates = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import ProfileInformation from "./ProfileInformation";
 import SubscriptionPlan from "./SubscriptionPlan";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
@@ -17,6 +18,9 @@ const UserProfile = () => {
 
   return (
     <>
+      <Helmet>
+        <title>MingleMotion Express | User Profile</title>
+      </Helmet>
     <div className="flex items-center gap-2 md:gap-4 text-[15px] font-semibold text-gray-500 ml-4 sm:ml-6 mt-6">
         <Link to="/">
           <p className="cursor-pointer">Home</p>
