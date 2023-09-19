@@ -9,6 +9,7 @@ import TemplateImages from "./TemplateImages";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImgTemplate } from "../../../../features/template/templateImagesSlice";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const Templates = () => {
   const [activeTab, setActiveTab] = useState(0); // 0 for Videos, 1 for Images
@@ -17,15 +18,7 @@ const Templates = () => {
   const [filteredImages, setFilteredImages] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Videos");
 
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  const changedTextColor = () => {
-    return theme === "dark" ? "text-[var(--dark-mode-bg)]" : "text-black"
-  }
-
-  useEffect(() => {
-    changedTextColor();
-  }, [theme]);
+  const { theme } = useTheme();
 
   const { isLoading, templateVideos: templateVideosData } = useSelector(
     (state) => state.templateVideos
@@ -90,8 +83,8 @@ const Templates = () => {
   const tabColor = (tabIndex, activeTab, theme) =>
     activeTab === tabIndex
       ? "#000"
-      : theme === "dark"
-      ? "text-[var(--dark-text-white)]"
+      : theme.mode === "dark"
+      ? "text-white"
       : "text-gray-600";
   
 
@@ -113,7 +106,7 @@ const Templates = () => {
         alt=""
       />
       <div className="absolute top-6 sm:top-8 left-4 lg:left-40">
-        <h4 className={`text-2xl font-bold ${changedTextColor()}`}>Templates</h4>
+        <h4 className={`text-2xl font-bold `}>Templates</h4>
         <p className="text-sm sm:text-[17px] text-gray-600 mt-3 sm:w-3/4 sm:leading-6">
           Motion mingle thousands of free trending templates are just a few
           clicks away. Create stunning videos and images with them effortlessly.

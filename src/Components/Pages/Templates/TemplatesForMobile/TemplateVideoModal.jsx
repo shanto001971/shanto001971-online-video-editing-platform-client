@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import VideoModalData from "./VideoModalData";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 export default function TemplateVideoModal({
   isOpen,
@@ -8,12 +9,10 @@ export default function TemplateVideoModal({
   selectedData,
   selectedCategoryData
 }) {
+  const { theme } = useTheme();
+
   function closeModal() {
     setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
   }
 
   return (
@@ -43,7 +42,11 @@ export default function TemplateVideoModal({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-sm sm:max-w-3xl md:max-w-[920px] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className={`w-full max-w-sm sm:max-w-3xl md:max-w-[920px] transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all ${
+                    theme.mode === "dark"
+                      ? `bg-gray-900 text-white`
+                      : "bg-white"
+                  }`}>
                   <VideoModalData
                     selectedData={selectedData}
                     closeModal={closeModal}

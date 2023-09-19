@@ -3,25 +3,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchImgTemplate } from "../../../../features/template/templateImagesSlice";
 import Loader from "../../../Loader/Loader";
 import TemplateImgModal from "./TemplateImgModal";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const TemplateImages = ({ searchQuery, filteredImages }) => {
   let [isOpen, setIsOpen] = useState(false); //for modal
   const [selectedData, setSelectedData] = useState(null);
     //For dark and light mode
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    // const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    const { theme } = useTheme();
   
-    const changedTheme = () => {
-      return theme === "dark" ? "bg-[var(--dark-mode-bg)] text-[var(--dark-text-white)]" : "bg-gray-100";
-    }
+    // const changedTheme = () => {
+    //   return theme === "dark" ? "bg-[var(--dark-mode-bg)] text-[var(--dark-text-white)]" : "bg-gray-100";
+    // }
   
-    const changedTextColor = () => {
-      return theme === "dark" ? "text-[var(--dark-text-gray)]" : "text-gray-600"
-    }
+    // const changedTextColor = () => {
+    //   return theme === "dark" ? "text-[var(--dark-text-gray)]" : "text-gray-600"
+    // }
   
-    useEffect(() => {
-      changedTheme();
-      changedTextColor();
-    }, [theme]);
+    // useEffect(() => {
+    //   changedTheme();
+    //   changedTextColor();
+    // }, [theme]);
 
   const {
     isLoading,
@@ -92,6 +94,10 @@ const TemplateImages = ({ searchQuery, filteredImages }) => {
                 <button
                   key={index}
                   className={`text-xs sm:text-sm md:text-base whitespace-nowrap px-3 py-1 rounded-md ${
+                    theme.mode === "dark"
+                      ? `bg-gray-800 text-white hover:bg-gray-800`
+                      : "bg-gray-100"
+                  } ${
                     selectedCategory === categoryItem.category
                       ? "bg-gray-200 text-gray-950 font-medium"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-600"
@@ -123,7 +129,7 @@ const TemplateImages = ({ searchQuery, filteredImages }) => {
                       src={item.img}
                       alt={item.title}
                     />
-                    <p className="text-sm text-gray-600 mt-2">{item.title}</p>
+                    <p className={`text-sm mt-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>{item.title}</p>
                   </div>
                 ))}
             </div>

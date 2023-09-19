@@ -9,7 +9,7 @@ const VedioPart = () => {
         autoPlay
         playsInline
         muted
-        className=""
+        className="min-w-[100%] max-w-[2520px]"
         src="https://165225.fs1.hubspotusercontent-na1.net/hubfs/165225/careers-hero-video-no-audio.mp4"
         type="video/mp4"
       ></video>

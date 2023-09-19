@@ -71,7 +71,7 @@ const VoiceSection = () => {
           Brands Kids
         </h2>
         <img
-          className="py-28 md:py-24 lg:py-32 md:px-6 lg:px-20 px-16 group-hover:scale-105 ease-out
+          className="py-28 md:py-24 lg:py-32 md:px-6 lg:px-20 px-16 ease-out
           transition"
           src={voiceImg}
           alt="Voice Section Image"
