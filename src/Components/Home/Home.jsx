@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "../BannerSection/Banner";
 import VideoLayout from "../Pages/VideoLayout/VideoLayout";
 import SideIcon from "../SideIcon/SideIcon";
@@ -12,6 +13,9 @@ const Home = () => {
 	
   return (
     <div>
+      <Helmet>
+        <title>MingleMotion Express | Home</title>
+      </Helmet>
       <Banner />
       <TemplateVideo />
       <VoiceSection />

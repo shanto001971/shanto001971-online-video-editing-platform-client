@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../ThemeProvider/ThemeProvider';
 
 const HelpButton = () => {
-  
+  const { changesThemeTextColor } = useTheme(); // for using light and dark themes
   const email = 'minglemotion@gmail.com';
   const subject = '';
   const body = '';
@@ -15,8 +16,8 @@ const HelpButton = () => {
   const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
     return (
         
-          <div className="dropdown dropdown-hover">
-  <label tabIndex={0} className="text-slate-500 font-medium m-1">Help</label>
+          <div className={`dropdown dropdown-hover ${changesThemeTextColor()}`}>
+  <label tabIndex={0} className="font-medium m-1">Help</label>
   <div tabIndex={0} className="dropdown-content z-[1] menu p-6 -ml-2 w-[280px] md:w-[360px] shadow-lg shadow-slate-500 bg-base-100 rounded-box">
 <div className='flex gap-7 space-y-5 md:space-y-8 text-sm'>
 <div>

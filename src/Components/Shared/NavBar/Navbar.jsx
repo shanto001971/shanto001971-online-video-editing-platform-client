@@ -14,9 +14,7 @@ import { BsCloudSunFill, BsFillCloudMoonFill } from "react-icons/bs";
 import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const Navbar = () => {
- 
- 
-  const { theme, themeSwitchHandler } = useTheme();
+  const { theme, themeSwitchHandler, changesThemeTextColor, changesThemeBgColor, } = useTheme(); // for using light and dark themes
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTemplateOpen, setIsTemplateOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
@@ -64,7 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" bg-gray-100 text-gray-500 font-medium px-4 py-5 mx-auto md:max-w-full   sticky top-0 z-10 bg-transparent backdrop-blur-md">
+    <div className={`bg-gray-100 font-medium px-4 py-5 mx-auto md:max-w-full   sticky top-0 z-10 bg-transparent backdrop-blur-md ${changesThemeTextColor()}`}>
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
@@ -85,7 +83,7 @@ const Navbar = () => {
             >
               Templates 
               {isTemplateOpen && (
-                <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500">
+                <ul className={`pe-6 -ms-10 ps-6 tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500 ${changesThemeTextColor()} ${theme.mode === 'dark' ? 'bg-gray-800': 'bg-white'}`}>
                   <li className="text-left pe-10">
                     <NavLink
                       to="/all-templates"
@@ -115,20 +113,20 @@ const Navbar = () => {
           {/* tool section  start =================== */}
           <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
             <NavLink
-              to="/Tools"
+              to="/"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold " : "default "
+                isActive ? "text-black font-medium " : "default "
               }
             >
               Tools
               {isToolsOpen && (
-                <ul className="pe-10 -ms-10 ps-10 backdrop-blur-sm bg-white/60 tools-dropdown absolute flex-column justify-center pt-5  rounded-lg">
+                <ul className={`pe-10 -ms-10 ps-10 backdrop-blur-sm tools-dropdown absolute flex-column text-sm justify-center pt-5  rounded-lg ${changesThemeTextColor()} ${theme.mode === 'dark' ? 'bg-gray-800': 'bg-white'}`}>
                   <li className="text-left pe-10">
                     <NavLink
                       to="/onlinevideo"
                       title=" Online video editor"
                       className={({ isActive }) =>
-                        isActive ? "text-xl text-black font-bold" : "default"
+                        isActive ? "text-black font-medium" : "default"
                       }
                     >
                       Online video editor
@@ -139,7 +137,7 @@ const Navbar = () => {
                       to="/desktopvideo"
                       title=" Online video edit"
                       className={({ isActive }) =>
-                        isActive ? "text-xl text-black font-bold" : "default"
+                        isActive ? "text-black font-medium" : "default"
                       }
                     >
                       Video editor for desktop
@@ -150,7 +148,7 @@ const Navbar = () => {
                       to="/mobilevideo"
                       title=" Online video edit"
                       className={({ isActive }) =>
-                        isActive ? "text-xl text-black font-bold" : "default"
+                        isActive ? "text-black font-medium" : "default"
                       }
                     >
                       Video editor for mobile
@@ -165,7 +163,7 @@ const Navbar = () => {
             <NavLink
               to="/explore"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
+                isActive ? " text-black font-bold nav-link" : "default nav-link"
               }
             >
               Explore
@@ -227,7 +225,7 @@ const Navbar = () => {
             <NavLink
               to="/pricing"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
+                isActive ? "text-black font-bold nav-link" : "default nav-link"
               }
             >
               Pricing
@@ -237,7 +235,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
+                isActive ? "text-black font-bold  nav-link" : "default nav-link"
               }
             >
               About
@@ -250,7 +248,7 @@ const Navbar = () => {
               to={isAdmin ? "/useradmindashboard/adminhome" : "/useradmindashboard/userhome"}
               title="Dashboard"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold" : "default"
+                isActive ? " text-black font-bold" : "default"
               }
             >
               Dashboard
@@ -258,10 +256,10 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <ul className="items-center hidden space-x-8 lg:flex  text-gray-400 font-semibold text-xl">
-          {/* Conditional rendering login and logout */}
-          {/* For dark and light mood */}
+        <ul className="items-center hidden space-x-8 lg:flex font-semibold ">
+        {/* Conditional rendering login and logout */}
 
+        {/* For dark and light mood */}
         <div className="-mr-5 mt-2">
           {theme.mode == "dark" ? (
               <BsCloudSunFill title="Make Light" className="text-2xl cursor-pointer" onClick={() => themeSwitchHandler()} />
@@ -298,7 +296,7 @@ const Navbar = () => {
           )}
         </ul>
         {/* Mobile Navbar Section */}
-        <div className="lg:hidden">
+      <div className={`lg:hidden`}>
           {/* Dropdown Open Button */}
           <button
             aria-label="Open Menu"
@@ -308,8 +306,8 @@ const Navbar = () => {
             <AiOutlineMenu className="w-5 text-gray-600" />
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full z-10">
-              <div className="p-5 bg-white border rounded shadow-sm">
+          <div className={`absolute top-0 left-0 w-full z-10 ${theme.mode === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+              <div className="p-5  border rounded shadow-sm">
                 {/* Logo & Button section */}
                 <div className="flex items-center justify-between mb-2">
                   <div>
@@ -336,7 +334,7 @@ const Navbar = () => {
                       title="Close Menu"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <RxCross2 className="w-5 text-gray-600" />
+                      <RxCross2 className={`w-5 text-2xl -mt-14 ${changesThemeTextColor()}`} />
                     </button>
                   </div>
                 </div>
@@ -348,7 +346,7 @@ const Navbar = () => {
                       <Link
                         to="/templates"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
+                          isActive ? " text-black font-bold nav-link" : "default nav-link"
                         }
                       >
                         Templates
@@ -385,7 +383,7 @@ const Navbar = () => {
                       <NavLink
                         to="/explore"
                         className={({ isActive }) =>
-                          isActive ? "text-xl text-black font-bold nav-link" : "default nav-link"
+                          isActive ? " text-black font-bold nav-link" : "default nav-link"
                         }
                       >
                         Explore
