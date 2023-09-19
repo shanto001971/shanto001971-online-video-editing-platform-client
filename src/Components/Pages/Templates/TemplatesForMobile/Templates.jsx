@@ -17,8 +17,7 @@ const Templates = () => {
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [filteredImages, setFilteredImages] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Videos");
-
-  const { theme } = useTheme();
+  const { theme, changesThemeBgColor, changesThemeTextColor } = useTheme(); //for dark and light theme
 
   const { isLoading, templateVideos: templateVideosData } = useSelector(
     (state) => state.templateVideos
@@ -106,14 +105,14 @@ const Templates = () => {
         alt=""
       />
       <div className="absolute top-6 sm:top-8 left-4 lg:left-40">
-        <h4 className={`text-2xl font-bold `}>Templates</h4>
+        <h4 className={`text-2xl font-bold ${theme.mode === 'dark' ? 'text-gray-800': ''}`}>Templates</h4>
         <p className="text-sm sm:text-[17px] text-gray-600 mt-3 sm:w-3/4 sm:leading-6">
           Motion mingle thousands of free trending templates are just a few
           clicks away. Create stunning videos and images with them effortlessly.
         </p>
-        <div className="mt-3 flex ">
+        <div className="mt-3 flex">
           <select
-            className="pl-2 text-sm font-medium rounded-s-xl w-full h-[39px] max-w-[80px] mt-[10px] bg-gray-100"
+            className={`pl-2 text-sm font-medium rounded-s-xl w-full h-[40px] max-w-[80px] mt-[10px] ${changesThemeBgColor()}`}
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
@@ -121,12 +120,11 @@ const Templates = () => {
             <option value="Images">Images</option>
           </select>
           <CiSearch
-            // onClick={(e) => setSearchQuery(e.target.value)}
-            className="text-lg text-gray-700 z-10 mt-[22px] ml-2"
+            className={`text-lg z-10 mt-[22px] ml-2 ${changesThemeTextColor()}`}
           />
           <input
             type="text"
-            className="border bg-gray-100 rounded-e-xl -ml-7 pl-7 h-10 w-3/4 sm:w-1/2 text-[13px]  focus:outline-none font-medium focus:border-blue-300"
+            className={`border rounded-e-xl -ml-7 pl-7 h-10 w-3/4 sm:w-1/2 text-[13px]  focus:outline-none font-medium focus:border-blue-300 ${changesThemeTextColor()} ${changesThemeBgColor()}`}
             placeholder="Search category or title"
             onChange={(e) => setSearchQuery(e.target.value)}
             value={searchQuery}

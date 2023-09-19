@@ -2,9 +2,10 @@ import { AiOutlineLayout, AiOutlineWarning } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const ImageModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
-  
+  const { theme } = useTheme();
   const { _id, title, img, img_url, author, description } = selectedData;
   const remainCategoryData = selectedCategoryData.data.filter(
     (data) => data._id !== _id
@@ -25,7 +26,7 @@ const ImageModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
         </div>
         <div className="lg:ml-10 sm:mt-6 ">
           <h4 className="text-lg sm:text-2xl font-bold">{title}</h4>
-          <div className="flex items-center gap-2 mt-4 text-gray-600">
+          <div className={`flex items-center gap-2 mt-4 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
             <p className="text-xs font-medium border-[2px] px-2 py-1 rounded-sm">
               {description[0]}
             </p>
@@ -35,7 +36,7 @@ const ImageModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
           </div>
           <div className="flex gap-2 items-center mt-4 mb-2">
             <img className="w-6 h-6 rounded-full avatar" src={img_url} alt="" />
-            <h6 className="text-sm sm:text-base text-gray-600">{author}</h6>
+            <h6 className={`text-sm sm:text-base ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>{author}</h6>
           </div>
           
           <Link to="/dashboard">
@@ -44,11 +45,11 @@ const ImageModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
             </button>
           </Link>
 
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
             <AiOutlineLayout />
             <p>1:1 aspect ratio used</p>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
             <AiOutlineWarning />
             <p>Available for commercial use</p>
           </div>
@@ -74,7 +75,7 @@ const ImageModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
               <div className="group" key={item._id}>
                 <Link to="/dashboard">
                   <img className="rounded-md group-hover:scale-105 transition-transform" src={item?.img} alt="" />
-                  <p className="text-xs sm:text-sm text-gray-600 mt-2">{item.title}</p>
+                  <p className={`text-xs sm:text-sm mt-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>{item.title}</p>
                 </Link>
               </div>
             ))}

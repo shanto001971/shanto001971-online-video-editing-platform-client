@@ -2,10 +2,13 @@ import Marquee from "react-fast-marquee";
 import { educationTemplateData } from "./LearnEducationData";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const LearnEducationTemplate = () => {
+  const { theme } = useTheme(); //using for dark and light theme
+  
   return (
-    <div className="text-center my-20 md:my-32 bg-gray-100 py-10 md:py-16 rounded-xl">
+    <div className={`text-center my-20 md:my-32 py-10 md:py-16 rounded-xl ${theme.mode === "dark" ? 'text-gray-100 bg-gray-800' : "text-gray-600 bg-gray-100 "}`}>
       <h2 className="text-2xl md:text-4xl font-semibold">Get Inspired</h2>
       <h6 className="text-base mt-3 md:mt-6 mb-14 px-2 md:px-0">
         Click on a Template to get started right away. Education video creation

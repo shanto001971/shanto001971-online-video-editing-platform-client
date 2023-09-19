@@ -28,8 +28,16 @@ export const ThemeProvider = ({ children }) => {
     document.querySelector("html").setAttribute("data-theme", theme.mode);
   };
 
+  const changesThemeBgColor = () => {
+    return theme.mode === "dark" ? "bg-gray-800" : "bg-gray-100"
+  }
+
+  const changesThemeTextColor = () => {
+    return theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, themeSwitchHandler, setTheme }}>
+    <ThemeContext.Provider value={{ theme, themeSwitchHandler, setTheme, changesThemeBgColor, changesThemeTextColor }}>
       {children}
     </ThemeContext.Provider>
   );
