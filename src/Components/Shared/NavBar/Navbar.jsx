@@ -255,6 +255,16 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/work-with-us"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
+              }
+            >
+              Carrer
+            </NavLink>
+          </li>
           {/* Conditional useradmindasboard  route  */}
           <li>
             <NavLink
@@ -608,6 +618,16 @@ const Navbar = () => {
                         />
                       )}
                     </li>
+                    <li>
+            <NavLink
+              to="/work-with-us"
+              className={({ isActive }) =>
+                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
+              }
+            >
+              Carrer
+            </NavLink>
+          </li>
 
                     {/* Conditional rendering login and logout */}
 

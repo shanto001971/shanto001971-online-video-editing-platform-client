@@ -102,14 +102,3 @@
 // export default HelpEmail;
 
 
-import React from 'react';
-
-const HelpEmail = () => {
-  return (
-    <div>
-      
-    </div>
-  );
-};
-
-export default HelpEmail;

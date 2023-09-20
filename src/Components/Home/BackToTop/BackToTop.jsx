@@ -15,10 +15,13 @@ const BackToTop = () => {
   };
   return (
     show && (
-      <button onClick={()=>scrollToTop()} className="bg-slate-800 w-12 h-12 hover:bg-slate-700 text-white rounded-full fixed right-14 bottom-48 cursor-pointer flex justify-center items-center transition-all z-50">
-        <BiArrowToTop className="w-7 h-7 " />
+      <button
+        onClick={() => scrollToTop()}
+        className="bg-slate-100 w-14 h-14 hover:bg-indigo-600 text-white rounded-full fixed right-6 bottom-4 cursor-pointer flex justify-center items-center transition-all z-50"
+      >
+        <BiArrowToTop className="w-7 h-7 text-indigo-400 hover:text-slate-100 " />
       </button>
-    ) 
+    )
   );
 };
 
