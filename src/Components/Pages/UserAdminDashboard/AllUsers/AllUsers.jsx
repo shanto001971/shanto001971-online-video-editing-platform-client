@@ -3,9 +3,11 @@ import "./AllUsers.css";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
+  const { theme, changesThemeTextColor, changesThemeBgColor } = useTheme(); // for using light and dark themes
   const { data: users = [], refetch } = useQuery(["users"], async () => {
     const res = await axiosSecure.get("/users");
     return res.data;
@@ -67,14 +69,14 @@ const AllUsers = () => {
       <Helmet>
         <title>MingleMotion Express | All Users</title>
       </Helmet>
-      <div className="text-4xl w-full px-8">
+      <div className={`text-4xl w-full px-8 ${changesThemeTextColor()}`}>
         All User : {users.length}
         <div>
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
               <thead>
-                <tr className=" ">
+                <tr className={`${changesThemeTextColor()}`}>
                   <th>#</th>
                   <th className="text-lg text-bold">Name</th>
                   <th className="text-lg ">Email</th>
@@ -84,7 +86,7 @@ const AllUsers = () => {
               </thead>
               <tbody>
                 {users.map((user, index) => (
-                  <tr key={user._id} className="">
+                  <tr key={user._id}>
                     <td>{index + 1}</td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>

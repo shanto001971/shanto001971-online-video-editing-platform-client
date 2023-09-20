@@ -5,10 +5,12 @@ import { useQuery } from "@tanstack/react-query";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const AdminHome = () => {
   const { user } = useContext(AuthContext);
   const [axiosSecure] = useAxiosSecure();
+  const { theme, changesThemeTextColor } = useTheme(); // for using light and dark themes
 
   const { data: stats = {} } = useQuery({
     queryKey: ["admin-stats"],
@@ -120,14 +122,14 @@ const AdminHome = () => {
         <title>MingleMotion Express | Admin Home</title>
       </Helmet>
       <div className="w-full h-full px-8">
-        <div className="text-2xl py-10 text-center">
+        <div className={`text-2xl py-10 text-center ${changesThemeTextColor()}`}>
           Hello, {user.displayName}
         </div>
 
         <div className="grid grid-cols-2 gap-3">
           <div>
             <div className="stat rounded-xl bg-gradient-to-r from-purple-500 to-pink-500">
-              <div className="stat-title text-white text-xl">Revinue</div>
+              <div className="stat-title text-white text-xl">Revenue</div>
               <div className="stat-value text-white">$439</div>
               <div className="stat-actions">
                 <div className="stat-desc text-primary">↗︎ 40 (2%)</div>
