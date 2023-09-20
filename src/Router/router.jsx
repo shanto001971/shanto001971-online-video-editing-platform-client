@@ -3,7 +3,6 @@ import LayOut from '../Components/LayOut/LayOut';
 import Home from '../Components/Home/Home';
 import Login from '../Components/Pages/Login/Login';
 import Register from '../Components/Pages/Register/Register';
-
 import OnlineVideoEditor from '../Components/Pages/OnlineVideoEditor/OnlineVideoEditor';
 import About from '../Components/Pages/About/About';
 import DesktopVideo from '../Components/Pages/DesktopVideo/DesktopVideo/DesktopVideo';
@@ -31,6 +30,7 @@ import UserHome from '../Components/Pages/UserAdminDashboard/UserHome/UserHome';
 import UserFeedback from '../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback';
 import AdminHome from '../Components/Pages/UserAdminDashboard/AdminHome/AdminHome';
 import AdminRoute from './AdminRoute';
+import PrivateRoute from './PrivateRoute';
 
 export const router = createBrowserRouter([
     {
@@ -71,11 +71,11 @@ export const router = createBrowserRouter([
                 element: <OnlineVideoEditor/>,
             },
             {
-                path: '/desktopvideo',
+                path: '/desktop-video',
                 element: <DesktopVideo/>,
             },
             {
-                path: '/mobilevideo',
+                path: '/mobile-video',
                 element: <MobileVideo/>,
             },
             {
@@ -97,11 +97,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/pricing',
-                element: <Pricing />,
+                element: <PrivateRoute><Pricing /></PrivateRoute>
             },
             {
                 path: '/user-profile',
-                element: <UserProfile />,
+                element: <PrivateRoute><UserProfile /></PrivateRoute>,
             },
             {
                 path: '/payments/success/:tran_id',
@@ -110,7 +110,7 @@ export const router = createBrowserRouter([
 
             {
                 path: "/donation",
-                element: <DonationSection />
+                element: <PrivateRoute><DonationSection /></PrivateRoute>
             },
             {
                 path: "/donate",
@@ -129,33 +129,33 @@ export const router = createBrowserRouter([
         ],
     },
     {
-        path: 'useradmindashboard',
+        path: 'dashboard',
         element: <UserAdminDashboard/>,
         children: [
             // users route
             {
-                path: "userhome",
-                element: <UserHome/>
+                path: "user-home",
+                element: <PrivateRoute><UserHome/></PrivateRoute>
             },
             {
-                path: "userschart",
-                element: <UsersChart/>
+                path: "users-chart",
+                element: <PrivateRoute><UsersChart/></PrivateRoute>
             },
             {
-                path: "userfeedback",
-                element: <UserFeedback/>
+                path: "user-feedback",
+                element: <PrivateRoute><UserFeedback/></PrivateRoute>
             },
             // admin routes
             {
-                path: "adminhome",
+                path: "admin-home",
                 element: <AdminRoute><AdminHome/></AdminRoute>
             },
             {
-                path: "allusers",
+                path: "all-users",
                 element: <AdminRoute><AllUsers/></AdminRoute>
             },
             {
-                path: "adminchart",
+                path: "admin-chart",
                 element: <AdminRoute><AdminChart/></AdminRoute>
             }
         ],

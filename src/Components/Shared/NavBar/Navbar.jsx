@@ -146,7 +146,7 @@ const Navbar = () => {
                   </li>
                   <li className="py-3 text-left">
                     <NavLink
-                      to="/desktopvideo"
+                      to="/desktop-video"
                       title=" Online video edit"
                       className={({ isActive }) =>
                         isActive ? "text-black font-medium" : "default"
@@ -157,7 +157,7 @@ const Navbar = () => {
                   </li>
                   <li className="text-left pb-3">
                     <NavLink
-                      to="/mobilevideo"
+                      to="/mobile-video"
                       title=" Online video edit"
                       className={({ isActive }) =>
                         isActive ? "text-black font-medium" : "default"
@@ -260,8 +260,8 @@ const Navbar = () => {
             <NavLink
               to={
                 isAdmin
-                  ? "/useradmindashboard/adminhome"
-                  : "/useradmindashboard/userhome"
+                  ? "/dashboard/admin-home"
+                  : "/dashboard/user-home"
               }
               title="Dashboard"
               className={({ isActive }) =>
@@ -451,7 +451,7 @@ const Navbar = () => {
                             </li>
                             <li className="py-3 text-left">
                               <NavLink
-                                to="/desktopvideo"
+                                to="/desktop-video"
                                 title=" Online video edit"
                                 className={({ isActive }) =>
                                   isActive
@@ -464,7 +464,7 @@ const Navbar = () => {
                             </li>
                             <li className="pb-3 text-left">
                               <NavLink
-                                to="/mobilevideo"
+                                to="/mobile-video"
                                 title=" Online video edit"
                                 className={({ isActive }) =>
                                   isActive
@@ -582,8 +582,8 @@ const Navbar = () => {
                       <NavLink
                         to={
                           isAdmin
-                            ? "/useradmindashboard/adminhome"
-                            : "/useradmindashboard/userhome"
+                            ? "/dashboard/admin-home"
+                            : "/dashboard/user-home"
                         }
                         title="Dashboard"
                         className={({ isActive }) =>
