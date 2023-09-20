@@ -80,7 +80,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/work-with-us',
-                element: <WorkWithUS />,
+                element: <PrivateRoute><WorkWithUS /></PrivateRoute>
             },
 
             {
@@ -120,11 +120,11 @@ export const router = createBrowserRouter([
     },
     {
         path: '/video-edit-page',
-        element: <VideoEditeLayout />,
+        element: <PrivateRoute><VideoEditeLayout /></PrivateRoute>,
         children: [
             {
                 path: '/video-edit-page',
-                element: <VideoEditePage />,
+                element: <PrivateRoute><VideoEditePage /></PrivateRoute>
             },
         ],
     },
