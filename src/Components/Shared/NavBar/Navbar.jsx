@@ -113,7 +113,7 @@ const Navbar = () => {
           {/* tool section  start =================== */}
           <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
             <NavLink
-              to="/"
+              to="/tool"
               className={({ isActive }) =>
                 isActive ? "text-black font-medium " : "default "
               }
@@ -179,7 +179,7 @@ const Navbar = () => {
             >
               Learn
               {isLearnOpen && (
-                <ul className="pe-6 -ms-10 ps-6 bg-white tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500">
+                <ul className={`pe-6 -ms-10 ps-6 tools-dropdown absolute flex-column justify-center pt-5  rounded-lg text-sm shadow-lg z-10 shadow-slate-500 ${changesThemeTextColor()} ${theme.mode === 'dark' ? 'bg-gray-800': 'bg-white'}`}>
                   <li className="text-left pe-10">
                     <NavLink
                       to="/learn-educational-video"
