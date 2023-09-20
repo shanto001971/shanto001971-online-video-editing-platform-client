@@ -153,7 +153,7 @@ const AllTemplates = () => {
               className={`w-52 min-h-full ${
                 theme.mode === "dark"
                   ? `bg-[#1D232A] text-black`
-                  : "bg-gray-100"
+                  : ""
               } text-base-content text-[13px] font-medium space-y-1 pt-3 pl-2 lg:pl-0 lg:mt-0`}
             >
               {/* Sidebar content here */}
@@ -173,7 +173,7 @@ const AllTemplates = () => {
                       : ""
                   } ${
                     selectedCategory === categoryItem.category
-                      ? "bg-gray-100 text-gray-950 font-medium"
+                      ? " text-gray-950 font-medium"
                       : " hover:bg-gray-200 text-gray-500"
                   }`}
                   onClick={() => handleCategoryClick(categoryItem.category)}

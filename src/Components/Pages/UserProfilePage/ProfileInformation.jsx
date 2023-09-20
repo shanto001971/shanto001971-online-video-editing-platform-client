@@ -7,9 +7,16 @@ import { Link } from "react-router-dom";
 import SocialProfiles from "./SocialProfiles";
 import { updateUser } from "../../../api/users";
 import Swal from "sweetalert2";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const ProfileInformation = () => {
   const { user } = useContext(AuthContext);
+  const {
+    theme,
+    changesThemeBgColor,
+    changesThemeTextColor
+  } = useTheme();
+
   const {
     register,
     handleSubmit,
@@ -55,6 +62,7 @@ const ProfileInformation = () => {
                 <input
                   type="text"
                   name="name"
+                  className={`${theme.mode === 'dark' ? '': 'bg-gray-100'}` }
                   defaultValue={user?.displayName}
                   {...register("name", { required: true })}
                   required
@@ -68,6 +76,7 @@ const ProfileInformation = () => {
                 <input
                   type="email"
                   name="email"
+                  className={`${theme.mode === 'dark' ? '': 'bg-gray-100'}` }
                   value={user?.email}
                   {...register("email", { required: true })}
                   required
@@ -81,6 +90,7 @@ const ProfileInformation = () => {
                 <input
                   type="text"
                   name="profession"
+                  className={`${theme.mode === 'dark' ? '': 'bg-gray-100'}` }
                   {...register("profession", { required: true })}
                   required
                 />
@@ -95,6 +105,7 @@ const ProfileInformation = () => {
                 <input
                   type="text"
                   name="location"
+                  className={`${theme.mode === 'dark' ? '': 'bg-gray-100'}` }
                   placeholder="Your country"
                   {...register("location", { required: true })}
                   required
@@ -109,6 +120,7 @@ const ProfileInformation = () => {
                   <input
                     type="text"
                     name="plan"
+                    className={`${theme.mode === 'dark' ? '': 'bg-gray-100'}` }
                     value={"Free Plan"}
                     {...register("plan", { required: true })}
                     required
@@ -128,6 +140,7 @@ const ProfileInformation = () => {
                 <input
                   type="text"
                   name="phone"
+                  className={`${theme.mode === 'dark' ? '': 'bg-gray-100'}` }
                   placeholder="Your phone number"
                   {...register("phone", { required: true })}
                   required

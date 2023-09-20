@@ -4,8 +4,15 @@ import { FaCrown } from "react-icons/fa";
 import { BiSolidGridAlt } from "react-icons/bi";
 import watermark from "../../../assets/profile-page/watermark-bg.png";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const SubscriptionPlan = () => {
+  const {
+    theme,
+    changesThemeBgColor,
+    changesThemeTextColor
+  } = useTheme();
+
   const freePlan = [
     "10 iStock clips per month",
     "1M+ Premium Media",
@@ -28,32 +35,32 @@ const SubscriptionPlan = () => {
     <>
       <h4 className="mt-8 md:mt-0 text-lg sm:text-xl font-semibold">Subscription Plan</h4>
       <hr className="my-4" />
-      <div className="w-full md:flex items-center gap-8">
-        <div className="md:w-[440px] md:h-[460px] lg:h-[360px] p-8 bg-gray-100 rounded-md">
+      <div className={`w-full md:flex items-center gap-8 ${changesThemeTextColor()}`}>
+        <div className={`md:w-[440px] md:h-[460px] lg:h-[360px] p-8 bg-gray-100 rounded-md ${changesThemeBgColor()}`}>
           <div className="flex items-center gap-2 my-4">
             <MdOndemandVideo />
             <p>Videos Exported</p>
           </div>
-          <p className="text-end bg-white w-full rounded-3xl px-3 text-xs py-1">
+          <p className={`text-end  w-full rounded-3xl px-3 text-xs py-1 ${theme.mode === 'dark' ? '' : 'bg-white'}`}>
             *Available only paid plans
           </p>
           <div className="flex items-center gap-2 my-4">
             <FaCrown />
             <p>iStock</p>
           </div>
-          <p className="text-end bg-white w-full rounded-3xl px-3 text-xs py-1">
+          <p className={`text-end  w-full rounded-3xl px-3 text-xs py-1 ${theme.mode === 'dark' ? '' : 'bg-white'}`}>
             *Available only paid plans
           </p>
           <div className="flex items-center gap-2 my-4">
             <BiSolidGridAlt />
             <p>Remove background credits</p>
           </div>
-          <p className="text-end bg-white w-full rounded-3xl px-3 text-xs py-1">
+          <p className={`text-end  w-full rounded-3xl px-3 text-xs py-1 ${theme.mode === 'dark' ? '' : 'bg-white'}`}>
             *Available only paid plans
           </p>
         </div>
 
-        <div className="mt-4 md:mt-0 p-8 lg:h-[360px] md:w-[500px] bg-gray-100 rounded-md">
+        <div className={`mt-4 md:mt-0 p-8 lg:h-[360px] md:w-[500px] bg-gray-100 rounded-md ${changesThemeBgColor()}`}>
           <p>Plan</p>
           <h6 className="text-lg font-medium my-2">
             Free Plan <span className="text-[#71AA00]">(Upgrade)</span>

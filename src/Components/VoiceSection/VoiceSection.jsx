@@ -5,22 +5,19 @@ import "./VoiceSection.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
+import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 const VoiceSection = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-  
-  let sectionBackgroundColor;
-  const changedTheme = () => {
-    return sectionBackgroundColor = theme === "dark" ? "bg-gray-700" : "bg-gray-100";
-  }
+  const {
+    theme,
+    changesThemeBgColor
+  } = useTheme();
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
-  useEffect(() => {
-    changedTheme()
-  }, [theme]);
   return (
     <section
       // data-aos="fade-up"
@@ -66,7 +63,7 @@ const VoiceSection = () => {
         </div>
       </div>
       
-      <div key={theme} className={`relative w-full md:w-[40%] md:h-[450px] lg:h-[600px] h-auto  rounded-3xl mt-8 md:mt-0 group ${sectionBackgroundColor}`}>
+      <div  className={`relative w-full md:w-[40%] md:h-[450px] lg:h-[600px] h-auto  rounded-3xl mt-8 md:mt-0 group ${theme.mode === 'dark' ? 'text-white' : 'text-black'} ${changesThemeBgColor()}`}>
         <h2 className="absolute top-6 md:to-pink-100 text-[22px] md:text-2xl lg:text-4xl font-bold lg:font-extrabold pl-6">
           Brands Kids
         </h2>
@@ -76,7 +73,7 @@ const VoiceSection = () => {
           src={voiceImg}
           alt="Voice Section Image"
         />
-        <p className="absolute text-base md:text-lg font-medium bottom-4 md:bottom-3 lg:bottom-6 px-6 text-gray-700">
+        <p className="absolute text-base md:text-lg font-medium bottom-4 md:bottom-3 lg:bottom-6 px-6">
           Generate diverse brand kits and easily apply them to videos in a
           single click.
         </p>
