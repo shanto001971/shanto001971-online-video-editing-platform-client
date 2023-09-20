@@ -7,23 +7,25 @@ import PropTypes from "prop-types";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const UserHome = () => {
   const { user } = useContext(AuthContext);
   const [value, onChange] = useState(new Date());
+  const {  theme } = useTheme(); // for using light and dark themes
 
   return (
     <>
       <Helmet>
         <title>MingleMotion Express | User Home</title>
       </Helmet>
-      <div className="w-full h-full  px-6">
-        <div className="text-2xl text-center py-10 font-bold text-black">
+      <div className="w-full h-full px-6">
+        <div className={`text-2xl text-center py-10 font-bold ${theme.mode === 'dark' ? 'text-white' : 'text-black'}`}>
           Hi, {user?.displayName}!
         </div>
 
         {/* grid container */}
-        <h2 className="text-left text-black uppercase font-bold">
+        <h2 className={`text-left uppercase font-bold ${theme.mode === 'dark' ? 'text-white' : 'text-black'}`}>
           my progress
         </h2>
         <div className="bg-[#2A2B47] rounded-xl">
@@ -87,7 +89,7 @@ const UserHome = () => {
         </div>
 
         {/* second div */}
-        <h2 className="text-left text-black py-5 uppercase font-bold">
+        <h2 className={`text-left py-5 uppercase font-bold ${theme.mode === 'dark' ? 'text-white' : 'text-black'}`}>
           Statistic
         </h2>
 
