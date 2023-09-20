@@ -8,6 +8,7 @@ import { useContext, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 // import { FaGoogle } from 'react-icons/fa';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
   const {signInUser, resetPassword} = useContext(AuthContext);
@@ -117,50 +118,55 @@ const Login = () => {
 
 
     return (
+        <>
+        <Helmet>
+        <title>MingleMotion Express | Login</title>
+      </Helmet>
         <div className='bg-gradient-to-r from-cyan-300 to-blue-300 lg:h-[800px]'>
           
-<div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-3 py-20 '>
-   
-   {/* left section */}
-    <div className='login-container mx-auto w-full md:w-[407px]'>
-    <h2 className='text-3xl md:text-5xl text-black font-semibold pb-5'>Login Here </h2>
-        <form onSubmit = {handleSignin}>
-        <div>
-        <input type="email" ref={emailRef} name='email' placeholder="Email" className="w-full input input-bordered" />
-        </div>
-      
-        <div>
-        <input type="password" name='password' placeholder="Password" className="w-full input input-bordered" />
-        <p className="text-red-600 text-xs">{error}</p>
-        <small>forgot password? <button onClick={handleResetPassword} className='text-orange-500'>reset now</button> </small>
-        </div>
-        <div className="form-control mt-6">
-        <input type="submit" className='w-full bg-gradient-to-r from-cyan-500 to-blue-500' value="Login" />
-         
-        </div>
-        </form>
-        <p className='p-3'><small>New here? <Link to='/register' className='text-orange-500'>Register</Link> </small></p>
-
-        <div>
-            {/* TODO: social login component will be here */}
-          <SocialLogin></SocialLogin>
-        {/* <button  onClick={handleGoogleSingIn} className='w-full flex justify-center items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-center p-2 rounded text-white'> 
-        <FaGoogle/> <span className=''> Google</span> 
-         </button> */}
-
-        </div>
-
-    </div>
-
-    {/* right section */}
-    <div>
-    <Lottie options={defaultOptions}
-      height={400}
-      width={375}
-     />
-    </div>
-</div>
-</div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-3 py-20 '>
+             
+             {/* left section */}
+              <div className='login-container mx-auto w-full md:w-[407px]'>
+              <h2 className='text-3xl md:text-5xl text-black font-semibold pb-5'>Login Here </h2>
+                  <form onSubmit = {handleSignin}>
+                  <div>
+                  <input type="email" ref={emailRef} name='email' placeholder="Email" className="w-full input input-bordered" />
+                  </div>
+                
+                  <div>
+                  <input type="password" name='password' placeholder="Password" className="w-full input input-bordered" />
+                  <p className="text-red-600 text-xs">{error}</p>
+                  <small>forgot password? <button onClick={handleResetPassword} className='text-orange-500'>reset now</button> </small>
+                  </div>
+                  <div className="form-control mt-6">
+                  <input type="submit" className='w-full bg-gradient-to-r from-cyan-500 to-blue-500' value="Login" />
+                   
+                  </div>
+                  </form>
+                  <p className='p-3'><small>New here? <Link to='/register' className='text-orange-500'>Register</Link> </small></p>
+          
+                  <div>
+                      {/* TODO: social login component will be here */}
+                    <SocialLogin></SocialLogin>
+                  {/* <button  onClick={handleGoogleSingIn} className='w-full flex justify-center items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-center p-2 rounded text-white'> 
+                  <FaGoogle/> <span className=''> Google</span> 
+                   </button> */}
+          
+                  </div>
+          
+              </div>
+          
+              {/* right section */}
+              <div>
+              <Lottie options={defaultOptions}
+                height={400}
+                width={375}
+               />
+              </div>
+          </div>
+          </div>
+        </>
     );
 };
 

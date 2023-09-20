@@ -7,9 +7,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSelectedData2 } from "../../../../features/template/templateVideosSlice";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const AllTemplateModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
   const dispatch = useDispatch();
+  const { theme } = useTheme();
 
   const { _id, title, video_src, img_url, img, author, description} =
     selectedData;
@@ -60,10 +62,10 @@ const AllTemplateModalData = ({ selectedData, closeModal, selectedCategoryData }
         />
         <div className="lg:ml-10 sm:mt-6">
           <h4 className="text-lg sm:text-2xl font-bold">{title}</h4>
-          <p className="text-xs sm:text-sm my-2 text-gray-600">{description}</p>
+          <p className={`text-xs sm:text-sm my-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>{description}</p>
           <div className="flex gap-2 items-center mt-4 mb-2">
             <img className="w-6 h-6 rounded-full avatar" src={img_url} alt="" />
-            <h6 className="text-sm sm:text-base text-gray-600">{author}</h6>
+            <h6 className={`text-sm sm:text-base ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>{author}</h6>
           </div>
 
           <Link to="/dashboard">
@@ -71,15 +73,15 @@ const AllTemplateModalData = ({ selectedData, closeModal, selectedCategoryData }
               Use this template
             </button>
           </Link>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
             <TbMovie />
             <p>18 clips required</p>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
             <PiTextTBold />
             <p>3 text materials required</p>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
             <AiOutlineLayout />
             <p>9:16 aspect ratio used</p>
           </div>
@@ -130,7 +132,7 @@ const AllTemplateModalData = ({ selectedData, closeModal, selectedCategoryData }
                       </div>
                     }
                   />
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1">{item.title}</p>
+                  <p className={`text-xs sm:text-sm mt-1 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>{item.title}</p>
                 </Link>
               </div>
             ))}

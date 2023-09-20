@@ -1,6 +1,10 @@
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
+
 const EducationTextContainer = () => {
+    const { theme } = useTheme(); //using for dark and light theme
+
     return (
-        <div className="my-12 md:my-28 bg-gray-100 rounded-xl p-8 md:p-12">
+        <div className={`my-12 md:my-28 rounded-xl p-8 md:p-12 ${theme.mode === "dark" ? 'text-gray-100 bg-gray-800' : "text-gray-600 bg-gray-100 "}`}>
            <h2 className="text-2xl md:text-3xl font-semibold text-center md:text-left">Create videos for teaching. Online, free</h2> 
            <div className="md:flex items-start gap-6 mt-4 text-base text-center md:text-left leading-7">
             <div className="text-sm md:text-base md:w-[1/2]">

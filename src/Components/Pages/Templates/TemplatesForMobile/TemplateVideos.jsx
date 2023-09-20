@@ -7,25 +7,14 @@ import {
 import Loader from "../../../Loader/Loader";
 import HoverVideoPlayer from "react-hover-video-player";
 import TemplateVideoModal from "./TemplateVideoModal";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const TemplateVideos = ({ filteredVideos, searchQuery }) => {
   let [isOpen, setIsOpen] = useState(false); //for modal
   const [selectedData, setSelectedData] = useState(null); //for selected data
   //For dark and light mode
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-  
-  const changedTheme = () => {
-    return theme === "dark" ? "bg-[var(--dark-mode-bg)] text-gray-50" : "bg-gray-100";
-  }
-
-  const changedTextColor = () => {
-    return theme === "dark" ? "text-[var(--dark-text-gray)]" : "text-gray-600"
-  }
-
-  useEffect(() => {
-    changedTheme();
-    changedTextColor();
-  }, [theme]);
+  // const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const { theme } = useTheme();
 
   const {
     isLoading,
@@ -67,10 +56,9 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
       <div className="my-6">
         {searchQuery.length > 0 && filteredVideos ? (
           <>
-            {isLoading && <Loader/>}
-            
+            {isLoading && <Loader />}
+
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 my-6 gap-0 sm:gap-4 lg:gap-1">
-              
               <TemplateVideoModal
                 selectedCategoryData={selectedCategoryData}
                 isOpen={isOpen}
@@ -98,7 +86,15 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
                         </div>
                       }
                     />
-                    <p className={`text-sm mt-2 ${theme === "dark" ? "text-[#ffffff]" : "text-gray-600 "}`}>{item.title}</p>
+                    <p
+                      className={`text-sm mt-2 ${
+                        theme.mode === "dark"
+                          ? "text-gray-100"
+                          : "text-gray-600 "
+                      }`}
+                    >
+                      {item.title}
+                    </p>
                   </div>
                 ))}
             </div>
@@ -109,7 +105,11 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
               {templateVideosData.map((categoryItem, index) => (
                 <button
                   key={index}
-                  className={`text-xs sm:text-sm md:text-base whitespace-nowrap px-3 py-1 rounded-md ${changedTheme()} ${
+                  className={`text-xs sm:text-sm md:text-base whitespace-nowrap px-3 py-1 rounded-md ${
+                    theme.mode === "dark"
+                      ? `bg-gray-800 text-white`
+                      : "bg-gray-100"
+                  } ${
                     selectedCategory === categoryItem.category
                       ? " text-gray-950 font-medium"
                       : " text-gray-600"
@@ -150,7 +150,9 @@ const TemplateVideos = ({ filteredVideos, searchQuery }) => {
                         </div>
                       }
                     />
-                    <p className={`text-sm mt-2 ${changedTextColor()}`}>{item.title}</p>
+                    <p className={`text-sm mt-2 ${theme.mode === "dark" ? 'text-gray-100' : "text-gray-600"}`}>
+                      {item.title}
+                    </p>
                   </div>
                 ))}
             </div>

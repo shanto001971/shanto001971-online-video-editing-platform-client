@@ -5,28 +5,32 @@ import { RiPencilFill } from "react-icons/ri";
 import { TbPointFilled } from "react-icons/tb";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 function UserModal({ handleLogOut }) {
   const { user } = useContext(AuthContext);
   const openGoogleAccount = () => {
     window.open("https://myaccount.google.com/", "_blank");
   };
+  const {
+    theme,
+    changesThemeTextColor,
+  } = useTheme();
 
   return (
     <div className="flex items-center">
-      <div className="dropdown   lg:dropdown-end">
-        <label tabIndex={0} className="flex items-center gap-1 m-1">
+      <div className="dropdown lg:dropdown-end">
+        <label tabIndex={0} className={`flex items-center gap-[2px] my-1 ${changesThemeTextColor()}`}>
           <img
-            className="cursor-pointer"
-            style={{ width: "40px", borderRadius: "50%", marginLeft: "7px" }}
+            className="cursor-pointer lg:w-10 w-9 rounded-full"
             src={user.photoURL}
             alt=""
           />
-          {user ? <BsChevronDown className="font-bold text-black h-3" /> : ""}{" "}
+          {user ? <BsChevronDown className="font-bold h-3" /> : ""}
         </label>
         <ul
           tabIndex={0}
-          className="dropdown-content mb-52 bg-indigo-50 z-[1] menu -mt-24 lg:-mt-0 ml-12 md:ml-20 lg:ml-0 p-3 md:p-5 text-center shadow-lg  rounded-box max-w-[400px] md:w-[400px]"
+          className={`dropdown-content mb-52 z-[1] menu -mt-24 lg:-mt-0 ml-12 md:ml-20 lg:ml-0 p-3 md:p-5 text-center shadow-lg  rounded-box max-w-[400px] md:w-[400px] ${changesThemeTextColor()} ${theme.mode === 'dark' ? 'bg-gray-800' : 'bg-indigo-50'}`}
         >
           {" "}
           <p className="py-2">{user?.email}</p>

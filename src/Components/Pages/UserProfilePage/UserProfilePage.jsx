@@ -7,21 +7,27 @@ import SubscriptionPlan from "./SubscriptionPlan";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
   const [activeComponent, setActiveComponent] = useState("ProfileInformation"); //by default component uses active component
+  const {
+    theme,
+    changesThemeBgColor,
+    changesThemeTextColor
+  } = useTheme();
 
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
   };
 
   return (
-    <>
+    <div div className={`${changesThemeTextColor()}`}>
       <Helmet>
         <title>MingleMotion Express | User Profile</title>
       </Helmet>
-    <div className="flex items-center gap-2 md:gap-4 text-[15px] font-semibold text-gray-500 ml-4 sm:ml-6 mt-6">
+    <div className="flex items-center gap-2 md:gap-4 text-[15px] font-semibold ml-4 sm:ml-6 mt-6">
         <Link to="/">
           <p className="cursor-pointer">Home</p>
         </Link>
@@ -41,17 +47,17 @@ const UserProfile = () => {
         <div className="block sm:flex lg:block items-center justify-center gap-16">
           <button
             onClick={() => handleButtonClick("ProfileInformation")}
-            className={`flex items-center justify-start gap-1  py-2 px-1 sm:px-5 rounded-md my-0 md:my-3 w-full ${activeComponent == "ProfileInformation" ? "bg-gray-100" : "bg-gray-50" }`}
+            className={`flex items-center justify-start gap-1  py-2 px-1 sm:px-5 rounded-md my-0 md:my-3 w-full ${theme.mode === 'dark' ? 'bg-gray-800' : ''} ${activeComponent == "ProfileInformation" ? "bg-gray-100" : "bg-gray-50" }`}
           >
-            <BiSolidUser className="text-[17px] sm:text-lg md:text-xl text-violet-950" />
-            <p className="text-[15px] sm:text-base md:text-[17px] font-semibold text-violet-950">Profile</p>
+            <BiSolidUser className={`text-[17px] sm:text-lg md:text-xl ${theme.mode === 'dark' ? 'text-gray-100' : 'text-violet-950 '}`} />
+            <p className={`text-[15px] sm:text-base md:text-[17px] font-semibold ${theme.mode === 'dark' ? 'text-gray-100' : 'text-violet-950 '}`}>Profile</p>
           </button>
           <button
             onClick={() => handleButtonClick("SubscriptionPlan")}
-            className={`flex items-center justify-start gap-1  py-2 px-1 sm:px-5 rounded-md my-0 md:my-3 w-full ${activeComponent == "SubscriptionPlan" ? "bg-gray-100" : "bg-gray-50" }`}
+            className={`flex items-center justify-start gap-1  py-2 px-1 sm:px-5 rounded-md my-0 md:my-3 w-full ${theme.mode === 'dark' ? 'bg-gray-800' : ''} ${activeComponent == "SubscriptionPlan" ? "bg-gray-100" : "bg-gray-50" }`}
           >
-            <LuHelpingHand className="text-[17px] sm:text-lg md:text-xl text-violet-950" />
-            <p className="text-[15px] sm:text-base md:text-[17px] font-semibold text-violet-950">
+            <LuHelpingHand className={`text-[17px] sm:text-lg md:text-xl ${theme.mode === 'dark' ? 'text-gray-100' : 'text-violet-950 '}`} />
+            <p className={`text-[15px] sm:text-base md:text-[17px] font-semibold ${theme.mode === 'dark' ? 'text-gray-100' : 'text-violet-950 '}`}>
               Subscription Plan
             </p>
           </button>
@@ -62,7 +68,7 @@ const UserProfile = () => {
         {activeComponent === "SubscriptionPlan" && <SubscriptionPlan />}
       </div>
     </div>
-    </>
+    </div>
   );
 };
 

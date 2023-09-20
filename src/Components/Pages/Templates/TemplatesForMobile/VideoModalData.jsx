@@ -7,9 +7,15 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSelectedData2 } from "../../../../features/template/templateVideosSlice";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
   const dispatch = useDispatch();
+  const { theme } = useTheme();
+
+  const changeTextColor =()=>{
+    return theme.mode === "dark" ? 'text-white' : "text-gray-600"
+  }
 
   const { _id, title, video_src, img_url, author, description, use } =
     selectedData;
@@ -46,10 +52,10 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
           }
         />
         <div className="lg:ml-10 sm:mt-6">
-          <h4 className="text-lg sm:text-2xl font-bold">{title}</h4>
+          <h4 className={`text-lg sm:text-2xl font-bold ${theme.mode === "dark" ? 'text-white' : "text-gray-600"}`}>{title}</h4>
           <div className="flex gap-2 items-center mt-4 mb-2">
             <img className="w-6 h-6 rounded-full avatar" src={img_url} alt="" />
-            <h6 className="text-sm sm:text-base text-gray-600">{author}</h6>
+            <h6 className={`text-sm sm:text-base ${changeTextColor()}`}>{author}</h6>
           </div>
 
           <Link to="/dashboard">
@@ -57,19 +63,19 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
               Use this template
             </button>
           </Link>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
             <TbMovie />
             <p>{description[0]}</p>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
             <PiTextTBold />
             <p>{description[1]}</p>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
             <AiOutlineLayout />
             <p>{description[2]}</p>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600">
+          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
             <AiOutlineFire />
             <p className="text-sm">{use} use</p>
           </div>
@@ -107,7 +113,7 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
                       </div>
                     }
                   />
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1">{item.title}</p>
+                  <p className={`text-xs sm:text-sm text-gray-600 mt-1 ${changeTextColor()}`}>{item.title}</p>
                 </Link>
               </div>
             ))}
