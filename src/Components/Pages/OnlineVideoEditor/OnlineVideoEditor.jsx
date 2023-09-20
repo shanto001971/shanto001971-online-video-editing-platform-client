@@ -14,21 +14,32 @@ import EditFeature from "./EditFeature/EditFeature";
 import EditFeaturesReverse from "./EditFeatureReverse/EditFeatureReverse";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const OnlineVideoEditor = () => {
+  const { theme, changesThemeTextColor, changesThemeBgColor } = useTheme(); //for dark and light themes
+
   return (
     <>
       <Helmet>
         <title>MingleMotion Express | Online Video Editor</title>
       </Helmet>
-      <div className="flex flex-col lg:flex-row w-full linear_bg px-5 md:px-20">
+      <div
+        className={`flex flex-col lg:flex-row w-full px-5 md:px-20 ${
+          theme.mode === "dark" ? "text-gray-100" : "linear_bg text-black"
+        }`}
+      >
         {/* left div content */}
         <div className="w-full lg:w-5/12  flex items-center justify-left">
           <div className="">
-            <h2 className="text-black text-[58px] font-bold text-left leading-tight">
+            <h2 className="text-[58px] font-bold text-left leading-tight">
               Free Online <br /> Video Editor
             </h2>
-            <p className="article_body2 text-[#54545c]  mb-10 ">
+            <p
+              className={`article_body2 mb-10 ${
+                theme.mode === "dark" ? "text-gray-100" : " text-[#54545c]"
+              }`}
+            >
               Create stunning videos to grow your business and <br /> engage the
               audience. Social media clips, promo videos, <br /> slideshows, and
               more are just at your fingertips.
@@ -57,7 +68,13 @@ const OnlineVideoEditor = () => {
         </div>
       </div>
 
-      <div className="bg-[#F5F8FC] pb-5">
+      <div
+        className={`pb-5 ${
+          theme.mode === "dark"
+            ? "bg-gray-800 text-gray-100"
+            : "bg-[#F5F8FC] text-black"
+        }`}
+      >
         <div className="text-center py-6">
           <p>Trusted by</p>
         </div>
@@ -67,26 +84,15 @@ const OnlineVideoEditor = () => {
           <img className="w-[170px] h-[62px]" src={logo_3} alt="" />
         </div>
       </div>
-
       {/* ohters components */}
-
-      {/* <AutoScroll></AutoScroll> */}
-
-      <EditFeature></EditFeature>
-
-      <EditFeaturesReverse></EditFeaturesReverse>
-
-      <SwiperSection></SwiperSection>
-
-      <CreateDemoVideo></CreateDemoVideo>
-
-      <Tools></Tools>
-
-      <Faq></Faq>
-
-      <Topics></Topics>
-
-      <GoToSignUp></GoToSignUp>
+      <EditFeature />
+      <EditFeaturesReverse />
+      <SwiperSection />
+      <CreateDemoVideo />
+      <Tools />
+      <Faq />
+      <Topics />
+      <GoToSignUp />
     </>
   );
 };

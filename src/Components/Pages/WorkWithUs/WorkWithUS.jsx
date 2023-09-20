@@ -6,10 +6,16 @@ import MissionVission from "./Components/MissionVission";
 import FAQs from "./Components/FAQs";
 import Application from "./Components/Application";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const WorkWithUS = () => {
+  const {
+    theme,
+    changesThemeTextColor
+  } = useTheme();
+
   return (
-    <div>
+    <div className={`${theme.mode === 'dark' ? 'text-gray-100' : 'text-black'}`}>
       <Helmet>
         <title>MingleMotion Express | Work With Us</title>
       </Helmet>

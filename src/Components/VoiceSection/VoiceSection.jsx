@@ -11,7 +11,7 @@ const VoiceSection = () => {
   const {
     theme,
     changesThemeBgColor
-  } = useTheme();
+  } = useTheme(); //for dark and light themes
 
   useEffect(() => {
     AOS.init();

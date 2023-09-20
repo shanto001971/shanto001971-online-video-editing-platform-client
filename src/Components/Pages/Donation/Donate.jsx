@@ -7,9 +7,11 @@ import img2 from "../../../../src/assets/images/download1.png";
 import img3 from "../../../../src/assets/images/download2.png";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const Donate = () => {
   const { user } = useContext(AuthContext);
+  const { theme, changesThemeTextColor } = useTheme();
 
   const handleAddToy = (event) => {
     event.preventDefault();
@@ -70,7 +72,10 @@ const Donate = () => {
       <Helmet>
         <title>MingleMotion Express | Donate</title>
       </Helmet>
-      <div style={{ width: "700px", margin: "auto" }}>
+      <div
+        className={`${changesThemeTextColor()}`}
+        style={{ width: "700px", margin: "auto" }}
+      >
         <h3 className="text-center font-bold text-3xl mb-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Make a Donation
         </h3>
@@ -78,7 +83,13 @@ const Donate = () => {
           <div>
             <div className="form-control border border-blue-400 p-4 mb-7 ">
               <label className="label">
-                <span className="label-text">Your Donation</span>
+                <span
+                  className={`label-text ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-black"
+                  }`}
+                >
+                  Your Donation
+                </span>
               </label>
               <input
                 type="number"
@@ -158,7 +169,13 @@ const Donate = () => {
               <div className="grid grid-cols-2 gap-2">
                 <div className="form-control  ">
                   <label className="label">
-                    <span className="label-text">Card holder Name</span>
+                    <span
+                      className={`label-text ${
+                        theme.mode === "dark" ? "text-gray-100" : "text-black"
+                      }`}
+                    >
+                      Card holder Name
+                    </span>
                   </label>
                   <input
                     type="text"
@@ -168,7 +185,13 @@ const Donate = () => {
                 </div>
                 <div className="form-control  ">
                   <label className="label">
-                    <span className="label-text">Card Number</span>
+                    <span
+                      className={`label-text ${
+                        theme.mode === "dark" ? "text-gray-100" : "text-black"
+                      }`}
+                    >
+                      Card Number
+                    </span>
                   </label>
                   <input
                     type="number"
@@ -178,7 +201,13 @@ const Donate = () => {
                 </div>
                 <div className="form-control  ">
                   <label className="label">
-                    <span className="label-text">CVV</span>
+                    <span
+                      className={`label-text ${
+                        theme.mode === "dark" ? "text-gray-100" : "text-black"
+                      }`}
+                    >
+                      CVV
+                    </span>
                   </label>
                   <input
                     type="number"
@@ -188,7 +217,13 @@ const Donate = () => {
                 </div>
                 <div className="form-control  ">
                   <label className="label">
-                    <span className="label-text">Expire Date</span>
+                    <span
+                      className={`label-text ${
+                        theme.mode === "dark" ? "text-gray-100" : "text-black"
+                      }`}
+                    >
+                      Expire Date
+                    </span>
                   </label>
                   <input
                     type="date"
