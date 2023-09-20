@@ -110,14 +110,6 @@ export const router = createBrowserRouter([
                 element: <VideoEditePage />,
             },
         ],
-        path: "/dashboard",
-        element: <VideoEditeLayout />,
-        children: [
-            {
-                path: "/dashboard",
-                element: <VideoEditePage />
-            }
-        ]
 
     },
 
