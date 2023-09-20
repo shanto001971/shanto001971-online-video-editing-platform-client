@@ -46,7 +46,6 @@ export const router = createBrowserRouter([
                 path: '/emailUs',
                 element: <HelpEmail />,
             },
-
             {
                 path: '/templates-for-mobile',
                 element: <Templates />,
@@ -57,27 +56,27 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>,
+                element: <Login/>,
             },
             {
                 path: '/about',
-                element: <About></About>,
+                element: <About/>,
             },
             {
                 path: '/register',
-                element: <Register></Register>,
+                element: <Register/>,
             },
             {
-                path: '/onlinevideo',
-                element: <OnlineVideoEditor></OnlineVideoEditor>,
+                path: '/online-video',
+                element: <OnlineVideoEditor/>,
             },
             {
                 path: '/desktopvideo',
-                element: <DesktopVideo></DesktopVideo>,
+                element: <DesktopVideo/>,
             },
             {
                 path: '/mobilevideo',
-                element: <MobileVideo></MobileVideo>,
+                element: <MobileVideo/>,
             },
             {
                 path: '/work-with-us',
@@ -129,36 +128,35 @@ export const router = createBrowserRouter([
             },
         ],
     },
-
     {
         path: 'useradmindashboard',
-        element: <UserAdminDashboard></UserAdminDashboard>,
+        element: <UserAdminDashboard/>,
         children: [
             // users route
             {
                 path: "userhome",
-                element: <UserHome></UserHome>
+                element: <UserHome/>
             },
             {
                 path: "userschart",
-                element: <UsersChart></UsersChart>
+                element: <UsersChart/>
             },
             {
                 path: "userfeedback",
-                element: <UserFeedback></UserFeedback>
+                element: <UserFeedback/>
             },
             // admin routes
             {
                 path: "adminhome",
-                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+                element: <AdminRoute><AdminHome/></AdminRoute>
             },
             {
                 path: "allusers",
-                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                element: <AdminRoute><AllUsers/></AdminRoute>
             },
             {
                 path: "adminchart",
-                element: <AdminRoute><AdminChart></AdminChart></AdminRoute>
+                element: <AdminRoute><AdminChart/></AdminRoute>
             }
         ],
     },

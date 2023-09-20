@@ -135,7 +135,7 @@ const Navbar = () => {
                 >
                   <li className="text-left pe-10">
                     <NavLink
-                      to="/onlinevideo"
+                      to="/online-video"
                       title=" Online video editor"
                       className={({ isActive }) =>
                         isActive ? "text-black font-medium" : "default"
@@ -438,7 +438,7 @@ const Navbar = () => {
                           >
                             <li className="text-left pe-10">
                               <NavLink
-                                to="/onlinevideo"
+                                to="/online-video"
                                 title=" Online video editor"
                                 className={({ isActive }) =>
                                   isActive
