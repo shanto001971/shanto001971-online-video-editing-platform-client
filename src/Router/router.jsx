@@ -41,7 +41,6 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <Home />
             },
-
             {
                 path: "/templates-for-mobile",
                 element: <Templates />
@@ -52,27 +51,27 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <Login/>,
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <About/>,
             },
             {
                 path: '/register',
-                element: <Register></Register>
+                element: <Register/>,
             },
             {
-                path: '/onlinevideo',
-                element: <OnlineVideoEditor></OnlineVideoEditor>
+                path: '/online-video',
+                element: <OnlineVideoEditor/>,
             },
             {
-                path: "/desktopvideo",
-                element: <DesktopVideo></DesktopVideo>
+                path: '/desktopvideo',
+                element: <DesktopVideo/>,
             },
             {
-                path: "/mobilevideo",
-                element: <MobileVideo></MobileVideo>
+                path: '/mobilevideo',
+                element: <MobileVideo/>,
             },
             {
                 path: "/work-with-us",
@@ -121,28 +120,28 @@ export const router = createBrowserRouter([
             // users route
             {
                 path: "userhome",
-                element: <UserHome></UserHome>
+                element: <UserHome/>
             },
             {
                 path: "userschart",
-                element: <UsersChart></UsersChart>
+                element: <UsersChart/>
             },
             {
                 path: "userfeedback",
-                element: <UserFeedback></UserFeedback>
+                element: <UserFeedback/>
             },
             // admin routes
             {
                 path: "adminhome",
-                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+                element: <AdminRoute><AdminHome/></AdminRoute>
             },
             {
                 path: "allusers",
-                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                element: <AdminRoute><AllUsers/></AdminRoute>
             },
             {
                 path: "adminchart",
-                element: <AdminRoute><AdminChart></AdminChart></AdminRoute>
+                element: <AdminRoute><AdminChart/></AdminRoute>
             }
         ]
     }
