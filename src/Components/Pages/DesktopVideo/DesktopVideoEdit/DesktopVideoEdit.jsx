@@ -19,9 +19,9 @@ const DesktopVideoEdit = () => {
         }`}
       >
         {/* left div content */}
-        <div className="w-full lg:w-5/12  flex items-center justify-left">
+        <div className="w-full lg:w-5/12  flex items-center lg:justify-left">
           <div className="">
-            <h2 className="text-[58px] font-bold text-left leading-tight">
+            <h2 className="text-[30px] md:text-[40px] lg:text-[58px] font-bold text-left leading-tight">
               Free Professional Desktop Video Editor
             </h2>
             <p

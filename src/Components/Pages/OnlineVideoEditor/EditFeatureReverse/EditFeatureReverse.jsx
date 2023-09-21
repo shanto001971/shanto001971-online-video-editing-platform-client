@@ -64,9 +64,9 @@ const EditFeaturesReverse = () => {
               <img src={text} alt="" />
             </span>
             <span>
-              <p className="text-2xl font-bold">Speech to Text</p>
+              <p className="text-lg lg:text-2xl font-bold">Speech to Text</p>
               <p
-                className={`text-xl font-medium ${
+                className={`text-sm md:text-lg lg:text-2xl font-medium ${
                   theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                 } py-2 `}
               >
@@ -83,9 +83,9 @@ const EditFeaturesReverse = () => {
               <img src={speech} alt="" />
             </span>
             <span>
-              <p className="text-2xl font-bold ">Text to Speech</p>
+              <p className="text-lg lg:text-2xl font-bold ">Text to Speech</p>
               <p
-                className={`text-xl font-medium ${
+                className={`text-sm md:text-lg lg:text-2xl font-medium ${
                   theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                 } py-2 `}
               >
@@ -102,9 +102,9 @@ const EditFeaturesReverse = () => {
               <img src={video} alt="" />
             </span>
             <span>
-              <p className="text-2xl font-bold">Transcribe Video</p>
+              <p className="text-lg lg:text-2xl font-bold">Transcribe Video</p>
               <p
-                className={`text-xl font-medium ${
+                className={`text-sm md:text-lg lg:text-2xl font-medium ${
                   theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                 } py-2 `}
               >
@@ -119,9 +119,9 @@ const EditFeaturesReverse = () => {
               <img src={background} alt="" />
             </span>
             <span>
-              <p className="text-2xl font-bold "> Remove Background</p>
+              <p className="text-lg lg:text-2xl font-bold "> Remove Background</p>
               <p
-                className={`text-xl font-medium ${
+                className={`text-sm md:text-lg lg:text-2xl font-medium ${
                   theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                 } py-2 `}
               >

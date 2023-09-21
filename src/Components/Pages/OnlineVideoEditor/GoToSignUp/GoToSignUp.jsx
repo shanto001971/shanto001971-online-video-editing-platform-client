@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 const GoToSignUp = () => {
     return (
         <div className="bg-[#2A323C] px-5 md:px-20 py-20 border-b">
-           <h2 className="text-center text-[42px] text-white font-bold">Tap into your creative power on Motion Mingle web <br /> editor</h2> 
+           <h2 className="text-center text-[30px] md:text-[40px] lg:text-[58px] text-white font-bold">Tap into your creative power on Motion Mingle web <br /> editor</h2> 
             <div className="text-center "> 
             <Link to="/register"> 
             <div >
