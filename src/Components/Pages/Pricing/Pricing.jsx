@@ -15,7 +15,7 @@ const Pricing = () => {
     business: 15,
   };
   const btnClicked = (price) => {
-    fetch("http://localhost:5000/payments", {
+    fetch("https://online-video-editing-platform-server.vercel.app/payments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ price }),
