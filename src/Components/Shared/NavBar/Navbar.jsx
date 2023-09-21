@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../assets/logo.png";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AuthContext } from "../../../providers/AuthProvider";
