@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
-
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import UserModal from "./UserModal";
@@ -19,6 +18,7 @@ const Navbar = () => {
     themeSwitchHandler,
     changesThemeTextColor,
   } = useTheme(); // for using light and dark themes
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTemplateOpen, setIsTemplateOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
