@@ -41,17 +41,17 @@ const UserAdminDashboard = () => {
             <>
               <h2 className="text-3xl py-10">Motion Mingle </h2>
               <li>
-                <Link to="/useradmindashboard/adminhome">
+                <Link to="/dashboard/admin-home">
                   <FaHome></FaHome> Admin Home
                 </Link>
               </li>
               <li>
-                <Link to="/useradmindashboard/allusers">
+                <Link to="/dashboard/all-users">
                   <FaUser></FaUser> All Users
                 </Link>
               </li>
               <li>
-                <Link to="/useradmindashboard/adminchart">
+                <Link to="/dashboard/admin-chart">
                   <FaChartPie></FaChartPie> Admin Chart
                 </Link>
               </li>
@@ -73,18 +73,18 @@ const UserAdminDashboard = () => {
             <>
               <h2 className="text-3xl py-10">Motion Mingle </h2>
               <li>
-                <Link to="/useradmindashboard/userhome">
+                <Link to="/dashboard/user-home">
                   <FaHome></FaHome> User Home
                 </Link>
               </li>
               {/* <li> <Link to="/useradmindashboard/paidusers"> <FaUser></FaUser> paid Users</Link> </li> */}
               <li>
-                <Link to="/useradmindashboard/userschart">
+                <Link to="/dashboard/users-chart">
                   <FaChartPie></FaChartPie> Users Chart
                 </Link>
               </li>
               <li>
-                <Link to="/useradmindashboard/userfeedback">
+                <Link to="/dashboard/user-feedback">
                   <FaComments></FaComments>Give Feedback
                 </Link>
               </li>

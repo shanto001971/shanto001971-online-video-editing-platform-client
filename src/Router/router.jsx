@@ -28,6 +28,9 @@ import AdminRoute from "./AdminRoute";
 import AdminHome from "../Components/Pages/UserAdminDashboard/AdminHome/AdminHome";
 import UserHome from "../Components/Pages/UserAdminDashboard/UserHome/UserHome";
 import UserFeedback from "../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback";
+import PaymentSuccess from "../Components/Pages/Pricing/PaymentSuccess";
+import DonationSection from "../Components/Pages/Donation/DonationSection";
+import Donate from "../Components/Pages/Donation/Donate";
 
 
 
@@ -66,16 +69,16 @@ export const router = createBrowserRouter([
                 element: <OnlineVideoEditor/>,
             },
             {
-                path: '/desktopvideo',
+                path: '/desktop-video',
                 element: <DesktopVideo/>,
             },
             {
-                path: '/mobilevideo',
+                path: '/mobile-video',
                 element: <MobileVideo/>,
             },
             {
-                path: "/work-with-us",
-                element: <WorkWithUS/>
+                path: '/work-with-us',
+                element: <PrivateRoute><WorkWithUS /></PrivateRoute>
             },
 
             {
@@ -91,22 +94,35 @@ export const router = createBrowserRouter([
                 element: <LearnTrainingVideo />
             },
             {
-                path: "/pricing",
-                element: <Pricing />
+                path: '/pricing',
+                element: <PrivateRoute><Pricing /></PrivateRoute>
             },
             {
-                path: "/user-profile",
-                element: <UserProfile />
+                path: '/user-profile',
+                element: <PrivateRoute><UserProfile /></PrivateRoute>,
             },
-        ]
+            {
+                path: '/payments/success/:tran_id',
+                element: <PaymentSuccess />,
+            },
+
+            {
+                path: "/donation",
+                element: <PrivateRoute><DonationSection /></PrivateRoute>
+            },
+            {
+                path: "/donate",
+                element: <Donate />
+            },
+        ],
     },
     {
         path: '/video-edit-page',
-        element: <VideoEditeLayout />,
+        element: <PrivateRoute><VideoEditeLayout /></PrivateRoute>,
         children: [
             {
                 path: '/video-edit-page',
-                element: <VideoEditePage />,
+                element: <PrivateRoute><VideoEditePage /></PrivateRoute>
             },
         ],
 
@@ -114,33 +130,33 @@ export const router = createBrowserRouter([
 
     //  user and admin dashboard routes 
     {
-        path: "useradmindashboard",
-        element: <PrivateRoute><UserAdminDashboard></UserAdminDashboard></PrivateRoute>,
+        path: 'dashboard',
+        element: <UserAdminDashboard/>,
         children: [
             // users route
             {
-                path: "userhome",
-                element: <UserHome/>
+                path: "user-home",
+                element: <PrivateRoute><UserHome/></PrivateRoute>
             },
             {
-                path: "userschart",
-                element: <UsersChart/>
+                path: "users-chart",
+                element: <PrivateRoute><UsersChart/></PrivateRoute>
             },
             {
-                path: "userfeedback",
-                element: <UserFeedback/>
+                path: "user-feedback",
+                element: <PrivateRoute><UserFeedback/></PrivateRoute>
             },
             // admin routes
             {
-                path: "adminhome",
+                path: "admin-home",
                 element: <AdminRoute><AdminHome/></AdminRoute>
             },
             {
-                path: "allusers",
+                path: "all-users",
                 element: <AdminRoute><AllUsers/></AdminRoute>
             },
             {
-                path: "adminchart",
+                path: "admin-chart",
                 element: <AdminRoute><AdminChart/></AdminRoute>
             }
         ]

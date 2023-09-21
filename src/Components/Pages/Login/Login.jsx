@@ -62,7 +62,7 @@ const Login = () => {
             })
             setError('')
             navigate(from, { replace: true });
-            console.log(loggedUser);
+            //console.log(loggedUser);
              form.reset();
           
             
