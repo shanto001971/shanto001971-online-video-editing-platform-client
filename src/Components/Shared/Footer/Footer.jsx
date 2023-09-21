@@ -17,7 +17,6 @@ const Footer = () => {
     new window.google.translate.TranslateElement(
       {
         pageLanguage: "en",
-        includedLanguages: "en,ms,ta,zh-CN,es,fr,de,bn",
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
       "google_translate_element"

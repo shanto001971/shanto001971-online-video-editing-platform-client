@@ -16,7 +16,7 @@ const HelpButton = () => {
   const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
   return (
 
-    <div className='nav-link'>
+    <div className='lg:nav-link'>
       <a href={mailtoLink} target="_blank" rel="noopener noreferrer">
         Contact Us
       </a>

@@ -68,11 +68,11 @@ const Navbar = () => {
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center" title="Home">
-          <img src={logo} alt="logo" className=" w-10 h-10 rounded-full" />
-
-          <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Motion Mingle
-          </span>
+          <img
+            src="https://i.ibb.co/wWXgqXy/logooooooooo1.png"
+            alt="logo"
+            className=" w-1/2 rounded-md"
+          />
         </Link>
         {/* Nav Items Section */}
         <ul className="items-center hidden space-x-8 lg:flex">
@@ -336,14 +336,11 @@ const Navbar = () => {
                       title="Home"
                     >
                       <img
-                        src={logo}
+                        src="https://i.ibb.co/wWXgqXy/logooooooooo1.png"
                         alt="logo"
-                        className="w-14  rounded-full"
+                        className=" w-1/2 rounded-md"
                       />
 
-                      <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                        Motion Mingle
-                      </span>
                     </NavLink>
                   </div>
                   {/* Dropdown menu close button */}
@@ -354,7 +351,7 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <RxCross2
-                        className={`w-5 text-2xl -mt-14 ${changesThemeTextColor()}`}
+                        className={`w-5 text-2xl ${changesThemeTextColor()}`}
                       />
                     </button>
                   </div>
@@ -539,8 +536,8 @@ const Navbar = () => {
                         to="/pricing"
                         className={({ isActive }) =>
                           isActive
-                            ? " text-black font-bold nav-link"
-                            : "default nav-link"
+                            ? " text-black font-bold "
+                            : "default "
                         }
                       >
                         Pricing
@@ -551,8 +548,8 @@ const Navbar = () => {
                         to="/about"
                         className={({ isActive }) =>
                           isActive
-                            ? " text-black font-bold nav-link"
-                            : "default nav-link"
+                            ? " text-black font-bold "
+                            : "default "
                         }
                       >
                         About
@@ -578,8 +575,8 @@ const Navbar = () => {
                         to="/work-with-us"
                         className={({ isActive }) =>
                           isActive
-                            ? "text-black font-bold  nav-link"
-                            : "default nav-link"
+                            ? "text-black font-bold "
+                            : "default "
                         }
                       >
                         Carrer
