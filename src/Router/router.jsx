@@ -116,7 +116,7 @@ export const router = createBrowserRouter([
     //  user and admin dashboard routes 
     {
         path: "useradmindashboard",
-        element: <PrivateRoute><UserAdminDashboard></UserAdminDashboard></PrivateRoute>,
+        element:<PrivateRoute> <UserAdminDashboard></UserAdminDashboard> </PrivateRoute>,
         children: [
             // users route
             {
