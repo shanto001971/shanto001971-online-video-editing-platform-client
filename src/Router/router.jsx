@@ -28,6 +28,9 @@ import AdminRoute from "./AdminRoute";
 import AdminHome from "../Components/Pages/UserAdminDashboard/AdminHome/AdminHome";
 import UserHome from "../Components/Pages/UserAdminDashboard/UserHome/UserHome";
 import UserFeedback from "../Components/Pages/UserAdminDashboard/UserFeedback/UserFeedback";
+import PaymentSuccess from "../Components/Pages/Pricing/PaymentSuccess";
+import DonationSection from "../Components/Pages/Donation/DonationSection";
+import Donate from "../Components/Pages/Donation/Donate";
 
 
 
@@ -41,7 +44,6 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <Home />
             },
-
             {
                 path: "/templates-for-mobile",
                 element: <Templates />
@@ -52,31 +54,31 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <Login/>,
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <About/>,
             },
             {
                 path: '/register',
-                element: <Register></Register>
+                element: <Register/>,
             },
             {
-                path: '/onlinevideo',
-                element: <OnlineVideoEditor></OnlineVideoEditor>
+                path: '/online-video',
+                element: <OnlineVideoEditor/>,
             },
             {
-                path: "/desktopvideo",
-                element: <DesktopVideo></DesktopVideo>
+                path: '/desktop-video',
+                element: <DesktopVideo/>,
             },
             {
-                path: "/mobilevideo",
-                element: <MobileVideo></MobileVideo>
+                path: '/mobile-video',
+                element: <MobileVideo/>,
             },
             {
-                path: "/work-with-us",
-                element: <WorkWithUS/>
+                path: '/work-with-us',
+                element: <PrivateRoute><WorkWithUS /></PrivateRoute>
             },
 
             {
@@ -92,22 +94,35 @@ export const router = createBrowserRouter([
                 element: <LearnTrainingVideo />
             },
             {
-                path: "/pricing",
-                element: <Pricing />
+                path: '/pricing',
+                element: <PrivateRoute><Pricing /></PrivateRoute>
             },
             {
-                path: "/user-profile",
-                element: <UserProfile />
+                path: '/user-profile',
+                element: <PrivateRoute><UserProfile /></PrivateRoute>,
             },
-        ]
+            {
+                path: '/payments/success/:tran_id',
+                element: <PaymentSuccess />,
+            },
+
+            {
+                path: "/donation",
+                element: <PrivateRoute><DonationSection /></PrivateRoute>
+            },
+            {
+                path: "/donate",
+                element: <Donate />
+            },
+        ],
     },
     {
         path: '/video-edit-page',
-        element: <VideoEditeLayout />,
+        element: <PrivateRoute><VideoEditeLayout /></PrivateRoute>,
         children: [
             {
                 path: '/video-edit-page',
-                element: <VideoEditePage />,
+                element: <PrivateRoute><VideoEditePage /></PrivateRoute>
             },
         ],
 
@@ -115,34 +130,34 @@ export const router = createBrowserRouter([
 
     //  user and admin dashboard routes 
     {
-        path: "useradmindashboard",
-        element:<PrivateRoute> <UserAdminDashboard></UserAdminDashboard> </PrivateRoute>,
+        path: 'dashboard',
+        element: <UserAdminDashboard/>,
         children: [
             // users route
             {
-                path: "userhome",
-                element: <UserHome></UserHome>
+                path: "user-home",
+                element: <PrivateRoute><UserHome/></PrivateRoute>
             },
             {
-                path: "userschart",
-                element: <UsersChart></UsersChart>
+                path: "users-chart",
+                element: <PrivateRoute><UsersChart/></PrivateRoute>
             },
             {
-                path: "userfeedback",
-                element: <UserFeedback></UserFeedback>
+                path: "user-feedback",
+                element: <PrivateRoute><UserFeedback/></PrivateRoute>
             },
             // admin routes
             {
-                path: "adminhome",
-                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+                path: "admin-home",
+                element: <AdminRoute><AdminHome/></AdminRoute>
             },
             {
-                path: "allusers",
-                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                path: "all-users",
+                element: <AdminRoute><AllUsers/></AdminRoute>
             },
             {
-                path: "adminchart",
-                element: <AdminRoute><AdminChart></AdminChart></AdminRoute>
+                path: "admin-chart",
+                element: <AdminRoute><AdminChart/></AdminRoute>
             }
         ]
     }

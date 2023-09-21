@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../../ThemeProvider/ThemeProvider";
 
 const UserFeedback = () => {
   const { user } = useContext(AuthContext);
-
+  const {  theme } = useTheme(); // for using light and dark themes
   // feedback validation
   const isFeedbackValid = (feedback) => {
     const words = feedback.split(" ").filter((word) => word.trim() !== "");
@@ -40,7 +41,7 @@ const UserFeedback = () => {
       ratings,
       photo: photoFileName,
     };
-    console.log(feedback);
+   
 
     fetch("https://online-video-editing-platform-server.vercel.app/feedback", {
       method: "POST",
@@ -70,7 +71,7 @@ const UserFeedback = () => {
       <Helmet>
         <title>MingleMotion Express | User Feedback</title>
       </Helmet>
-      <div className="w-full md:w-1/2 h-full">
+      <div className={`w-full md:w-1/2 h-full ${theme.mode === 'dark' ? 'text-gray-100' : 'text-black'}`}>
         <div className="text-3xl py-10 text-center">
           Dear {user.displayName} <br /> Please Provide Us Feedback{" "}
         </div>

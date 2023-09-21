@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
-
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import UserModal from "./UserModal";
@@ -14,11 +13,8 @@ import { BsCloudSunFill, BsFillCloudMoonFill } from "react-icons/bs";
 import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const Navbar = () => {
-  const {
-    theme,
-    themeSwitchHandler,
-    changesThemeTextColor,
-  } = useTheme(); // for using light and dark themes
+  const { theme, themeSwitchHandler, changesThemeTextColor } = useTheme(); // for using light and dark themes
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTemplateOpen, setIsTemplateOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
@@ -135,7 +131,7 @@ const Navbar = () => {
                 >
                   <li className="text-left pe-10">
                     <NavLink
-                      to="/onlinevideo"
+                      to="/online-video"
                       title=" Online video editor"
                       className={({ isActive }) =>
                         isActive ? "text-black font-medium" : "default"
@@ -146,7 +142,7 @@ const Navbar = () => {
                   </li>
                   <li className="py-3 text-left">
                     <NavLink
-                      to="/desktopvideo"
+                      to="/desktop-video"
                       title=" Online video edit"
                       className={({ isActive }) =>
                         isActive ? "text-black font-medium" : "default"
@@ -157,7 +153,7 @@ const Navbar = () => {
                   </li>
                   <li className="text-left pb-3">
                     <NavLink
-                      to="/mobilevideo"
+                      to="/mobile-video"
                       title=" Online video edit"
                       className={({ isActive }) =>
                         isActive ? "text-black font-medium" : "default"
@@ -171,16 +167,6 @@ const Navbar = () => {
             </NavLink>
           </li>
           {/* tool section end ===================== */}
-          <li>
-            <NavLink
-              to="/explore"
-              className={({ isActive }) =>
-                isActive ? " text-black font-bold nav-link" : "default nav-link"
-              }
-            >
-              Explore
-            </NavLink>
-          </li>
           {/* Learn NavItem start */}
           <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
             <NavLink
@@ -259,20 +245,16 @@ const Navbar = () => {
             <NavLink
               to="/work-with-us"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
+                isActive ? "text-black font-bold  nav-link" : "default nav-link"
               }
             >
-              Carrer
+              Career
             </NavLink>
           </li>
           {/* Conditional useradmindasboard  route  */}
           <li>
             <NavLink
-              to={
-                isAdmin
-                  ? "/useradmindashboard/adminhome"
-                  : "/useradmindashboard/userhome"
-              }
+              to={isAdmin ? "/dashboard/admin-home" : "/dashboard/user-home"}
               title="Dashboard"
               className={({ isActive }) =>
                 isActive ? " text-black font-bold" : "default"
@@ -448,7 +430,7 @@ const Navbar = () => {
                           >
                             <li className="text-left pe-10">
                               <NavLink
-                                to="/onlinevideo"
+                                to="/online-video"
                                 title=" Online video editor"
                                 className={({ isActive }) =>
                                   isActive
@@ -461,7 +443,7 @@ const Navbar = () => {
                             </li>
                             <li className="py-3 text-left">
                               <NavLink
-                                to="/desktopvideo"
+                                to="/desktop-video"
                                 title=" Online video edit"
                                 className={({ isActive }) =>
                                   isActive
@@ -474,7 +456,7 @@ const Navbar = () => {
                             </li>
                             <li className="pb-3 text-left">
                               <NavLink
-                                to="/mobilevideo"
+                                to="/mobile-video"
                                 title=" Online video edit"
                                 className={({ isActive }) =>
                                   isActive
@@ -490,18 +472,6 @@ const Navbar = () => {
                       </Link>
                     </li>
                     {/* Template Nav Item end */}
-                    <li>
-                      <NavLink
-                        to="/explore"
-                        className={({ isActive }) =>
-                          isActive
-                            ? " text-black font-bold nav-link"
-                            : "default nav-link"
-                        }
-                      >
-                        Explore
-                      </NavLink>
-                    </li>
                     {/* Learn NavItem start */}
                     <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
                       <NavLink
@@ -592,8 +562,8 @@ const Navbar = () => {
                       <NavLink
                         to={
                           isAdmin
-                            ? "/useradmindashboard/adminhome"
-                            : "/useradmindashboard/userhome"
+                            ? "/dashboard/admin-home"
+                            : "/dashboard/user-home"
                         }
                         title="Dashboard"
                         className={({ isActive }) =>
@@ -601,6 +571,18 @@ const Navbar = () => {
                         }
                       >
                         Dashboard
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/work-with-us"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "text-black font-bold  nav-link"
+                            : "default nav-link"
+                        }
+                      >
+                        Carrer
                       </NavLink>
                     </li>
                     <li>
@@ -618,16 +600,6 @@ const Navbar = () => {
                         />
                       )}
                     </li>
-                    <li>
-            <NavLink
-              to="/work-with-us"
-              className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
-              }
-            >
-              Carrer
-            </NavLink>
-          </li>
 
                     {/* Conditional rendering login and logout */}
 

@@ -2,8 +2,14 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Pricing.css";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const Pricing = () => {
+  const {
+    theme,
+    changesThemeBgColor
+  } = useTheme(); // for using light and dark themes
+  
   const price = {
     pro: 7,
     business: 15,
@@ -29,7 +35,7 @@ const Pricing = () => {
       <Helmet>
         <title>MingleMotion Express | Pricing</title>
       </Helmet>
-      <div className="text-center my-14 font-bg-blue-800 font">
+      <div className={`text-center my-14 font-bg-blue-800 font ${theme.mode === 'dark' ? 'text-gray-100' : 'text-black'}`}>
         <h1 className="text-3xl">
           <span className="text-[#009bff]">10x faster</span> than any other
           video tool
@@ -40,7 +46,7 @@ const Pricing = () => {
         </h1>
       </div>
 
-      <div className="md:flex items-center justify-center gap-5 my-10 mx-10 font">
+      <div className={`md:flex items-center justify-center gap-5 my-10 mx-10 font ${theme.mode === 'dark' ? 'text-gray-100' : 'text-black'}`}>
         <div className="card w-96 shadow-lg border gradient-border duration-700">
           <div className="card-body text-center">
             <h2 className="card-title text-[#ff365b] text-2xl">Free</h2>
@@ -168,7 +174,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mx-10 mb-10 border px-16 rounded-lg">
+      <div className={`flex justify-between items-center mx-10 mb-10 border px-16 rounded-lg ${theme.mode === 'dark' ? 'text-gray-100' : 'text-black'}`}>
         <div className="font">
           <h3 className="text-2xl font-semibold text-[#009bff] pb-3">
             Enterprise
@@ -193,7 +199,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="text-center py-32 bg-blue-50 mb-20 mt-3">
+      <div className={`text-center py-32 bg-blue-50 mb-20 mt-3 ${theme.mode === 'dark' ? 'text-gray-100 bg-gray-800' : 'text-black'}`}>
         <h1 className="text-4xl mb-10 font">
           Dramatically speed up your video editing
         </h1>
