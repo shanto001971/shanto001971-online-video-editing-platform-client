@@ -16,7 +16,7 @@ const VedioPart = () => {
 
       <div className=" absolute top-2 right-16 md:top-20  lg:top-1/3 md:right-1/3   text-white  mx-auto">
         <h1 className="text-2xl md:text-4xl lg:text-5xl ml-7 lg:ml-0 font-serif my-0">
-        Work With US
+          Work With US
         </h1>
         <p className="lg:text-xl md:ml-7 lg:ml-4  my-1 ">
           Let's inspire the world to create
