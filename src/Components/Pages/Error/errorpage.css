@@ -68,7 +68,6 @@ s,
 samp,
 section,
 small,
-span,
 strike,
 strong,
 sub,
@@ -87,10 +86,7 @@ u,
 ul,
 var,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline
+ 
 }
 
 html {
@@ -105,73 +101,7 @@ img {
     border: none
 }
 
-input[type=email],
-input[type=password],
-input[type=tel],
-input[type=text],
-textarea {
-    -webkit-appearance: none
-}
 
-button,
-input[type=submit] {
-    cursor: pointer
-}
-
-button::-moz-focus-inner,
-input[type=submit]::-moz-focus-inner {
-    padding: 0;
-    border: 0
-}
-
-button {
-    background: 0 0
-}
-
-textarea {
-    overflow: auto
-}
-
-button,
-input {
-    margin: 0;
-    padding: 0;
-    border: 0
-}
-
-a,
-a:focus,
-button,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-select,
-span,
-textarea {
-    outline: 0
-}
-
-ol,
-ul {
-    list-style-type: none
-}
-
-table {
-    border-spacing: 0;
-    border-collapse: collapse;
-    width: 100%
-}
-
-*,
-:after,
-:before {
-    box-sizing: inherit
-}
 
 .custom-checkbox__field:checked+.custom-checkbox__content::after {
     opacity: 1
@@ -223,12 +153,7 @@ a {
     display: none !important
 }
 
-.btn-reset {
-    border: none;
-    padding: 0;
-    background: 0 0;
-    cursor: pointer
-}
+
 
 .list-reset {
     list-style: none;
@@ -245,23 +170,8 @@ a {
     outline: 0
 }
 
-.btn {
-    color: var(--color-white);
-    background: #FB8133;
-    border: 1px solid #FB8133;
-    box-sizing: border-box;
-    border-radius: 30px;
-    font-size: 12px;
-    line-height: 16px;
-    padding: 12px 42px;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase
-}
 
-.btn:hover {
-    box-shadow: -15px 15px 20px rgba(0, 0, 0, .1)
-}
+
 
 .notpage {
     background-image: url(../img/bg.svg)
