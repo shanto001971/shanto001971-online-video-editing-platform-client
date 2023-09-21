@@ -13,11 +13,7 @@ import { BsCloudSunFill, BsFillCloudMoonFill } from "react-icons/bs";
 import { useTheme } from "../../ThemeProvider/ThemeProvider";
 
 const Navbar = () => {
-  const {
-    theme,
-    themeSwitchHandler,
-    changesThemeTextColor,
-  } = useTheme(); // for using light and dark themes
+  const { theme, themeSwitchHandler, changesThemeTextColor } = useTheme(); // for using light and dark themes
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTemplateOpen, setIsTemplateOpen] = useState(false);
@@ -249,20 +245,16 @@ const Navbar = () => {
             <NavLink
               to="/work-with-us"
               className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
+                isActive ? "text-black font-bold  nav-link" : "default nav-link"
               }
             >
-              Carrer
+              Career
             </NavLink>
           </li>
           {/* Conditional useradmindasboard  route  */}
           <li>
             <NavLink
-              to={
-                isAdmin
-                  ? "/dashboard/admin-home"
-                  : "/dashboard/user-home"
-              }
+              to={isAdmin ? "/dashboard/admin-home" : "/dashboard/user-home"}
               title="Dashboard"
               className={({ isActive }) =>
                 isActive ? " text-black font-bold" : "default"
@@ -582,6 +574,18 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
+                      <NavLink
+                        to="/work-with-us"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "text-black font-bold  nav-link"
+                            : "default nav-link"
+                        }
+                      >
+                        Carrer
+                      </NavLink>
+                    </li>
+                    <li>
                       {theme.mode == "dark" ? (
                         <BsCloudSunFill
                           title="Make Light"
@@ -596,16 +600,6 @@ const Navbar = () => {
                         />
                       )}
                     </li>
-                    <li>
-            <NavLink
-              to="/work-with-us"
-              className={({ isActive }) =>
-                isActive ? "text-xl text-black font-bold  nav-link" : "default nav-link"
-              }
-            >
-              Carrer
-            </NavLink>
-          </li>
 
                     {/* Conditional rendering login and logout */}
 
