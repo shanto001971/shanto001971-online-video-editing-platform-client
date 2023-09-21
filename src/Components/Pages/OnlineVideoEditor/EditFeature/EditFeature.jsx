@@ -67,7 +67,11 @@ const EditFeature = () => {
               </span>
               <span>
                 <p className="text-2xl font-bold">Speech to Text</p>
-                <p className="text-xl font-medium text-slate-600 py-2 ">
+                <p
+                  className={`text-xl font-medium ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  } py-2 `}
+                >
                   Use AI to automatically generate subtitles with near-perfect
                   accuracy to make your video more accessible and compelling.
                 </p>
@@ -82,7 +86,11 @@ const EditFeature = () => {
               </span>
               <span>
                 <p className="text-2xl font-bold ">Text to Speech</p>
-                <p className="text-xl font-medium text-slate-600 py-2 ">
+                <p
+                  className={`text-xl font-medium ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  } py-2 `}
+                >
                   Convert text files into natural voiceovers to make your video
                   content more informative and captivating.
                 </p>
@@ -97,7 +105,11 @@ const EditFeature = () => {
               </span>
               <span>
                 <p className="text-2xl font-bold">Transcribe Video</p>
-                <p className="text-xl font-medium text-slate-600 py-2 ">
+                <p
+                  className={`text-xl font-medium ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  } py-2 `}
+                >
                   Auto-transcribe video into text in different languages to make
                   your video more searchable, accessible, and engaging.
                 </p>
@@ -110,7 +122,11 @@ const EditFeature = () => {
               </span>
               <span>
                 <p className="text-2xl font-bold "> Remove Background</p>
-                <p className="text-xl font-medium text-slate-600 py-2 ">
+                <p
+                  className={`text-xl font-medium ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  } py-2 `}
+                >
                   Remove video background to isolate people from the scene of a
                   video or an image, making it more authentic and accessible.
                 </p>
@@ -130,13 +146,23 @@ const EditFeature = () => {
                   name="my-accordion-1"
                   checked={selectedCollapse === "speech"}
                   onChange={() => handleCollapseChange("speech")}
-                />{" "}
+                />
                 <div className="collapse-title shadow-xl text-xl font-medium flex items-center gap-5 ">
                   <img src={speech} alt="" className="h-6" />
 
-                  <p className="text-black"> Speech to Text</p>
+                  <p
+                    className={`${
+                      theme.mode === "dark" ? "text-gray-100" : "text-black"
+                    }`}
+                  >
+                    Speech to Text
+                  </p>
                 </div>
-                <div className="collapse-content font-medium text-slate-700  lg:pl-16 ">
+                <div
+                  className={`collapse-content font-medium  lg:pl-16 ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  }`}
+                >
                   <p>
                     Use AI to automatically generate subtitles with near-perfect
                     accuracy to make your video more accessible and compelling.
@@ -150,13 +176,23 @@ const EditFeature = () => {
                   name="my-accordion-1"
                   checked={selectedCollapse === "text"}
                   onChange={() => handleCollapseChange("text")}
-                />{" "}
+                />
                 <div className="collapse-title  shadow-xl text-xl font-medium flex items-center gap-5 ">
                   <img src={text} alt="" className="h-6" />
 
-                  <p className="text-black"> Text to Speech</p>
+                  <p
+                    className={`${
+                      theme.mode === "dark" ? "text-gray-100" : "text-black"
+                    }`}
+                  >
+                    Text to Speech
+                  </p>
                 </div>
-                <div className="collapse-content font-medium text-slate-700 lg:pl-16 ">
+                <div
+                  className={`collapse-content font-medium  lg:pl-16 ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  }`}
+                >
                   <p>
                     Convert text files into natural voiceovers to make your
                     video content more informative and captivating.
@@ -169,12 +205,22 @@ const EditFeature = () => {
                   name="my-accordion-1"
                   checked={selectedCollapse === "video"}
                   onChange={() => handleCollapseChange("video")}
-                />{" "}
+                />
                 <div className="collapse-title  shadow-xl text-xl font-medium flex items-center gap-5">
                   <img src={video} alt="" className="h-6" />
-                  <p className="text-black"> Transcribe Video</p>{" "}
+                  <p
+                    className={`${
+                      theme.mode === "dark" ? "text-gray-100" : "text-black"
+                    }`}
+                  >
+                    Transcribe Video
+                  </p>
                 </div>
-                <div className="collapse-content font-medium text-slate-700  lg:pl-16 ">
+                <div
+                  className={`collapse-content font-medium  lg:pl-16 ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  }`}
+                >
                   <p>
                     Auto-transcribe video into text in different languages to
                     make your video more searchable, accessible, and engaging.
@@ -187,12 +233,22 @@ const EditFeature = () => {
                   name="my-accordion-1"
                   checked={selectedCollapse === "background"}
                   onChange={() => handleCollapseChange("background")}
-                />{" "}
+                />
                 <div className="collapse-title  shadow-xl text-xl font-medium flex items-center gap-5">
                   <img src={background} alt="" className="h-6" />
-                  <p className="text-black"> Remove Background</p>{" "}
+                  <p
+                    className={`${
+                      theme.mode === "dark" ? "text-gray-100" : "text-black"
+                    }`}
+                  >
+                    Remove Background
+                  </p>
                 </div>
-                <div className="collapse-content font-medium text-slate-700  lg:pl-16 ">
+                <div
+                  className={`collapse-content font-medium  lg:pl-16 ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
+                  }`}
+                >
                   <p>
                     Remove video background to isolate people from the scene of
                     a video or an image, making it more authentic and

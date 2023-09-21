@@ -171,16 +171,6 @@ const Navbar = () => {
             </NavLink>
           </li>
           {/* tool section end ===================== */}
-          <li>
-            <NavLink
-              to="/explore"
-              className={({ isActive }) =>
-                isActive ? " text-black font-bold nav-link" : "default nav-link"
-              }
-            >
-              Explore
-            </NavLink>
-          </li>
           {/* Learn NavItem start */}
           <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
             <NavLink
@@ -480,18 +470,6 @@ const Navbar = () => {
                       </Link>
                     </li>
                     {/* Template Nav Item end */}
-                    <li>
-                      <NavLink
-                        to="/explore"
-                        className={({ isActive }) =>
-                          isActive
-                            ? " text-black font-bold nav-link"
-                            : "default nav-link"
-                        }
-                      >
-                        Explore
-                      </NavLink>
-                    </li>
                     {/* Learn NavItem start */}
                     <li onMouseEnter={toggleLearn} onMouseLeave={toggleLearn}>
                       <NavLink
