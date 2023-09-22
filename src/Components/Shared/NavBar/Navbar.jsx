@@ -66,12 +66,13 @@ const Navbar = () => {
     >
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
-        <Link to="/" className="inline-flex items-center" title="Home">
+        <Link to="/" className="inline-flex items-center">
           <img
             src="https://i.ibb.co/wWXgqXy/logooooooooo1.png"
             alt="logo"
             className=" w-1/2 rounded-md"
           />
+         
         </Link>
         {/* Nav Items Section */}
         <ul className="items-center hidden space-x-8 lg:flex">
@@ -332,7 +333,7 @@ const Navbar = () => {
                     <NavLink
                       to="/"
                       className="inline-flex flex-col items-start "
-                      title="Home"
+                   
                     >
                       <img
                         src="https://i.ibb.co/wWXgqXy/logooooooooo1.png"

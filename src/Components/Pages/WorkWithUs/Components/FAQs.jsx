@@ -7,7 +7,7 @@ const FAQs = () => {
   const { theme, changesThemeBgColor } = useTheme(); //for dark amd light mode themes
 
   return (
-    <div className="w-full px-4 pt-1">
+    <div className="w-full px-4 pt-1 mb-3">
       <div
         className={`mx-auto w-full sm:max-w-[345px] md:max-w-[695px] rounded-2xl p-2 ${changesThemeBgColor()}`}
       >
