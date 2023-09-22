@@ -8,7 +8,7 @@ const Topics = () => {
 
   return (
     <div className={`px-5 md:px-20 py-20 ${theme.mode === 'dark' ? 'text-gray-100' : 'bg-white text-black'}`}>
-      <h2 className="text-center text-[42px] font-bold">
+      <h2 className="text-center text-[30px] md:text-[40px] lg:text-[58px] font-bold">
         More topics on CapCut online video editor
       </h2>
       {/* flex container */}

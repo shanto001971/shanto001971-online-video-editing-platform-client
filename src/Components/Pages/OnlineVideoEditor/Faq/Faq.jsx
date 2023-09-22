@@ -15,7 +15,7 @@ const Faq = () => {
     <div className={`py-20 px-5 md:px-20 ${theme.mode === 'dark' ? 'text-gray-100' : 'text-black bg-[#F5F8FC]'}`}>
       <div className="flex flex-col md:flex-row gap-10">
         <div className=" w-full md:w-1/3 text-left">
-          <h2 className="text-[42px] leading-snug font-bold">
+          <h2 className=" text-[30px] md:text-[40px] lg:text-[58px] leading-snug font-bold">
             Frequently <br /> Asked <br /> Questions
           </h2>
         </div>
@@ -26,7 +26,7 @@ const Faq = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <span className="text-2xl font-semibold">
+                    <span className="text-md md:text-lg lg:text-2xl font-semibold">
                       {" "}
                       What is the best free online video editor?
                     </span>
@@ -47,7 +47,7 @@ const Faq = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <span className="text-2xl font-semibold">
+                    <span className="text-md md:text-lg lg:text-2xl font-semibold">
                       {" "}
                       How can I edit a video like a Pro?
                     </span>
@@ -69,7 +69,7 @@ const Faq = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <span className="text-2xl font-semibold">
+                    <span className="text-md md:text-lg lg:text-2xl font-semibold">
                       Which video editor is best for beginners?
                     </span>
                   </AccordionItemButton>
@@ -89,7 +89,7 @@ const Faq = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <span className="text-2xl font-semibold">
+                    <span className="text-md md:text-lg lg:text-2xl font-semibold">
                       {" "}
                       What is the best video editor with effects and music?
                     </span>

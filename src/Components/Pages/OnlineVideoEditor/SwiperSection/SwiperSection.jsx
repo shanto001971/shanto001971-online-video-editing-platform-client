@@ -30,7 +30,7 @@ const SwiperSection = () => {
       theme.mode === "dark" ? "text-gray-100" : "bg-white text-black"
     }`}>
       <div className="text-center py-20 pt-20">
-        <h2 className="text-[42px]  font-bold">
+        <h2 className="text-[30px] md:text-[40px] lg:text-[58px] font-bold">
           Meet your needs in every context
         </h2>
         <p className="">

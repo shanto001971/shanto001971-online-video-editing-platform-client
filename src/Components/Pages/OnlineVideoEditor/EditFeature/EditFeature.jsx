@@ -66,9 +66,9 @@ const EditFeature = () => {
                 <img src={text} alt="" />
               </span>
               <span>
-                <p className="text-2xl font-bold">Speech to Text</p>
+                <p className="text-lg lg:text-2xl font-bold">Speech to Text</p>
                 <p
-                  className={`text-xl font-medium ${
+                  className={`text-sm md:text-lg lg:text-2xl font-medium ${
                     theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                   } py-2 `}
                 >
@@ -85,9 +85,9 @@ const EditFeature = () => {
                 <img src={speech} alt="" />
               </span>
               <span>
-                <p className="text-2xl font-bold ">Text to Speech</p>
+                <p className="text-lg lg:text-2xl font-bold ">Text to Speech</p>
                 <p
-                  className={`text-xl font-medium ${
+                  className={`text-sm md:text-lg lg:text-2xl font-medium ${
                     theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                   } py-2 `}
                 >
@@ -104,9 +104,9 @@ const EditFeature = () => {
                 <img src={video} alt="" />
               </span>
               <span>
-                <p className="text-2xl font-bold">Transcribe Video</p>
+                <p className="text-lg lg:text-2xl font-bold">Transcribe Video</p>
                 <p
-                  className={`text-xl font-medium ${
+                  className={`text-sm md:text-lg lg:text-2xl font-medium ${
                     theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                   } py-2 `}
                 >
@@ -121,9 +121,9 @@ const EditFeature = () => {
                 <img src={background} alt="" />
               </span>
               <span>
-                <p className="text-2xl font-bold "> Remove Background</p>
+                <p className="text-lg lg:text-2xl font-bold "> Remove Background</p>
                 <p
-                  className={`text-xl font-medium ${
+                  className={`text-sm md:text-lg lg:text-2xl font-medium ${
                     theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                   } py-2 `}
                 >
@@ -153,17 +153,17 @@ const EditFeature = () => {
                   <p
                     className={`${
                       theme.mode === "dark" ? "text-gray-100" : "text-black"
-                    }`}
+                    }  `}
                   >
                     Speech to Text
                   </p>
                 </div>
                 <div
-                  className={`collapse-content font-medium  lg:pl-16 ${
+                  className={`collapse-content  font-medium  lg:pl-16 ${
                     theme.mode === "dark" ? "text-gray-100" : "text-gray-700"
                   }`}
                 >
-                  <p>
+                  <p className="text-sm md:text-lg lg:text-2xl">
                     Use AI to automatically generate subtitles with near-perfect
                     accuracy to make your video more accessible and compelling.
                   </p>

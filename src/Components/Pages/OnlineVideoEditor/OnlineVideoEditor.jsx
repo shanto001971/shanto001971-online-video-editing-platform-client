@@ -30,9 +30,9 @@ const OnlineVideoEditor = () => {
         }`}
       >
         {/* left div content */}
-        <div className="w-full lg:w-5/12  flex items-center justify-left">
+        <div className="w-full lg:w-5/12 flex items-center justify-left md:justify-center  md:text-center lg:text-left">
           <div className="">
-            <h2 className="text-[58px] font-bold text-left leading-tight">
+            <h2 className="text-[30px] md:text-[40px] lg:text-[58px] text-center md:text-center font-bold  lg:text-left leading-tight">
               Free Online <br /> Video Editor
             </h2>
             <p
@@ -45,7 +45,7 @@ const OnlineVideoEditor = () => {
               more are just at your fingertips.
             </p>
             <div className=" ">
-              <div className="flex gap-5 ">
+              <div className="flex gap-5 md:justify-between">
                 <Link to="/register">
                   <button className="btn  text-white min-w-[200px] h-[53px] signin-button bg-black">
                     Sign Up

@@ -44,7 +44,7 @@ function CreateDemoVideo() {
         theme.mode === "dark" ? "text-gray-100" : "bg-[#F5F8FC]"
       }`}
     >
-      <div className="text-center text-[42px] py-10 font-bold">
+      <div className="text-center text-[30px] md:text-[40px] lg:text-[58px] py-10 font-bold">
         <h2>How to create a video online?</h2>
       </div>
       <div className="create-demo-video grid grid-cols-1 md:grid-cols-2 gap-5">
