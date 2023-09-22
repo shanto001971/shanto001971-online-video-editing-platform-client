@@ -68,7 +68,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
           <img
-            src="https://i.ibb.co/wWXgqXy/logooooooooo1.png"
+            src="https://i.ibb.co/WvcqYVZ/logooooooooo1-removebg-preview.png"
             alt="logo"
             className=" w-1/2 rounded-md"
           />
@@ -336,7 +336,7 @@ const Navbar = () => {
                    
                     >
                       <img
-                        src="https://i.ibb.co/wWXgqXy/logooooooooo1.png"
+                        src="https://i.ibb.co/WvcqYVZ/logooooooooo1-removebg-preview.png"
                         alt="logo"
                         className=" w-1/2 rounded-md"
                       />

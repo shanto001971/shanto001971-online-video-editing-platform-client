@@ -9,7 +9,7 @@ const FAQs = () => {
   return (
     <div className="w-full px-4 pt-1 mb-3">
       <div
-        className={`mx-auto w-full sm:max-w-[345px] md:max-w-[695px] rounded-2xl p-2 ${changesThemeBgColor()}`}
+        className={`mx-auto w-full sm:min-w-[345px] md:max-w-[695px] rounded-2xl p-2 ${changesThemeBgColor()}`}
       >
         <h1 className="text-3xl font-bold leading-none text-center sm:text-4xl mb-3 md:mb-8">
           Frequently asked questions

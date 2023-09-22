@@ -18,7 +18,9 @@ const AboutUs = () => {
   return (
     <>
       <div className="w-full  ">
-        <div className=" my-3 md:my-10 lg:my-20 shadow-md  rounded-lg md:flex items-center justify-center gap-12  max-h[285px] mx-2 lg:mx-16">
+        <div data-aos="fade-up"
+     data-aos-duration="1000" 
+     className=" my-3 md:my-10 lg:my-20 shadow-md  rounded-lg md:flex items-center justify-center gap-12  max-h[285px] mx-2 lg:mx-16">
           <div className=" ">
             <img
               src={img1}
@@ -42,7 +44,8 @@ const AboutUs = () => {
             </button>{" "}
           </div>
         </div>
-        <div className="my-7 md:my-10 lg:my-20 shadow-md  rounded-lg md:flex flex-row-reverse items-center justify-center gap-9 max-h[285px] mx-2 lg:mx-20">
+        <div data-aos="fade-up"
+     data-aos-duration="1000" className="my-7 md:my-10 lg:my-20 shadow-md  rounded-lg md:flex flex-row-reverse items-center justify-center gap-9 max-h[285px] mx-2 lg:mx-20">
           <div className=" ">
             <video
               loop
@@ -70,7 +73,8 @@ const AboutUs = () => {
             </button>{" "}
           </div>
         </div>
-        <div className="my-3 md:my-10 lg:my-20 shadow-md  rounded-lg md:flex items-center justify-center gap-9 max-h[285px]  mx-2 lg:mx-20">
+        <div data-aos="fade-up"
+     data-aos-duration="1000" className="my-3 md:my-10 lg:my-20 shadow-md  rounded-lg md:flex items-center justify-center gap-9 max-h[285px]  mx-2 lg:mx-20">
           <div className=" ">
             <img
               src={img2}
