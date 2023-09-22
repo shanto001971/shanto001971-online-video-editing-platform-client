@@ -34,7 +34,8 @@ const Application = () => {
   };
 
   return (
-    <div
+    <div data-aos="fade-right"
+   
       className={`min-w-[307px] md:max-w-full text-center mx-3 md:mx-9 my-8 md:my-14 ${changesThemeTextColor()}`}
     >
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-none my-0 py-2 ">
