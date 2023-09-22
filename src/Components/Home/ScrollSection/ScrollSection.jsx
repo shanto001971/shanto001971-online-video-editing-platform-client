@@ -9,10 +9,7 @@ const ScrollSection = () => {
   const images = [img2, img3, img1];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const scrollableSectionRef = useRef(null);
-  const {
-    theme,
-    changesThemeBgColor
-  } = useTheme();
+  const { theme, changesThemeBgColor } = useTheme();
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -39,15 +36,15 @@ const ScrollSection = () => {
 
   return (
     <>
-      <h3 className="text-4xl md:text-5xl md:text-center md:pt-4 font-bold mb-10 ml-10">
-        Use the full power of video <br />{" "}
+      <h3 className="text-3xl md:text-5xl text-center  md:pt-4 font-bold mb-10 md:ml-10">
+        Use the full power of video <br className="hidden md:block " />{" "}
         <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent">
           to grow your brand
         </span>
       </h3>
 
-      <div className="lg:hidden mb-20">
-        <div className="max-w-screen-md m-3 md:m-8 p-3 md:p-7 tracking-wide">
+      <div className="lg:hidden mb-20 ">
+        <div className="max-w-full  md:m-8  p-3 md:p-7 tracking-wide">
           <div className="flex justify-center gap-5 md:gap-9 ">
             <span className="pt-3">
               <svg
@@ -86,16 +83,20 @@ const ScrollSection = () => {
               <p className="text-3xl font-bold md:w-4/6">
                 Set your brand up for social media success
               </p>
-              <p className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${theme.mode === 'dark' ? 'text-gray-100' : 'text-gray-600'}`}>
+              <p
+                className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${
+                  theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+                }`}
+              >
                 Plan and execute a video content strategy that will
                 significantly increase your brand’s exposure, awareness and
                 engagement.
               </p>
             </span>
           </div>
-          <img src={img1} alt="" className="object-fill pt-3 md:pt-7" />
+          <img src={img1} alt="" className="object-fill pt-3 md:pt-7 " />
         </div>
-        <div className="max-w-screen-md m-3 md:m-8 p-3 md:p-7 tracking-wide">
+        <div className="max-w-full m-3 md:m-8 p-3 md:p-7 tracking-wide">
           <div className="flex justify-center gap-5 md:gap-9 ">
             <span className="pt-3">
               <svg
@@ -118,7 +119,11 @@ const ScrollSection = () => {
               <p className="text-3xl font-bold md:w-4/6">
                 Start a new revenue stream
               </p>
-              <p className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${theme.mode === 'dark' ? 'text-gray-100' : 'text-gray-600'}`}>
+              <p
+                className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${
+                  theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+                }`}
+              >
                 Turn video into a monetizable asset that helps you gain new
                 customers and scale your business.
               </p>
@@ -126,7 +131,7 @@ const ScrollSection = () => {
           </div>
           <img src={img2} alt="" className="object-fill pt-3 md:pt-7" />
         </div>
-        <div className="max-w-screen-md m-3 md:m-8 p-3 md:p-7 tracking-wide">
+        <div className="max-w-full m-3 md:m-8 p-3 md:p-7 tracking-wide">
           <div className="flex justify-center gap-5 md:gap-9 ">
             <span className="pt-3">
               <svg
@@ -153,7 +158,11 @@ const ScrollSection = () => {
               <p className="text-3xl font-bold md:w-4/6">
                 Save time and optimize your workflow
               </p>
-              <p className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${theme.mode === 'dark' ? 'text-gray-100' : 'text-gray-600'}`}>
+              <p
+                className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${
+                  theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+                }`}
+              >
                 Increase the scale and speed of your video creation. Save time,
                 maximize resources and lower production costs.
               </p>
@@ -206,7 +215,11 @@ const ScrollSection = () => {
                   <p className="text-3xl font-bold md:w-4/6">
                     Set your brand up for social media success
                   </p>
-                  <p className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${theme.mode === 'dark' ? 'text-gray-100' : 'text-gray-600'}`}>
+                  <p
+                    className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${
+                      theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+                    }`}
+                  >
                     Plan and execute a video content strategy that will
                     significantly increase your brand’s exposure, awareness and
                     engagement.
@@ -233,7 +246,11 @@ const ScrollSection = () => {
                   <p className="text-3xl font-bold md:w-4/6">
                     Start a new revenue stream
                   </p>
-                  <p className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${theme.mode === 'dark' ? 'text-gray-100' : 'text-gray-600'}`}>
+                  <p
+                    className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${
+                      theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+                    }`}
+                  >
                     Turn video into a monetizable asset that helps you gain new
                     customers and scale your business.
                   </p>
@@ -263,7 +280,11 @@ const ScrollSection = () => {
                   <p className="text-3xl font-bold md:w-4/6">
                     Save time and optimize your workflow
                   </p>
-                  <p className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${theme.mode === 'dark' ? 'text-gray-100' : 'text-gray-600'}`}>
+                  <p
+                    className={`text-sm sm:text-base md:text-[17px] mt-4 font-medium  ${
+                      theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
+                    }`}
+                  >
                     Increase the scale and speed of your video creation. Save
                     time, maximize resources and lower production costs.
                   </p>
@@ -274,13 +295,13 @@ const ScrollSection = () => {
           <div className="w-1/2">
             {/* Fixed Image */}
             <div
-              className="h-96 overflow-hidden sticky top-24"
+              className="h-96 2xl:h-[450px] overflow-hidden sticky top-24"
               style={{ zIndex: -1 }} // Push the image behind the content
             >
               <img
                 src={images[currentImageIndex]}
                 alt=""
-                className="h-full w-full  rounded-xl"
+                className="h-full l w-full  rounded-xl"
               />
             </div>
           </div>

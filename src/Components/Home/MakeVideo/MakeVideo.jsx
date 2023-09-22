@@ -22,13 +22,13 @@ const MakeVideo = () => {
         alt=""
         className="md:max-w-full lg:pt-4 lg:animate-scale animate-pulse animate-ease-in-out infinite"
       />
-      <div className="md:flex gap-7 justify-center items-center pr-16 pb-9 ">
-        <div>
-          <img src={makevideo} alt="" />
+      <div className="md:flex gap-7 justify-center items-center pr-16 pb-9">
+        <div className="text-center ml-4 md:ml-0">
+          <img src={makevideo} alt="" className="w-full"/>
         </div>
-        <div className="pl-4">
-          <p className="text-3xl lg:text-4xl font-bold ">
-            Make a Video for Free with <br /> MotionMingle Now
+        <div className="md:pl-4 text-center md:text-left  ">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold ">
+            Make a Video for Free with  <br/> MotionMingle Now
           </p>
           <div>
             <Link to="/dashboard">
@@ -45,7 +45,7 @@ const MakeVideo = () => {
       <img
         src={play}
         alt=""
-        className="hidden md:block animate-timing-6 animate-pulse absolute md:-mt-40 lg:-mt-48  right-2 2xl:right-56 lg:right-9"
+        className=" animate-timing-6 animate-pulse absolute -mt-[145px] md:-mt-40  sm:right-0 md:right-2 lg:right-9 2xl:right-40  right-56 h-36 md:h-"
       />
     </div>
   );
