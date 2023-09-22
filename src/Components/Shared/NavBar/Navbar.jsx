@@ -116,7 +116,7 @@ const Navbar = () => {
           {/* tool section  start =================== */}
           <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
             <NavLink
-              to="/tools"
+              to="/"
               className={({ isActive }) =>
                 isActive ? "text-black font-medium " : "default "
               }
@@ -317,7 +317,7 @@ const Navbar = () => {
           </button>
           {isMenuOpen && (
             <div
-              className={`absolute top-0 left-0 w-full z-10 ${
+              className={`absolute top-0 left-0 w-full z-100 ${
                 theme.mode === "dark" ? "bg-gray-800" : "bg-white"
               }`}
             >
@@ -364,7 +364,7 @@ const Navbar = () => {
                       onMouseLeave={toggleTemplate}
                     >
                       <Link
-                        to="/templates"
+                        to="/"
                         className={({ isActive }) =>
                           isActive
                             ? " text-black font-bold nav-link"
@@ -410,7 +410,7 @@ const Navbar = () => {
                     </li>
                     <li onMouseEnter={toggleTools} onMouseLeave={toggleTools}>
                       <Link
-                        to="/tools"
+                        to="/"
                         className={({ isActive }) =>
                           isActive
                             ? " text-black font-bold nav-link"
