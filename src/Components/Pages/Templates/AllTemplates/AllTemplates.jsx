@@ -49,7 +49,7 @@ const AllTemplates = () => {
       <div className="mx-10">
         <div className="w-full lg:w-1/2">
           <h2
-            className={`text-2xl sm:text-3xl text-start font-bold  ${
+            className={`text-2xl sm:text-3xl text-start font-bold rubik ${
               theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
             }`}
           >
@@ -141,7 +141,7 @@ const AllTemplates = () => {
                 theme.mode === "dark" ? "text-gray-100" : "text-gray-600"
               }`}
             >
-              <p className="absolute -top-4 right-2 text-sm font-normal mr-4 cursor-pointer">
+              <p className="absolute -top-4 right-2 text-sm font-normal mr-4 cursor-pointer poppins">
                 Categories
               </p>
               <AiOutlineMenu className="absolute -top-3 right-0" />
@@ -150,15 +150,15 @@ const AllTemplates = () => {
           <div className="drawer-side z-10">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul
-              className={`w-52 min-h-full ${
+              className={`w-56 min-h-full poppins font-semibold ${
                 theme.mode === "dark"
                   ? `bg-[#1D232A] text-black`
-                  : ""
-              } text-base-content text-[13px] font-medium space-y-1 pt-3 pl-2 lg:pl-0 lg:mt-0`}
+                  : "bg-white"
+              } text-base-content text-[12px] font-medium space-y-1 pt-3 pl-2 lg:pl-0 lg:mt-0`}
             >
               {/* Sidebar content here */}
               <li
-                className={` ${
+                className={`  ${
                   theme.mode === "dark" ? `text-white` : "text-gray-600"
                 }`}
               >
@@ -167,13 +167,13 @@ const AllTemplates = () => {
               {templateVideosData.map((categoryItem, index) => (
                 <button
                   key={index}
-                  className={`text-xs sm:text-[13px] whitespace-nowrap px-1 py-1 rounded-md ${
+                  className={`text-xs sm:text-[12px] whitespace-nowrap px-1 py-1 rounded-md ${
                     theme.mode === "dark"
                       ? `bg-[#1D232A] hover:bg-gray-900 text-white`
                       : ""
                   } ${
                     selectedCategory === categoryItem.category
-                      ? " text-gray-950 font-medium"
+                      ? " text-gray-950 font-semibold"
                       : " hover:bg-gray-200 text-gray-500"
                   }`}
                   onClick={() => handleCategoryClick(categoryItem.category)}

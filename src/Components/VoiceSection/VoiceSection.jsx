@@ -42,7 +42,7 @@ const VoiceSection = () => {
           <source src={voiceCoverVideo} type="video/mp4" />
         </video>
         <div className="md:w-1/2 absolute top-2 text-start text-gray-950">
-          <h2 className="text-[22px] md:text-2xl lg:text-4xl font-bold lg:font-extrabold mt-6 md:mt-10 lg:mt-6 md:px-6">
+          <h2 className="text-[22px] md:text-2xl lg:text-3xl font-bold lg:font-extrabold mt-6 md:mt-10 lg:mt-6 md:px-0">
             Make and use brand kits on videos professionally with just one
             click.
           </h2>
@@ -64,7 +64,7 @@ const VoiceSection = () => {
       </div>
       
       <div  className={`relative w-full md:w-[40%] md:h-[450px] lg:h-[600px] h-auto  rounded-3xl mt-8 md:mt-0 group ${theme.mode === 'dark' ? 'text-white' : 'text-black'} ${changesThemeBgColor()}`}>
-        <h2 className="absolute top-6 md:to-pink-100 text-[22px] md:text-2xl lg:text-4xl font-bold lg:font-extrabold pl-6">
+        <h2 className="absolute top-6 md:to-pink-100 text-[22px] md:text-2xl lg:text-3xl font-bold lg:font-extrabold pl-6">
           Brands Kids
         </h2>
         <img

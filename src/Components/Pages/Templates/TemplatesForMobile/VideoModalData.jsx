@@ -13,9 +13,9 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
   const dispatch = useDispatch();
   const { theme } = useTheme();
 
-  const changeTextColor =()=>{
-    return theme.mode === "dark" ? 'text-white' : "text-gray-600"
-  }
+  const changeTextColor = () => {
+    return theme.mode === "dark" ? "text-white" : "text-gray-600";
+  };
 
   const { _id, title, video_src, img_url, author, description, use } =
     selectedData;
@@ -52,30 +52,44 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
           }
         />
         <div className="lg:ml-10 sm:mt-6">
-          <h4 className={`text-lg sm:text-2xl font-bold ${theme.mode === "dark" ? 'text-white' : "text-gray-600"}`}>{title}</h4>
+          <h4
+            className={`text-lg sm:text-2xl font-bold ${
+              theme.mode === "dark" ? "text-white" : "text-gray-600"
+            }`}
+          >
+            {title}
+          </h4>
           <div className="flex gap-2 items-center mt-4 mb-2">
             <img className="w-6 h-6 rounded-full avatar" src={img_url} alt="" />
-            <h6 className={`text-sm sm:text-base ${changeTextColor()}`}>{author}</h6>
+            <h6 className={`text-sm sm:text-base ${changeTextColor()}`}>
+              {author}
+            </h6>
           </div>
 
-          <Link to="/dashboard">
-            <button className="btn btn-outline btn-xs sm:btn-sm my-6">
-              Use this template
-            </button>
-          </Link>
-          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
+          <button className="btn btn-outline btn-xs sm:btn-sm my-6">
+            Use this template
+          </button>
+          <div
+            className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}
+          >
             <TbMovie />
             <p>{description[0]}</p>
           </div>
-          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
+          <div
+            className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}
+          >
             <PiTextTBold />
             <p>{description[1]}</p>
           </div>
-          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
+          <div
+            className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}
+          >
             <AiOutlineLayout />
             <p>{description[2]}</p>
           </div>
-          <div className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}>
+          <div
+            className={`flex items-center gap-2 text-xs sm:text-sm mb-2 text-gray-600 ${changeTextColor()}`}
+          >
             <AiOutlineFire />
             <p className="text-sm">{use} use</p>
           </div>
@@ -88,9 +102,13 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
       </div>
       <div className="mt-10 sm:mt-16 mb-4 sm:mb-6 lg:mb-10">
         <div className="flex items-center justify-between mb-2">
-          <h2 className="text-lg sm:text-2xl font-extrabold">Similar templates</h2>
+          <h2 className="text-lg sm:text-2xl font-extrabold">
+            Similar templates
+          </h2>
           <div className="-mt-4 sm:mt-0 flex items-center gap-1 cursor-pointer">
-            <p className="text-xs sm:text-sm font-semibold">View all templates</p>
+            <p className="text-xs sm:text-sm font-semibold">
+              View all templates
+            </p>
             <IoIosArrowForward className="text-sm sm:text-base mt-[2px]" />
           </div>
         </div>
@@ -113,7 +131,11 @@ const VideoModalData = ({ selectedData, closeModal, selectedCategoryData }) => {
                       </div>
                     }
                   />
-                  <p className={`text-xs sm:text-sm text-gray-600 mt-1 ${changeTextColor()}`}>{item.title}</p>
+                  <p
+                    className={`text-xs sm:text-sm text-gray-600 mt-1 ${changeTextColor()}`}
+                  >
+                    {item.title}
+                  </p>
                 </Link>
               </div>
             ))}
