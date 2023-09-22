@@ -119,7 +119,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-black font-medium " : "default "
+                isActive ? "font-medium " : "default "
               }
             >
               Tools
