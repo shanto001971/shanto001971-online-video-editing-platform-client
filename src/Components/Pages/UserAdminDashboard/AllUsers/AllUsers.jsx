@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
 import { useTheme } from "../../../ThemeProvider/ThemeProvider";
+import { FaUserCog } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
@@ -94,15 +96,15 @@ const AllUsers = () => {
                     <td>
                       <button
                         onClick={() => handleMakeAdmin(user)}
-                        className="btn-sm btn-success"
+                        className="btn-sm btn-success rounded-md text-2xl text-white"
                       >
-                        Admin
+                       <FaUserCog></FaUserCog>
                       </button>
                       <button
                         onClick={() => handleDelete(user)}
-                        className="btn-sm ms-2 bg-red-600"
+                        className="btn-sm ms-2 rounded-md bg-red-600 text-2xl text-white"
                       >
-                        Delete
+                       <MdDelete></MdDelete>
                       </button>
                     </td>
                   </tr>

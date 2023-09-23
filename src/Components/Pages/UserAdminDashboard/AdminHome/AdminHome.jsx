@@ -51,13 +51,13 @@ const AdminHome = () => {
     },
     {
       name: "Videos",
-      uv: 20,
+      uv: 300,
       pv: 9800,
       amt: 2290,
     },
     {
       name: "Images",
-      uv: 27,
+      uv: 200,
       pv: 3908,
       amt: 2000,
     },
@@ -66,8 +66,8 @@ const AdminHome = () => {
   const dataTwo = [
     { name: "Revinue", value: 400 },
     { name: "Users", value: 17 },
-    { name: "Videos", value: 30 },
-    { name: "Audios", value: 20 },
+    { name: "Videos", value: 300 },
+    { name: "Audios", value: 200 },
   ];
 
   // chart one

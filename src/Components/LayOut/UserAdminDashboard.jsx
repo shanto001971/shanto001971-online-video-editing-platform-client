@@ -16,7 +16,7 @@ const UserAdminDashboard = () => {
   const { theme, changesThemeTextColor } = useTheme(); // for using light and dark themes
 
   return (
-    <div className="drawer  lg:drawer-open ">
+    <div className="drawer  lg:drawer-open bg-white">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
         {/* Page content here */}
@@ -28,7 +28,7 @@ const UserAdminDashboard = () => {
           Open drawer
         </label>
       </div>
-      <div className="drawer-side ">
+      <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         <ul
